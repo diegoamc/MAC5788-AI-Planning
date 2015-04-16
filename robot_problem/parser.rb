@@ -110,11 +110,3 @@ class Array
     "(%s)" % inject([]) {|a, elem| a << elem.to_sexpr}.join(" ")
   end
 end
-
-
-
-=begin sexpr = SExpr.new <<END
-((data "quoted data" 123 4.5)
- (data (!@# (4.5) "(more" "data)")))
-END
-=end
