@@ -112,13 +112,9 @@ class Array
 end
 
 
-sexpr = SExpr.new File.read("problem.pddl")
+
 =begin sexpr = SExpr.new <<END
 ((data "quoted data" 123 4.5)
  (data (!@# (4.5) "(more" "data)")))
 END
 =end
-
-#puts "original sexpr:\n#{sexpr.original}"
-puts "\nruby data structure:\n#{sexpr.data}"
-puts "\nand back to S-Expr:\n#{sexpr.to_sexpr}"
