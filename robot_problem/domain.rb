@@ -53,10 +53,10 @@ class Domain
           same_element_action << element
         end
       end
-    things[last_key] = same_element_action  
-    action.parameters << things["parameters"]
-    action.precond << things["precondition"]
-    action.effects << things["effect"]
+    things[last_key] = same_element_action
+    action.parameters = things["parameters"].flatten
+    action.precond = things["precondition"].flatten(1)
+    action.effects = things["effect"].flatten(1)
     return action
   end
 
