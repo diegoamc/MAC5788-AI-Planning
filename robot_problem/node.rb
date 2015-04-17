@@ -8,4 +8,5 @@ class Node
   def initialize(attributes={})
     attributes.each { |field, value| send("#{field}=", value) }
   end
+
 end

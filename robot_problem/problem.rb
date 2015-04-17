@@ -21,6 +21,21 @@ class Problem
     end
   end
 
+  def goalTest(node)
+    goal.each do |key, array|
+      array.each do |element|
+        #como vai ser o hash de predicados no estado?
+        puts key.to_s + element.to_s
+        if not node.state.has_key?(key.to_s + element.to_s)
+          puts "False"
+          return false
+        end
+      end
+    end
+    puts "True"
+    return true
+  end
+
   private
 
   def parse_objects(raw)
@@ -46,4 +61,5 @@ class Problem
     end
     return state_hash
   end
+
 end
