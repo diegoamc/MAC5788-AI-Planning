@@ -1,7 +1,8 @@
 require_relative 'requirements'
 
 class Domain
-  attr_accessor :name, :predicates, :types, :requirements, :constants, :action
+  attr_accessor :name, :predicates, :types, :requirements, :constants,
+  :action, :groundedActions
 
   def initialize(definitions=[])
     raw_objects = raw_initial_state = raw_goal = []
@@ -28,7 +29,28 @@ class Domain
     end
   end
 
+  def groundAllActions(problem)
+    groundedActions = {}
+    action.each do |element|
+      element.parameters.each do |key, type|
+        listObjects = problem.objects[type]
+        listObjects.each do |objects|
+
+        end
+      end
+    end
+  end
+
   private
+
+  def groundAction(action, param)
+    action.precond.each do |element|
+      #TODO: Verificar se contem um parametro a ser substituido ?x
+
+    end
+    action.effects.each do |eff|
+    end
+  end
 
   def parse_action(raw)
     action = Action.new raw.first
@@ -54,9 +76,11 @@ class Domain
         end
       end
     things[last_key] = same_element_action
-    action.parameters = things["parameters"].flatten
-    action.precond = things["precondition"].flatten(1)
-    action.effects = things["effect"].flatten(1)
+    #action.precond = things["precondition"].flatten(1)
+    #action.effects = things["effect"].flatten(1)
+    action.prepareEffects things["effect"].flatten(1)
+    action.preparePreconditions things["precondition"].flatten(1)
+    action.prepareParameters things["parameters"].flatten
     return action
   end
 

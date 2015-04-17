@@ -5,7 +5,7 @@
 	(:constants left right - arm)
 	(:predicates
 		(robot-at ?x - room)
-		(box-at ?x - box ?y room)
+		(box-at ?x - box ?y - room)
 		(free ?x - arm)
 		(carry ?x - box ?y - arm))
 	(:action move

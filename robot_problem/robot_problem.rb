@@ -25,8 +25,8 @@ domain = Domain.new domain_pddl.data.drop 1
 # puts "domain predicates: #{domain.predicates}"
 # puts ""
 #
-# puts "=============== Actions ==============="
-# puts "Actions: #{domain.action}"
+#puts "=============== Actions ==============="
+#puts "Actions: #{domain.action}"
 #
 # puts ""
 # puts "=============== Problem Definition ==============="
@@ -37,6 +37,11 @@ domain = Domain.new domain_pddl.data.drop 1
 # puts "problem goal: #{problem.goal}"
 
 puts ""
+puts "=============== Actions ==============="
+puts "Action: #{domain.action[1].name}"
+puts "Action parameters: #{domain.action[1].parameters}"
+puts "Action preconditions: #{domain.action[1].precond}"
+puts "Action effects: #{domain.action[1].effects}"
 puts ""
 
 
