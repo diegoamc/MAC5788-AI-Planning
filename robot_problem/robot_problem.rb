@@ -40,9 +40,9 @@ puts ""
 puts ""
 
 
-state = problem.initial_state
+state = problem.goal
 no = Node.new({:"state" => state})
 puts "Node:  #{no.state}"
 puts "problem goal: #{problem.goal}"
 
-#problem.goalTest(no)
+problem.goalTest(no)

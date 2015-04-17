@@ -22,17 +22,12 @@ class Problem
   end
 
   def goalTest(node)
-    goal.each do |key, array|
-      array.each do |element|
-        #como vai ser o hash de predicados no estado?
-        puts key.to_s + element.to_s
-        if not node.state.has_key?(key.to_s + element.to_s)
-          puts "False"
-          return false
-        end
+    goal.each do |key, value|
+      #TODO: como vai ser o hash de predicados no estado?
+      if not node.state.has_key?(key.to_s)
+        return false
       end
     end
-    puts "True"
     return true
   end
 
