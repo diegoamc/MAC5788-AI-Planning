@@ -41,7 +41,6 @@ class Problem
   def parse_state(raw)
     state_hash = Hash.new([])
     raw.each do |element|
-      puts "#{raw}"
       values = element.size == 2 ? element.drop(1) : [element.drop(1)]
       state_hash[element.first] = state_hash[element.first] + values
     end
