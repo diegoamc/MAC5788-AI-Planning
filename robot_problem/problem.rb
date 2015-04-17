@@ -12,9 +12,9 @@ class Problem
         when :":objects"
           parse_objects definition.drop 1
         when :":init"
-          @initial_state = parse_state definition.drop 1
+          @initial_state = parse_predicate definition.drop 1
         when :":goal"
-          @goal = parse_state(definition.drop(1).first.drop(1))
+          @goal = parse_predicate(definition.drop(1).first.drop(1))
         else
           puts "You shouldn't be here"
         end
@@ -62,4 +62,11 @@ class Problem
     return state_hash
   end
 
+  def parse_predicate(raw)
+    state_hash = Hash.new([])
+    raw.each do |element|
+      state_hash[element.join(" ")]=1
+    end
+    return state_hash
+  end
 end
