@@ -45,9 +45,10 @@ puts "Action effects: #{domain.action[1].effects}"
 puts ""
 
 
-state = problem.goal
-no = Node.new({:"state" => state})
-puts "Node:  #{no.state}"
-puts "problem goal: #{problem.goal}"
+# state = problem.goal
+# no = Node.new({:"state" => state})
+# puts "Node:  #{no.state}"
+# puts "problem goal: #{problem.goal}"
+# problem.goalTest(no)
 
-problem.goalTest(no)
+domain.groundAllActions(problem)

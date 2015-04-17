@@ -31,22 +31,43 @@ class Domain
 
   def groundAllActions(problem)
     groundedActions = {}
-    action.each do |element|
-      element.parameters.each do |key, type|
-        listObjects = problem.objects[type]
-        listObjects.each do |objects|
-
-        end
+    param = {}
+    ex = []
+    result = []
+    action.each do |act|
+      act.parameters.each do |key, type|
+        param[key] = problem.objects[type]
       end
     end
+    ex << param.keys
+    test = ex.flatten(1)
+    result << param[test.first]
+    result = result.flatten
+    test.drop(1).each do |el|
+      result = product(result, param[el])
+    end
+      #param.each do |key, objects|
+      # objects.each do |object|
+      #   ex << object
+      # end
+      # puts "#{result}"
   end
 
   private
 
+  def product(vector1, vector2)
+    result =[]
+    vector1.each do |el|
+      vector2.each do |elb|
+        result << [el, elb].flatten if el != elb
+      end
+    end
+    return result
+  end
+
   def groundAction(action, param)
     action.precond.each do |element|
       #TODO: Verificar se contem um parametro a ser substituido ?x
-
     end
     action.effects.each do |eff|
     end
