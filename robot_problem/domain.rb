@@ -30,28 +30,25 @@ class Domain
   end
 
   def groundAllActions(problem)
-    groundedActions = {}
+    @groundedActions = []
     param = {}
-    ex = []
     result = []
-    action.each do |act|
-      act.parameters.each do |key, type|
-        param[key] = problem.objects[type]
+    act = @action[2]
+    act.parameters.each do |key, type|
+      param[key] = problem.objects[type]
+      if result.empty?
+        result << param[key]
+        result = result.flatten
+      else
+        p result
+        result = product(result, param[key])
       end
+      end
+      result.zip.each do |combination|
+        groundAction(act, combination)
+      end
+      result = []
     end
-    ex << param.keys
-    test = ex.flatten(1)
-    result << param[test.first]
-    result = result.flatten
-    test.drop(1).each do |el|
-      result = product(result, param[el])
-    end
-      #param.each do |key, objects|
-      # objects.each do |object|
-      #   ex << object
-      # end
-      # puts "#{result}"
-  end
 
   private
 
@@ -66,11 +63,18 @@ class Domain
   end
 
   def groundAction(action, param)
-    action.precond.each do |element|
-      #TODO: Verificar se contem um parametro a ser substituido ?x
+    a = Action.new("#{action.name} #{param.join("_")}")
+    i = 0
+    precondition = action.precond.join("$")
+    effect = action.effects.join("$")
+    action.parameters.each do |key, param|
+      precondition.gsub!(/\#{key.to_s}/, param.to_s)
+      effect.gsub!(/\#{key.to_s}/, param.to_s)
     end
-    action.effects.each do |eff|
-    end
+    a.precond = precondition.split("$")
+    a.effects = effect.split("$")
+    p a
+    @groundedActions << a
   end
 
   def parse_action(raw)
