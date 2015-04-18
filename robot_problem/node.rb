@@ -9,4 +9,18 @@ class Node
     attributes.each { |field, value| send("#{field}=", value) }
   end
 
+  def is_goal_state?(goal_test)
+    # This does not work since state is not a class
+    # self.state.left == goal_test.left && self.state.right == goal_test.right
+  end
+
+  def expand
+    # This does not work since state is not a class
+    #state_sucessors = self.state.successors
+    #state_sucessors.map do |action, state|
+    #  Node.new(state: state, parent: self, action: action,
+    #           path_cost: self.path_cost + 1, depth: self.depth + 1)
+    #end
+  end
+
 end
