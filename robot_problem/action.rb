@@ -8,7 +8,7 @@ class Action
     @effects = []
   end
 
-  def prepareParameters parameters_list
+  def prepare_parameters parameters_list
     same_type_parameters = []
     last_element = nil
     parameters_list.each do |param|

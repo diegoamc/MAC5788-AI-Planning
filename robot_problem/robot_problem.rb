@@ -51,4 +51,5 @@ puts ""
 # puts "problem goal: #{problem.goal}"
 # problem.goalTest(no)
 
-domain.groundAllActions(problem)
+domain.ground_all_actions(problem)
+domain.grounded_actions.each {|grounded_action| p grounded_action}

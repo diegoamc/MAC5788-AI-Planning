@@ -2,15 +2,14 @@ require_relative 'requirements'
 
 class Domain
   attr_accessor :name, :predicates, :types, :requirements, :constants,
-  :action, :groundedActions
+  :action, :grounded_actions
 
   def initialize(definitions=[])
+    @grounded_actions = []
     raw_objects = raw_initial_state = raw_goal = []
     @action = []
     definitions.each do |definition|
         case definition.first
-        #when :problem
-        #  @name = definition.last
         when :"domain"
           @name = definition.last
         when :":action"
@@ -29,52 +28,45 @@ class Domain
     end
   end
 
-  def groundAllActions(problem)
-    @groundedActions = []
-    param = {}
+  def ground_all_actions(problem)
     result = []
-    act = @action[2]
-    act.parameters.each do |key, type|
-      param[key] = problem.objects[type]
-      if result.empty?
-        result << param[key]
-        result = result.flatten
-      else
-        p result
-        result = product(result, param[key])
+    @action.each do |defined_action|
+      defined_action.parameters.to_a.each do |parameter|
+        result = product(problem.objects[parameter.last].zip, result)
       end
-      end
-      result.zip.each do |combination|
-        groundAction(act, combination)
+      result.each do |combination|
+        ground_action(defined_action, combination)
       end
       result = []
     end
+  end
 
   private
 
   def product(vector1, vector2)
+    return vector1 if vector2.empty?
     result =[]
-    vector1.each do |el|
-      vector2.each do |elb|
+    vector2.each do |el|
+      vector1.each do |elb|
         result << [el, elb].flatten if el != elb
       end
     end
     return result
   end
 
-  def groundAction(action, param)
-    a = Action.new("#{action.name} #{param.join("_")}")
-    i = 0
+  def ground_action(action, combination)
+    new_action = Action.new("#{action.name} #{combination.join("_")}")
     precondition = action.precond.join("$")
     effect = action.effects.join("$")
-    action.parameters.each do |key, param|
-      precondition.gsub!(/\#{key.to_s}/, param.to_s)
-      effect.gsub!(/\#{key.to_s}/, param.to_s)
+    index = 0
+    action.parameters.each_key do |variable|
+      precondition.gsub!("#{variable.to_s}", combination[index].to_s)
+      effect.gsub!("#{variable.to_s}", combination[index].to_s)
+      index +=1
     end
-    a.precond = precondition.split("$")
-    a.effects = effect.split("$")
-    p a
-    @groundedActions << a
+    new_action.precond = precondition.split("$")
+    new_action.effects = effect.split("$")
+    @grounded_actions << new_action
   end
 
   def parse_action(raw)
@@ -103,7 +95,7 @@ class Domain
     things[last_key] = same_element_action
     action.prepare(action.effects, things["effect"].flatten(1))
     action.prepare(action.precond, things["precondition"].flatten(1))
-    action.prepareParameters things["parameters"].flatten
+    action.prepare_parameters things["parameters"].flatten
     return action
   end
 
