@@ -101,10 +101,8 @@ class Domain
         end
       end
     things[last_key] = same_element_action
-    #action.precond = things["precondition"].flatten(1)
-    #action.effects = things["effect"].flatten(1)
-    action.prepareEffects things["effect"].flatten(1)
-    action.preparePreconditions things["precondition"].flatten(1)
+    action.prepare(action.effects, things["effect"].flatten(1))
+    action.prepare(action.precond, things["precondition"].flatten(1))
     action.prepareParameters things["parameters"].flatten
     return action
   end

@@ -24,25 +24,13 @@ class Action
     end
   end
 
-  def preparePreconditions predicates_list
-    #TODO: Daria para desduplicar este método e evitar ter ele replicado abaixo?
-    if predicates_list.first == :and
-      predicates_list.drop(1).each do |element|
-        precond << element.join(" ")
+  def prepare(object , list)
+    if list.first == :and
+      list.drop(1).each do |element|
+        object.send("<<", element.join(" "))
       end
     else
-      precond << predicates_list.join(" ")
+      object.send("<<", list.join(" "))
     end
   end
-
-  def prepareEffects predicates_list
-    if predicates_list.first == :and
-      predicates_list.drop(1).each do |element|
-        effects << element.join(" ")
-      end
-    else
-      effects << predicates_list.join(" ")
-    end
-  end
-
 end
