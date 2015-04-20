@@ -1,6 +1,10 @@
-class Astar < Strategy
+class PriorityQueue
+
+  def initialize(node, heuristic)
+    @heuristic = heuristic
+  end
   # TODO: Maybe use a heap
-  def select_node_from(fringe)
+  def select_node
     selected = nil
     min = 10000000000000000
     fringe.each do |node|
@@ -24,5 +28,9 @@ class Astar < Strategy
 
   def evaluation_funcion(node)
     node.path_cost + heuristic0
+  end
+
+  def add(node)
+
   end
 end

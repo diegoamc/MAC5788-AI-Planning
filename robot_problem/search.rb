@@ -1,15 +1,17 @@
 class Search
-  @@visited_nodes = []
-  def self.graph_search(problem, strategy)
-    fringe = [problem[:initial_state]]
+  @@all_nodes = Hash.new
+  def self.a_star_tree_search(problem, heuristic)
+    root_node = Node.new(state: problem.initial_state, parent: nil, action: nil, path_cost: 0, depth: 0)
+    fringe = PriorityQueue.new(root_node, heuristic)
+    @@all_nodes[root_node.object_id] = root_node
     loop {
       return "Failure" if fringe.empty?
-      fringe, node = strategy.select_node_from(fringe)
-      @@visited_nodes << node if not already_visited?(node)
-      return node if node.is_goal_state?(problem[:goal_test])
+      node = fringe.select_node
+      return node if problem.goal_test?(node.state)
       node.expand.each do |successor|
-        if not already_visited?(successor)
-          fringe = insert_on(fringe, successor)
+        if not @@all_nodes[successor.object_id]
+          fringe.add(successor)
+          @@all_nodes[successor.object_id] = successor
         end
       end
     }
@@ -19,31 +21,11 @@ class Search
     puts "\n================= Results ================="
     puts "Path cost: #{node.path_cost}"
     puts "Depth: #{node.depth}"
-    puts "Visited nodes: #{@@visited_nodes.size}"
+    puts "Visited nodes: #{@@all_nodes.size}"
     puts "\tAction \t| State "
     while node
       puts "\t#{node.action} \t| #{node.state.snapshot}"
       node = node.parent
     end
-  end
-
-  # TODO: Maybe create a hash table
-  def self.already_visited?(node)
-    visited = @@visited_nodes.select do |visited_node|
-      visited_node.state.snapshot == node.state.snapshot
-    end
-    !visited.empty?
-  end
-
-  def self.insert_on(fringe, successor)
-    lower_cost = nil
-    fringe.each_with_index do |node, index|
-      if node.state.snapshot == successor.state.snapshot && node.path_cost > successor.path_cost
-        lower_cost = index
-      end
-    end
-    return (fringe + [successor]) if lower_cost.nil?
-    fringe[lower_cost] = successor
-    fringe
   end
 end
