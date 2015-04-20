@@ -44,20 +44,26 @@ class Domain
   def ground_applicable_actions(problem, state)
     @memoized_actions = {}
     result = []
+    action_Set = []
     @action.each do |defined_action|
       defined_action.parameters.to_a.each do |parameter|
         result = product(problem.objects[parameter.last].zip, result)
       end
       result.each do |combination|
         if(applicable_combination?(defined_action, combination, state))
-          a = ground_action(defined_action, combination)
-          if(!@memoized_actions.has_key?(a.name))
-            @memoized_actions[a.name] = a
+          str = "#{defined_action.name} #{combination.join("_")}"
+          if(!@memoized_actions.has_key?(str))
+            a = ground_action(defined_action, combination)
+            @memoized_actions[str] = a
+            action_Set << a
+          else
+            action_Set << @memoized_actions[str]
           end
         end
       end
       result = []
     end
+    return action_Set
   end
 
   def match_applicable_actions(action_Set, state)
