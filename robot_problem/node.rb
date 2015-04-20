@@ -9,13 +9,15 @@ class Node
     attributes.each { |field, value| send("#{field}=", value) }
   end
 
-  def expand
-    # This does not work since state is not a class
-    #state_sucessors = self.state.successors
-    #state_sucessors.map do |action, state|
-    #  Node.new(state: state, parent: self, action: action,
-    #           path_cost: self.path_cost + 1, depth: self.depth + 1)
-    #end
+  def heuristic0
+    return 0
   end
 
+  def heuristic1
+    return 1
+  end
+
+  def evaluation_function(heuristic)
+    path_cost + send("#{heuristic}")
+  end
 end
