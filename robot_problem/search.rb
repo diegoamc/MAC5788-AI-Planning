@@ -3,7 +3,7 @@ class Search
   def self.a_star_tree_search(actions, problem, domain, heuristic)
     root_node = Node.new(state: problem.initial_state, parent: nil, action: nil, path_cost: 0, depth: 0)
     # Initializes a PriorityQueue. Elements with higher priority will be the ones with lower evaluation_functions
-    fringe = PQueue.new([root_node], heuristic) do |node, other_node|
+    fringe = PQueue.new([root_node]) do |node, other_node|
                       node.evaluation_function(heuristic) < other_node.evaluation_function(heuristic)
                    end
     @@all_nodes[root_node.state] = root_node
