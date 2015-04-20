@@ -35,21 +35,27 @@ domain = Domain.new domain_pddl.data.drop 1
 # puts "problem objects: #{problem.objects}"
 # puts "problem initial state: #{problem.initial_state}"
 # puts "problem goal: #{problem.goal}"
-
-puts ""
-puts "=============== Actions ==============="
-puts "Action: #{domain.action[1].name}"
-puts "Action parameters: #{domain.action[1].parameters}"
-puts "Action preconditions: #{domain.action[1].precond}"
-puts "Action effects: #{domain.action[1].effects}"
-puts ""
-
-
+#
+# puts ""
+# puts "=============== Actions ==============="
+# puts "Action: #{domain.action[1].name}"
+# puts "Action parameters: #{domain.action[1].parameters}"
+# puts "Action preconditions: #{domain.action[1].precond}"
+# puts "Action effects: #{domain.action[1].effects}"
+# puts ""
+#
+#
 # state = problem.goal
 # no = Node.new({:"state" => state})
 # puts "Node:  #{no.state}"
 # puts "problem goal: #{problem.goal}"
 # problem.goalTest(no)
 
-domain.ground_all_actions(problem)
-domain.grounded_actions.each {|grounded_action| p grounded_action}
+#domain.ground_all_actions(problem)
+#domain.grounded_actions.each {|grounded_action| p grounded_action}
+
+domain.ground_applicable_actions(problem, problem.initial_state)
+puts "=============== Actions ==============="
+domain.memoized_actions.each do |key, action|
+  puts "Applicables: #{key}"
+end

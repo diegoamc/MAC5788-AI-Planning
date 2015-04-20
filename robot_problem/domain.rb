@@ -2,7 +2,7 @@ require_relative 'requirements'
 
 class Domain
   attr_accessor :name, :predicates, :types, :requirements, :constants,
-  :action, :grounded_actions
+  :action, :grounded_actions, :memoized_actions
 
   def initialize(definitions=[])
     @grounded_actions = []
@@ -35,13 +35,67 @@ class Domain
         result = product(problem.objects[parameter.last].zip, result)
       end
       result.each do |combination|
-        ground_action(defined_action, combination)
+        @grounded_actions << ground_action(defined_action, combination)
       end
       result = []
     end
   end
 
+  def ground_applicable_actions(problem, state)
+    @memoized_actions = {}
+    result = []
+    @action.each do |defined_action|
+      defined_action.parameters.to_a.each do |parameter|
+        result = product(problem.objects[parameter.last].zip, result)
+      end
+      result.each do |combination|
+        if(applicable_combination?(defined_action, combination, state))
+          a = ground_action(defined_action, combination)
+          if(!@memoized_actions.has_key?(a.name))
+            @memoized_actions[a.name] = a
+          end
+        end
+      end
+      result = []
+    end
+  end
+
+  def match_applicable_actions(action_Set, state)
+    set_applicable = []
+    action.each do |action|
+      if(applicable_action?(action, state))
+        set_applicable << action
+      end
+    end
+    return set_applicable
+  end
+
   private
+
+  def applicable_combination?(action, combination, state)
+    index = 0
+    precondition = action.precond.join("$")
+    action.parameters.each_key do |variable|
+      precondition.gsub!("#{variable.to_s}", combination[index].to_s)
+      index +=1
+    end
+    foo = precondition.split("$")
+    foo.each do |precond|
+      if(!state.has_key?(precond))
+        return false
+      end
+    end
+    return true
+  end
+
+  def applicable_action?(action, state)
+    action.precond.each do |precondition|
+      if(!state.has_key?(precond))
+        return false
+      end
+    end
+    return true
+  end
 
   def product(vector1, vector2)
     return vector1 if vector2.empty?
@@ -66,7 +120,7 @@ class Domain
     end
     new_action.precond = precondition.split("$")
     new_action.effects = effect.split("$")
-    @grounded_actions << new_action
+    return new_action
   end
 
   def parse_action(raw)
