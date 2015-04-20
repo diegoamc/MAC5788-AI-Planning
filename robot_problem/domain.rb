@@ -66,9 +66,9 @@ class Domain
     return action_Set
   end
 
-  def match_applicable_actions(action_Set, state)
+  def match_applicable_actions(action_set, state)
     set_applicable = []
-    action.each do |action|
+    action_set.each do |action|
       if(applicable_action?(action, state))
         set_applicable << action
       end
@@ -96,7 +96,7 @@ class Domain
 
   def applicable_action?(action, state)
     action.precond.each do |precondition|
-      if(!state.has_key?(precond))
+      if(!state.has_key?(precondition))
         return false
       end
     end

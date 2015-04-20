@@ -10,12 +10,13 @@ class Search
     loop {
       return "Failure" if fringe.empty?
       node = fringe.pop
-      return node if problem.goal_test?(node.state)
-      domain.match_applicable_actions(actions, problem, node.state) do |action|
+      return node if problem.goal_test(node)
+
+      domain.match_applicable_actions(actions, node.state).each do |action|
         new_state = expand(action, node.state)
         if not @@all_nodes[new_state]
-          sucessor = Node.new(state: new_state, parent: node, action: action,
-                                              path_cost: (node.path_cost + 1), depth: (node.depth + 1))
+          successor = Node.new(state: new_state, parent: node, action: action,
+                                            path_cost: (node.path_cost + 1), depth: (node.depth + 1))
           fringe.push(successor)
           @@all_nodes[successor.state] = successor
         end
@@ -30,7 +31,10 @@ class Search
     puts "Visited nodes: #{@@all_nodes.size}"
     puts "\tAction \t| State "
     while node
-      puts "\t#{node.action} \t| #{node.state.snapshot}"
+      # puts "\t#{node.action} \t| #{node.state.snapshot}"
+      if node.action != nil
+        puts "\t#{node.action.name} \t| #{node.state}"
+      end
       node = node.parent
     end
   end
@@ -38,11 +42,11 @@ class Search
   # private
 
   def self.expand(action, state)
-    new_state = state
+    new_state = state.clone
     action.effects.each do |effect|
       if effect.split(" ")[0] == "not"
         #TODO remove var remove_predicate
-        remove_predicate = effect.gsub!("not ", "")
+        remove_predicate = effect.gsub("not ", "")
         new_state.delete(remove_predicate)
       else
         new_state[effect] = 1
