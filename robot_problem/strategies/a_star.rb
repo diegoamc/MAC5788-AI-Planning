@@ -14,17 +14,15 @@ class Astar < Strategy
     [fringe, selected]
   end
 
-  # (Number of people on the initial side) - 1
-  def heuristic1(state)
-    (state.left[:missionaries] + state.left[:cannibals]) - 1
+  def heuristic0
+    return 0
   end
 
-  # (Number of people on the initial side) / Boat Capacity
-  def heuristic2(state)
-    (state.left[:missionaries] + state.left[:cannibals]) / 2
+  def heuristic1
+    return 1
   end
 
   def evaluation_funcion(node)
-    node.path_cost + heuristic1(node.state)
+    node.path_cost + heuristic0
   end
 end
