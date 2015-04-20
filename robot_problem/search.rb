@@ -34,4 +34,21 @@ class Search
       node = node.parent
     end
   end
+
+  # private
+
+  def self.expand(action, state)
+    new_state = state
+    action.effects.each do |effect|
+      if effect.split(" ")[0] == "not"
+        #TODO remove var remove_predicate
+        remove_predicate = effect.gsub!("not ", "")
+        new_state.delete(remove_predicate)
+      else
+        new_state[effect] = 1
+      end
+    end
+    return new_state
+  end
+
 end
