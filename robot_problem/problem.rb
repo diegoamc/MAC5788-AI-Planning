@@ -21,7 +21,7 @@ class Problem
     end
   end
 
-  def goalTest(node)
+  def goal_test(node)
     goal.each do |key, value|
       #TODO: como vai ser o hash de predicados no estado?
       if not node.state.has_key?(key.to_s)

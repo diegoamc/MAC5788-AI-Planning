@@ -45,9 +45,9 @@ domain = Domain.new domain_pddl.data.drop 1
 # puts ""
 #
 #
-# state = problem.goal
-# no = Node.new({:"state" => state})
-# puts "Node:  #{no.state}"
+state = problem.goal
+no = Node.new({:"state" => state})
+puts "Node:  #{no.state}"
 # puts "problem goal: #{problem.goal}"
 # problem.goalTest(no)
 
@@ -59,3 +59,20 @@ puts "=============== Actions ==============="
 domain.memoized_actions.each do |key, action|
   puts "Applicables: #{key}"
 end
+
+state_test = {"free left"=>1, "robot-at room1"=>1, "box-at box1 room1"=>1}
+no_test = Node.new({:"state" => state_test})
+puts "Node Test:  #{no_test.state}"
+
+# pickup
+action_test = Action.new("pickup_test")
+action_test.parameters = {:"?x"=>:box, :"?y"=>:arm, :"?w"=>:room}
+action_test.precond = ["free left", "robot-at room1", "box-at box1 room1"]
+action_test.effects = ["not free left", "carry box1 left", "not box-at box1 room1"]
+puts ""
+puts "Action Test Parameters #{action_test.parameters}"
+puts "Action Test Precond #{action_test.precond}"
+puts "Action Test Effects #{action_test.effects}"
+
+new_state = Search.expand(action_test, no_test.state)
+p new_state
