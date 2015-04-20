@@ -39,7 +39,7 @@ class Search
     end
   end
 
-  # private
+  private
 
   def self.expand(action, state)
     new_state = state.clone
