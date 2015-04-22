@@ -55,4 +55,18 @@ class Search
     return new_state
   end
 
+  def self.expandHeuristic(action, state)
+    new_state = state.clone
+    action.effects.each do |effect|
+      if effect.split(" ")[0] == "not"
+        #TODO remove var remove_predicate
+        #remove_predicate = effect.gsub("not ", "")
+        #new_state.delete(remove_predicate)
+      else
+        new_state[effect] = 1
+      end
+    end
+    return new_state
+  end
+
 end
