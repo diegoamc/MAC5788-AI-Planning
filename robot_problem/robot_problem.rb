@@ -1,11 +1,11 @@
 require_relative 'requirements'
 
-problem = ARGV[0]
+problem_test = ARGV[0]
 ground = ARGV[1]
 
 #parse the PDDL input
 domain_pddl = SExpr.new File.read("domain.pddl")
-problem_pddl = SExpr.new File.read("problems/" << problem)
+problem_pddl = SExpr.new File.read("problems/" << problem_test)
 
 problem = Problem.new problem_pddl.data.drop 1
 domain = Domain.new domain_pddl.data.drop 1
@@ -13,12 +13,14 @@ domain = Domain.new domain_pddl.data.drop 1
 start_time = Time.now
 node_solution = Search.a_star_tree_search(domain.grounded_actions, problem, domain, "heuristic0", ground)
 end_time = (Time.now - start_time) * 1000
-puts ("%.2f" % end_time + "ms")
+time = ("Time: %.2f" % end_time + "ms")
 
-
-# p node_solution.state
 if node_solution == "Failure"
-  puts ":("
+  result = ":("
 else
-  Search.path_to(node_solution)
+  result = Search.path_to(node_solution)
 end
+
+out_file = File.new("results/result_#{problem_test.gsub(".pddl", "")}_#{ground}.txt", "w")
+out_file.puts("#{time}\n#{result}")
+out_file.close
