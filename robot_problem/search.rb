@@ -23,7 +23,7 @@ class Search
       if ground == "all"
         actions_applicable = domain.match_applicable_actions(actions, node.state)
       else
-        actions_applicable = domain.ground_applicable_actions(problem, node.state)
+        actions_applicable = domain.ground_applicable_actions2(problem, node.state)
       end
 
       actions_applicable.each do |action|

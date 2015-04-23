@@ -2,7 +2,7 @@ require_relative 'requirements'
 
 class Domain
   attr_accessor :name, :predicates, :types, :requirements, :constants,
-  :action, :grounded_actions, :memoized_actions
+  :action, :grounded_actions, :memoized_actions, :substitution
 
   def initialize(definitions=[])
     @grounded_actions = []
@@ -66,6 +66,72 @@ class Domain
     return action_Set
   end
 
+  def ground_applicable_actions2(problem, state)
+    action_Set = []
+    @action.each do |defined_action|
+      a = add_applicables(problem, defined_action, defined_action.precond, {}, state)
+      action_Set = action_Set + a
+    end
+    return action_Set
+  end
+
+  def add_applicables(problem, action, precondition, substitution, state)
+    if(precondition.empty?)
+      a = complete_substitution(action, substitution, problem)
+      return a
+    else
+      #p precondition.first
+      #pre = [precondition] if not precondition.is_a?(Array)
+      pp =  precondition.first
+      state.each do |key, value|
+        set = []
+        auxParameter = pp.split(" ")
+        #p "#{key} #{auxParameter}"
+        if key.start_with?(auxParameter.first)
+          p "Cheguei"
+          auxState = key.split(" ")
+          dict = {}
+          #comment1: Mr T falou alguma coisa aqui
+          for i in 1..(auxState.size - 1)
+            dict[auxParameter[i]] = auxState[i]
+          end
+          substituicaoValida = true
+          dict.each do |arg, object|
+            if !((substitution[arg] == dict[arg]) || !substitution[arg])
+              substituicaoValida = false
+            end
+          end
+          #comment2 e outra aqui
+          if substituicaoValida
+            dict = dict.merge(substitution)
+            set = set + add_applicables(problem, action, precondition.drop(1), dict, state)
+          end
+          p set
+          return set
+        end
+      end
+    end
+  end
+
+  def complete_substitution(action, substitution, problem)
+    foo = []
+    action_set = []
+    action.parameters.each do |param_name, param_type|
+      if !substitution[param_name.to_s]
+        problem.objects[param_type].each do |obj|
+          substitution[param_name.to_s] = obj
+          action_set = action_set + complete_substitution(action, substitution, problem)
+        end
+        return action_set
+      else
+        foo << substitution[param_name.to_s]
+      end
+    end
+    a = ground_action(action, foo)
+    action_set << a
+    return action_set
+  end
+
   def match_applicable_actions(action_set, state)
     set_applicable = []
     action_set.each do |action|
@@ -112,6 +178,21 @@ class Domain
       end
     end
     return result
+  end
+
+  def ground_action2(action, combination)
+    new_action = Action.new("#{action.name} #{combination.join("_")}")
+    precondition = action.precond.join("$")
+    effect = action.effects.join("$")
+    index = 0
+    action.parameters.each_key do |variable|
+      precondition.gsub!("#{variable.to_s}", combination[index].to_s)
+      effect.gsub!("#{variable.to_s}", combination[index].to_s)
+      index +=1
+    end
+    new_action.precond = precondition.split("$")
+    new_action.effects = effect.split("$")
+    return new_action
   end
 
   def ground_action(action, combination)
