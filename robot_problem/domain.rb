@@ -70,46 +70,42 @@ class Domain
     action_Set = []
     @action.each do |defined_action|
       a = add_applicables(problem, defined_action, defined_action.precond, {}, state)
-      action_Set = action_Set + a
+      action_Set = action_Set | a
     end
     return action_Set
   end
 
   def add_applicables(problem, action, precondition, substitution, state)
     if(precondition.empty?)
-      a = complete_substitution(action, substitution, problem)
-      return a
+      response = substitution.empty? ? [] : complete_substitution(action, substitution, problem)
+      return response
     else
-      #p precondition.first
-      #pre = [precondition] if not precondition.is_a?(Array)
-      pp =  precondition.first
-      state.each do |key, value|
-        set = []
-        auxParameter = pp.split(" ")
-        #p "#{key} #{auxParameter}"
-        if key.start_with?(auxParameter.first)
-          p "Cheguei"
-          auxState = key.split(" ")
-          dict = {}
-          #comment1: Mr T falou alguma coisa aqui
-          for i in 1..(auxState.size - 1)
-            dict[auxParameter[i]] = auxState[i]
-          end
-          substituicaoValida = true
-          dict.each do |arg, object|
-            if !((substitution[arg] == dict[arg]) || !substitution[arg])
-              substituicaoValida = false
+      action_set = []
+      current_precondition = precondition.first
+      state.each_key do |predicate_state|
+        predicate_precond = current_precondition.split(" ")
+        #verificar se a precond esta no estado
+        substituicao_parcial = {}
+        if(predicate_state.start_with?(predicate_precond.first))
+          #Substituir e verificar q é consistente
+          objects = predicate_state.split(" ")
+          valid_substitution = true
+          for i in 1..(objects.size - 1)
+            if((substitution[predicate_precond[i]] != objects[i]) &&
+              substitution[predicate_precond[i]])
+              valid_substitution = false
+              break
+            else
+              substituicao_parcial[predicate_precond[i]] = objects[i]
+              substituicao_parcial = substituicao_parcial.merge(substitution)
             end
           end
-          #comment2 e outra aqui
-          if substituicaoValida
-            dict = dict.merge(substitution)
-            set = set + add_applicables(problem, action, precondition.drop(1), dict, state)
+          if valid_substitution
+            action_set = action_set | add_applicables(problem, action, precondition.drop(1), substituicao_parcial, state)
           end
-          p set
-          return set
         end
       end
+      return action_set
     end
   end
 
@@ -119,7 +115,7 @@ class Domain
     action.parameters.each do |param_name, param_type|
       if !substitution[param_name.to_s]
         problem.objects[param_type].each do |obj|
-          substitution[param_name.to_s] = obj
+          substitution[param_name.to_s] = obj.to_s
           action_set = action_set + complete_substitution(action, substitution, problem)
         end
         return action_set
