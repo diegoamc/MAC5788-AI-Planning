@@ -23,7 +23,7 @@ class Search
       if ground == "all"
         actions_applicable = domain.match_applicable_actions(actions, node.state)
       else
-        actions_applicable = domain.ground_applicable_actions2(problem, node.state)
+        actions_applicable = domain.ground_applicable_actions(problem, node.state)
       end
 
       actions_applicable.each do |action|
@@ -63,9 +63,7 @@ class Search
     new_state = state.clone
     action.effects.each do |effect|
       if effect.split(" ")[0] == "not"
-        #TODO remove var remove_predicate
-        remove_predicate = effect.gsub("not ", "")
-        new_state.delete(remove_predicate)
+        new_state.delete(effect.gsub("not ", ""))
       else
         new_state[effect] = 1
       end

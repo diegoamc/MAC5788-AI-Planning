@@ -1,11 +1,11 @@
-Time: 4026.74ms
+Time: 659.28ms
 
 ================= Results =================
 Path cost: 17
 Depth: 17
-Visited nodes: 1855
-Generated nodes: 7214
-Factor: 3.889
+Visited nodes: 2782
+Generated nodes: 9066
+Factor: 3.259
 	Plan Action
 	putdown box6_right_room2
 	putdown box5_left_room2

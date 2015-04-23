@@ -1,19 +1,18 @@
 require_relative 'requirements'
 
 class Domain
-  attr_accessor :name, :predicates, :types, :requirements, :constants,
-  :action, :grounded_actions, :memoized_actions, :substitution
+  attr_accessor :name, :predicates, :types, :requirements, :constants,  :actions, :grounded_actions
 
   def initialize(definitions=[])
     @grounded_actions = []
     raw_objects = raw_initial_state = raw_goal = []
-    @action = []
+    @actions = []
     definitions.each do |definition|
         case definition.first
         when :"domain"
           @name = definition.last
         when :":action"
-          @action << parse_action(definition.drop 1)
+          @actions << parse_action(definition.drop 1)
         when :":requirements"
            parse_requirements definition.drop 1
         when :":types"
@@ -30,7 +29,7 @@ class Domain
 
   def ground_all_actions(problem)
     result = []
-    @action.each do |defined_action|
+    @actions.each do |defined_action|
       defined_action.parameters.to_a.each do |parameter|
         result = product(problem.objects[parameter.last].zip, result)
       end
@@ -42,37 +41,11 @@ class Domain
   end
 
   def ground_applicable_actions(problem, state)
-    @memoized_actions = {}
-    result = []
-    action_Set = []
-    @action.each do |defined_action|
-      defined_action.parameters.to_a.each do |parameter|
-        result = product(problem.objects[parameter.last].zip, result)
-      end
-      result.each do |combination|
-        if(applicable_combination?(defined_action, combination, state))
-          str = "#{defined_action.name} #{combination.join("_")}"
-          if(!@memoized_actions.has_key?(str))
-            a = ground_action(defined_action, combination)
-            @memoized_actions[str] = a
-            action_Set << a
-          else
-            action_Set << @memoized_actions[str]
-          end
-        end
-      end
-      result = []
+    actions_set = []
+    @actions.each do |defined_action|
+       actions_set = actions_set | add_applicables(problem, defined_action, defined_action.precond, {}, state)
     end
-    return action_Set
-  end
-
-  def ground_applicable_actions2(problem, state)
-    action_Set = []
-    @action.each do |defined_action|
-      a = add_applicables(problem, defined_action, defined_action.precond, {}, state)
-      action_Set = action_Set | a
-    end
-    return action_Set
+    return actions_set
   end
 
   def add_applicables(problem, action, precondition, substitution, state)
@@ -110,7 +83,7 @@ class Domain
   end
 
   def complete_substitution(action, substitution, problem)
-    foo = []
+    substituion_array = []
     action_set = []
     action.parameters.each do |param_name, param_type|
       if !substitution[param_name.to_s]
@@ -120,11 +93,10 @@ class Domain
         end
         return action_set
       else
-        foo << substitution[param_name.to_s]
+        substituion_array << substitution[param_name.to_s]
       end
     end
-    a = ground_action(action, foo)
-    action_set << a
+    action_set << ground_action(action, substituion_array)
     return action_set
   end
 
@@ -176,21 +148,6 @@ class Domain
     return result
   end
 
-  def ground_action2(action, combination)
-    new_action = Action.new("#{action.name} #{combination.join("_")}")
-    precondition = action.precond.join("$")
-    effect = action.effects.join("$")
-    index = 0
-    action.parameters.each_key do |variable|
-      precondition.gsub!("#{variable.to_s}", combination[index].to_s)
-      effect.gsub!("#{variable.to_s}", combination[index].to_s)
-      index +=1
-    end
-    new_action.precond = precondition.split("$")
-    new_action.effects = effect.split("$")
-    return new_action
-  end
-
   def ground_action(action, combination)
     new_action = Action.new("#{action.name} #{combination.join("_")}")
     precondition = action.precond.join("$")
@@ -237,7 +194,6 @@ class Domain
   end
 
   def parse_predicates(raw)
-    #TODO: How to represent predicates? list? hash? to discuss...
     @predicates = []
     raw.each do |element|
       @predicates << element
