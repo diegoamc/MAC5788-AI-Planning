@@ -1,5 +1,6 @@
 require 'pqueue'
 
+require_relative 'heuristics'
 require_relative 'node'
 require_relative 'parser'
 require_relative 'problem'
