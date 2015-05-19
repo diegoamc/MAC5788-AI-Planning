@@ -6,7 +6,7 @@ class Search
     root_node = Node.new(state: problem.initial_state, parent: nil, action: nil, path_cost: 0, depth: 0)
     # Initializes a PriorityQueue. Elements with higher priority will be the ones with lower evaluation_functions
     fringe = PQueue.new([root_node]) do |node, other_node|
-                      node.evaluation_function(heuristic) < other_node.evaluation_function(heuristic)
+                      node.evaluation_function(heuristic, node.state, domain, problem) < other_node.evaluation_function(heuristic, node.state, domain, problem)
                    end
     @@all_nodes[root_node.state] = root_node
     @generated_nodes = 0
