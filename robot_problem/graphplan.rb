@@ -15,19 +15,23 @@ class GraphPlanner
     #Initial state
     state.each do |key, value|
       node = RelaxedNode.new key
+      node.depth = 0
       step.addNode node
     end
     @steps << step
+    #Expande o grafo
     while(!@problem.goal_test(@steps.last))
       calculate_relaxed_plan(@steps.last, @domain.grounded_actions)
       #p @steps.last.state
     end
+    #Backtracka o plano
     extractPlan @steps.last
     heuristic_value = 0
     @relaxed_plan.each do |key, subplan|
       heuristic_value = heuristic_value + subplan.size
     end
-    return heuristic_value
+    p @relaxed_plan
+    #return heuristic_value
   end
 
   def extractPlan last_step
@@ -43,6 +47,7 @@ class GraphPlanner
         if(!node.parent.nil?)
           node.parent.each do |parent|
             node_param =  parent.predicate
+            #node_param = node.parent.first.predicate
             if(!achieved_preconds.has_key?(node_param))
               achieved_preconds[node_param] = 1
               actual_list << node_param
@@ -91,6 +96,8 @@ class GraphPlanner
           #if so, add effect if not predicate contained
           #create new node and link it to the parent
           effect_Node = RelaxedNode.new(efeito)
+          #Verify dificulty
+          effect_Node.depth = step_predicates.depth
           effect_Node.parent << node
           node.sucessor << effect_Node
           #Add nodes to the list of nodes of the step of predicates
@@ -102,12 +109,17 @@ class GraphPlanner
           end
         end
       end
+      #Set difficulty of the node
+      current_difficulty_action = 0      
       #Add preconditions
       action.precond.each do |precondition|
         parent_precond_node = step.getNode(precondition)
+        #Sum difficulty of preconditions
+        current_difficulty_action += parent_precond_node.depth
         node.parent << parent_precond_node
         step.updateSucessorNode(precondition, node)
       end
+      node.depth = current_difficulty_action
       #Add nodes to the list of nodes of the step of actions
       step_actions.addNode(node)
     end
