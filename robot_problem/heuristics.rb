@@ -1,4 +1,5 @@
 require_relative 'graphplan'
+require_relative 'graphplanOptimus'
 
 module Heuristics
   #load "graphplan.rb"
@@ -17,6 +18,10 @@ module Heuristics
 
   def graphPlanHeuristic(state, problem, domain)
     GraphPlanner.new.graphPlanner(state, domain, problem)
+  end
+
+  def graphPlanHeuristicOpt(state, problem, domain)
+    GraphPlannerOptimus.new.graphPlanner(state, domain, problem)
   end
 
 end

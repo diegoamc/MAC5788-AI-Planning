@@ -17,7 +17,7 @@
   (:action turn_to
    :parameters (?s - satellite ?d_new - direction ?d_prev - direction)
    :precondition (and (pointing ?s ?d_prev)
-                   (not (= ?d_new ?d_prev))
+                   (not ( = ?d_new ?d_prev))
               )
    :effect (and  (pointing ?s ?d_new)
                  (not (pointing ?s ?d_prev))
