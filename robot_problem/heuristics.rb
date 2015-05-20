@@ -1,4 +1,5 @@
 require_relative 'graphplan'
+require_relative 'graphplanOptimus'
 
 module Heuristics
   #load "graphplan.rb"
@@ -29,6 +30,9 @@ module Heuristics
 
   def self.hspMaxHeuristic(state, problem, domain)
     Hsp.new.hspMax(state, problem, domain)
+
+  def graphPlanHeuristicOpt(state, problem, domain)
+    GraphPlannerOptimus.new.graphPlanner(state, domain, problem)
   end
 
 end
