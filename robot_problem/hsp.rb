@@ -1,9 +1,19 @@
 class Hsp
   @@infinity = 999999
 
+
+  def hspAdd(state, domain, problem)
+    return hsp(state, problem, domain, "add")
+  end
+
+  def hspMax(state, domain, problem)
+    return hsp(state, problem, domain, "max")
+  end
+
   # ground: all actions or ground applicable actions
   # h_type: max or add
-  def self.hsp(state, problem, domain, actions, ground, h_type)
+  #def self.hsp(state, problem, domain, actions, ground, h_type)
+  def hsp(state, problem, domain, h_type)
 
     @set_preposition = state.clone
     heuristic = Hash.new # predicate,value
@@ -19,7 +29,8 @@ class Hsp
     @change = true
     while @change do
 
-      actions_applicable = actions_applicable(problem, domain, ground, actions, @set_preposition)
+      #actions_applicable = actions_applicable(problem, domain, ground, actions, @set_preposition)
+      actions_applicable = domain.ground_applicable_actions(problem, @set_preposition)
 
       @change = false
       actions_applicable.each do |action|
@@ -37,7 +48,7 @@ class Hsp
 
   private
 
-  def self.predicate_cost(h_type, effect, heuristic, action)
+  def predicate_cost(h_type, effect, heuristic, action)
     if not heuristic.has_key?(effect.to_s)
       heuristic[effect] = @@infinity
     end
@@ -49,7 +60,7 @@ class Hsp
     return [preconditions_value, heuristic[effect]].min
   end
 
-  def self.preconditions_cost_max(action, heuristic)
+  def preconditions_cost_max(action, heuristic)
     preconditions_value = 0
     action.precond.each do |precond|
       if preconditions_value < heuristic[precond]
@@ -59,7 +70,7 @@ class Hsp
     return preconditions_value
   end
 
-  def self.preconditions_cost_add(action, heuristic)
+  def preconditions_cost_add(action, heuristic)
     preconditions_value = 0
     action.precond.each do |precond|
       preconditions_value += heuristic[precond]
@@ -67,7 +78,7 @@ class Hsp
     return preconditions_value
   end
 
-  def self.h_value(heuristic, h_type)
+  def h_value(heuristic, h_type)
     if h_type == "max"
       return h_value_max(heuristic)
     else
@@ -75,7 +86,7 @@ class Hsp
     end
   end
 
-  def self.h_value_max(heuristic)
+  def h_value_max(heuristic)
     heuristic_value = 0
     heuristic.each do |predicate, value|
       if heuristic_value < value
@@ -85,7 +96,7 @@ class Hsp
     return heuristic_value
   end
 
-  def self.h_value_add(heuristic)
+  def h_value_add(heuristic)
     heuristic_value = 0
     heuristic.each do |predicate, value|
       heuristic_value += value
@@ -93,7 +104,7 @@ class Hsp
     return heuristic_value
   end
 
-  def self.actions_applicable(problem, domain, ground, actions, set_preposition)
+  def actions_applicable(problem, domain, ground, actions, set_preposition)
     if ground == "all"
       return domain.match_applicable_actions(actions, set_preposition)
     else

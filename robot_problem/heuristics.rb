@@ -19,4 +19,12 @@ module Heuristics
     GraphPlanner.new.graphPlanner(state, domain, problem)
   end
 
+  def hspAddHeuristic(state, problem, domain)
+    Hsp.new.hspAdd(state, problem, domain)
+  end
+
+  def hspMaxHeuristic(state, problem, domain)
+    Hsp.new.hspMax(state, problem, domain)
+  end
+
 end
