@@ -8,7 +8,7 @@ class Step
   end
 
   def contains node
-    return @state.has_value?(node.predicate)
+    return @state.has_key?(node.predicate)
   end
 
   def addNode node

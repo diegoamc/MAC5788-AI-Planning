@@ -10,7 +10,7 @@ class GraphPlanner
     @steps = []
     @domain = domain
     @problem = problem
-    @relaxed_plan = []
+    @relaxed_plan = {}
     step = Step.new
     #Initial state
     state.each do |key, value|
@@ -23,32 +23,38 @@ class GraphPlanner
       #p @steps.last.state
     end
     extractPlan @steps.last
-  end
-
-  def plotHashMap state
-    state.each do |key, value|
-      p "Key #{key} Value: #{value.predicate}"
+    heuristic_value = 0
+    @relaxed_plan.each do |key, subplan|
+      heuristic_value = heuristic_value + subplan.size
     end
+    return heuristic_value
   end
 
   def extractPlan last_step
+    achieved_preconds = {}
     subgoals = @problem.goal.keys
     current_step = last_step
     while(!current_step.parent.nil?)
-      p "========================"
       actual_list = []
+      partial_ordered_actions = []
       subgoals.each do |predicate_goal|
-        p "---------------------"
         node = current_step.getNode(predicate_goal)
         #TODO: heuristic no op first
         if(!node.parent.nil?)
           node.parent.each do |parent|
-            actual_list << parent.predicate
+            node_param =  parent.predicate
+            if(!achieved_preconds.has_key?(node_param))
+              achieved_preconds[node_param] = 1
+              actual_list << node_param
+              if(!node_param.start_with?("No-op-"))
+                partial_ordered_actions << node_param
+              end
+            end
           end
         end
       end
       if(current_step.depth % 2 == 0)
-        @relaxed_plan << actual_list.clone
+        @relaxed_plan[current_step.depth-1] = partial_ordered_actions
       end
       subgoals = subgoals.clear
       subgoals = actual_list
