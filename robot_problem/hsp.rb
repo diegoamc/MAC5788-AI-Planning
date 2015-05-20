@@ -64,13 +64,14 @@ class Hsp
     action.precond.each do |precond|
       preconditions_value += heuristic[precond]
     end
+    return preconditions_value
   end
 
   def self.h_value(heuristic, h_type)
     if h_type == "max"
       return h_value_max(heuristic)
     else
-      return return h_value_add(heuristic)
+      return h_value_add(heuristic)
     end
   end
 

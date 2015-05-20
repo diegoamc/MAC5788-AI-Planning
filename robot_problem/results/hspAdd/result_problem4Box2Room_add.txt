@@ -1,0 +1,22 @@
+Time: 254.78ms
+
+================= Results =================
+Path cost: 13
+Depth: 13
+Visited nodes: 183
+Generated nodes: 315
+Factor: 1.721
+	Plan Action
+	putdown box4_right_room2
+	putdown box3_left_room2
+	move room1_room2
+	pickup box4_right_room1
+	move room2_room1
+	putdown box2_right_room2
+	move room1_room2
+	pickup box3_left_room1
+	move room2_room1
+	putdown box1_left_room2
+	move room1_room2
+	pickup box2_right_room1
+	pickup box1_left_room1
