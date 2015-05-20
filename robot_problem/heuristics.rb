@@ -15,15 +15,19 @@ module Heuristics
     path_cost + send("#{heuristic}", state, problem, domain)
   end
 
+  def self.evaluation_heuristic(heuristic, state, problem, domain)
+    send("#{heuristic}", state, problem, domain)
+  end
+
   def graphPlanHeuristic(state, problem, domain)
     GraphPlanner.new.graphPlanner(state, domain, problem)
   end
 
-  def hspAddHeuristic(state, problem, domain)
+  def self.hspAddHeuristic(state, problem, domain)
     Hsp.new.hspAdd(state, problem, domain)
   end
 
-  def hspMaxHeuristic(state, problem, domain)
+  def self.hspMaxHeuristic(state, problem, domain)
     Hsp.new.hspMax(state, problem, domain)
   end
 

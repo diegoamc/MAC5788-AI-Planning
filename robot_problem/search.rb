@@ -10,12 +10,15 @@ class Search
       domain.ground_all_actions(problem)
     end
 
-    #heuristic_value = Hsp.hsp(problem.initial_state, problem, domain, actions, ground,"add")
+    heuristic_value = Heuristics.evaluation_heuristic(heuristic, problem.initial_state, domain, problem)
     root_node = Node.new(state: problem.initial_state, parent: nil, action: nil, path_cost: 0,
-                                                      depth: 0)
+                                                      depth: 0, heuristic_value: heuristic_value)
     # Initializes a PriorityQueue. Elements with higher priority will be the ones with lower evaluation_functions
+    #fringe = PQueue.new([root_node]) do |node, other_node|
+    #                  node.evaluation_function(heuristic, node.state, domain, problem) < other_node.evaluation_function(heuristic, node.state, domain, problem)
+    #               end
     fringe = PQueue.new([root_node]) do |node, other_node|
-                      node.evaluation_function(heuristic, node.state, domain, problem) < other_node.evaluation_function(heuristic, node.state, domain, problem)
+                      node.heuristic_value < other_node.heuristic_value
                    end
     @@all_nodes[root_node.state] = root_node
     @generated_nodes = 0
@@ -35,9 +38,10 @@ class Search
         new_state = expand(action, node.state)
         @generated_nodes +=1
         if not @@all_nodes[new_state]
-          #heuristic_value = Hsp.hsp(new_state, problem, domain,actions, ground, "add")
+          heuristic_value = Heuristics.evaluation_heuristic(heuristic, new_state, domain, problem)
           successor = Node.new(state: new_state, parent: node, action: action,
-                                            path_cost: (node.path_cost + 1), depth: (node.depth + 1))
+                                            path_cost: (node.path_cost + 1), depth: (node.depth + 1),
+                                            heuristic_value: (heuristic_value + node.depth + 1))
           fringe.push(successor)
           @@all_nodes[successor.state] = successor
         end
