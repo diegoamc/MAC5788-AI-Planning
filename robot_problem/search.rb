@@ -1,19 +1,24 @@
+require_relative 'requirements'
+
 class Search
   @@all_nodes = Hash.new
   attr_accessor :generated_nodes
 
   def self.a_star_tree_search(actions, problem, domain, heuristic, ground)
-    root_node = Node.new(state: problem.initial_state, parent: nil, action: nil, path_cost: 0, depth: 0)
+
+    if ground == "all"
+      domain.ground_all_actions(problem)
+    end
+
+    heuristic_value = Hsp.hsp(problem.initial_state, problem, domain, actions, ground,"max")
+    root_node = Node.new(state: problem.initial_state, parent: nil, action: nil, path_cost: 0,
+                                                      depth: 0, heuristic_value: heuristic_value)
     # Initializes a PriorityQueue. Elements with higher priority will be the ones with lower evaluation_functions
     fringe = PQueue.new([root_node]) do |node, other_node|
                       node.evaluation_function(heuristic) < other_node.evaluation_function(heuristic)
                    end
     @@all_nodes[root_node.state] = root_node
     @generated_nodes = 0
-
-    if ground == "all"
-      domain.ground_all_actions(problem)
-    end
 
     loop {
       return "Failure" if fringe.empty?
@@ -30,8 +35,10 @@ class Search
         new_state = expand(action, node.state)
         @generated_nodes +=1
         if not @@all_nodes[new_state]
+          heuristic_value = Hsp.hsp(new_state, problem, domain,actions, ground, "max")
           successor = Node.new(state: new_state, parent: node, action: action,
-                                            path_cost: (node.path_cost + 1), depth: (node.depth + 1))
+                                            path_cost: (node.path_cost + 1), depth: (node.depth + 1),
+                                            heuristic_value:heuristic_value)
           fringe.push(successor)
           @@all_nodes[successor.state] = successor
         end
