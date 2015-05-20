@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 Time: 5862.19ms
+=======
+Time: 5941.80ms
+>>>>>>> hsp heuristic
 
 ================= Results =================
 Path cost: 37
