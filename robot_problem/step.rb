@@ -20,7 +20,7 @@ class Step
   end
 
   def updateParentNode(predicate, parent)
-    @state[predicate].parent << parent
+    @state[predicate].parent.push parent
   end
 
   def updateSucessorNode(predicate, sucessor)

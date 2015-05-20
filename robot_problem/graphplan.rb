@@ -43,9 +43,8 @@ class GraphPlanner
       partial_ordered_actions = []
       subgoals.each do |predicate_goal|
         node = current_step.getNode(predicate_goal)
-        #TODO: heuristic no op first
         if(!node.parent.nil?)
-          node.parent.each do |parent|
+          node.parent.to_a.each do |parent|
             node_param =  parent.predicate
             #node_param = node.parent.first.predicate
             if(!achieved_preconds.has_key?(node_param))
@@ -98,7 +97,7 @@ class GraphPlanner
           effect_Node = RelaxedNode.new(efeito)
           #Verify dificulty
           effect_Node.depth = step_predicates.depth
-          effect_Node.parent << node
+          effect_Node.parent.push node
           node.sucessor << effect_Node
           #Add nodes to the list of nodes of the step of predicates
           if(!step_predicates.contains(effect_Node))
@@ -110,13 +109,13 @@ class GraphPlanner
         end
       end
       #Set difficulty of the node
-      current_difficulty_action = 0      
+      current_difficulty_action = 0
       #Add preconditions
       action.precond.each do |precondition|
         parent_precond_node = step.getNode(precondition)
         #Sum difficulty of preconditions
         current_difficulty_action += parent_precond_node.depth
-        node.parent << parent_precond_node
+        node.parent.push parent_precond_node
         step.updateSucessorNode(precondition, node)
       end
       node.depth = current_difficulty_action
