@@ -1,7 +1,6 @@
 class Hsp
   @@infinity = 999999
 
-
   def hspAdd(state, domain, problem)
     return hsp(state, problem, domain, "add")
   end

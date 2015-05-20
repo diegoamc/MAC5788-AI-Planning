@@ -11,9 +11,13 @@ problem = Problem.new problem_pddl.data.drop 1
 domain = Domain.new domain_pddl.data.drop 1
 
 start_time = Time.now
+<<<<<<< HEAD
 #node_solution = Search.a_star_tree_search(domain.grounded_actions, problem, domain, "graphPlanHeuristic", ground)
 node_solution = Search.a_star_tree_search(domain.grounded_actions, problem, domain, "hspAddHeuristic", ground)
 
+=======
+node_solution = Search.a_star_tree_search(domain.grounded_actions, problem, domain, "heuristic2", ground)
+>>>>>>> 86681ec06e7810eb35ea7f5dd030e5de11fd5400
 end_time = (Time.now - start_time) * 1000
 time = ("Time: %.2f" % end_time + "ms")
 
