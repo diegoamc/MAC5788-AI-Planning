@@ -7,44 +7,85 @@ class GraphPlannerOptimus
 
 
   def graphPlanner(state, problem, domain)
+    #p "Calculando heuristica"
+    #p state
     @steps = []
     @domain = domain
     @problem = problem
-    @relaxed_plan = {}
+    @relaxed_plan = []
+    #p state.keys
     expandPlan(state, @domain.grounded_actions, @problem.goal)
-    p "Pronto, vamos extrair o plano"
+    #p "Pronto, vamos extrair o plano"
     extractRelaxedPlan(@problem.goal)
-    p "Acabei"
+    return @relaxed_plan.size
   end
 
-  # def getAction(goal)
-  #   @domain.grounded_actions.each do |action|
-  #     action.effects.each do |efeito|
-  #     end
-  #   end
-  # end
-
   def extractRelaxedPlan(goal_list)
-    goal_true = {}
-    gMembership = Hash.new([])
+    goal_Membership = Hash.new([])
+    true_Membership = Hash.new([])
+    goals_array = []
     goal_list.each do |predicate_goal, value|
-      p "Goal : #{predicate_goal} at deep #{@predicate_step.getNode(predicate_goal).depth}"
-      gMembership[@predicate_step.getNode(predicate_goal).depth] << predicate_goal
+      #p "Goal : #{predicate_goal} at deep #{@predicate_step.getNode(predicate_goal).depth}"
+      goals_array << predicate_goal
+      goal_Membership[@predicate_step.getNode(predicate_goal).depth] = goals_array
     end
-    p gMembership
-    @step_number.downto(0) do |i|
-      p "Goal : #{gMembership[i]} at deep #{i}"
+    @step_number.downto(1) do |i|
+      #p "Iteracao: #{i}--------------------------------"
+      iterator_array = []
+      iterator_array = goal_Membership[i].clone
+      iterator_array.each do |goal_at_i|
+        achieving_action_node = @predicate_step.getNode(goal_at_i).parent.pop
+        #p "Predicate: #{@predicate_step.getNode(goal_at_i).predicate} depth: #{@predicate_step.getNode(goal_at_i).depth}"
+        if(!true_Membership[i].include?(goal_at_i) && (@predicate_step.getNode(goal_at_i).depth != 0))
+          #G_layer membership <- G_layer membership U {f}
+          achieving_action = @scheduled_actions[achieving_action_node.predicate]
+          #p "Name achieving action: #{achieving_action.name} depth :#{achieving_action_node.depth}"
+          @relaxed_plan << achieving_action
+          if(achieving_action_node.depth == i -1)
+            achieving_action.precond.each do |precondition|
+              #p "Precond: #{precondition} Depth: #{@predicate_step.getNode(precondition).depth}"
+              if(!true_Membership[i-1].include?(precondition) && @predicate_step.getNode(precondition).depth != 0)
+                #p precondition
+                goal_Membership[@predicate_step.getNode(precondition).depth-1] << precondition
+                goal_Membership[@predicate_step.getNode(precondition).depth-1].uniq!
+                #p goal_Membership[@predicate_step.getNode(precondition).depth-1]
+                #p "Precondition: #{precondition} depth: #{@predicate_step.getNode(precondition).depth}"
+              end
+            end
+          end
+          #mark effects as TRUE
+          achieving_action.effects.each do |efeito|
+            if true_Membership[i].empty?
+              true_Membership[i] = [efeito]
+            else
+              true_Membership[i] << efeito
+            end
+            if i >= 1 && true_Membership[i-1].empty?
+              true_Membership[i-1] = [efeito]
+            else
+              true_Membership[i-1] << efeito
+            end
+          end
+          #p "True: #{true_Membership[i]}"
+        end
+      end
     end
   end
 
   def expandPlan(state, actions_list, goal_list)
+    #p "Cheguei no expand"
     #Arrays of relaxed Nodes
-    scheduled_actions = {}
+    @scheduled_actions = {}
     current_predicates = {}
     next_predicates = {}
     actions_added = {}
     @predicate_step = Step.new
     @action_step = Step.new
+    #Goals state
+    goal_list.each do |predicate_goal, value|
+      goal_node = RelaxedNode.new(predicate_goal)
+      @predicate_step.addNode(goal_node)
+    end
     #Initial state
     state.each do |key, value|
       predicate_node = RelaxedNode.new(key)
@@ -53,11 +94,7 @@ class GraphPlannerOptimus
       @predicate_step.addNode(predicate_node)
       current_predicates[key] = 1
     end
-    #Goals state
-    goal_list.each do |predicate_goal, value|
-      goal_node = RelaxedNode.new(predicate_goal)
-      @predicate_step.addNode(goal_node)
-    end
+
     #Initial state actions
     actions_list.each do |action|
       action_node = RelaxedNode.new(action.name)
@@ -72,20 +109,22 @@ class GraphPlannerOptimus
       #p "Iteracao #{@step_number} ======================="
       #First:
       #Adicionando efeitos das açoes possiveis
-      #p scheduled_actions
-      scheduled_actions.each do |key, action_scheduled|
+      #p @scheduled_actions
+      @scheduled_actions.each do |key, action_scheduled|
         action_scheduled.effects.each do |efeito|
           #TODO: Revisar condiçao
+          #p "Efeito #{efeito} Entra?: #{!efeito.start_with?("not") && !current_predicates.has_key?(efeito)}"
           if(!efeito.start_with?("not") && (!current_predicates.has_key?(efeito)))
           #if(!efeito.start_with?("not") && (!@predicate_step.state.has_key?(efeito)))
             efeito_node = RelaxedNode.new(efeito)
-            efeito_node.depth = @step_number + 1
+            efeito_node.depth = @step_number
+            efeito_node.parent.push(@action_step.getNode(action_scheduled.name))
             @predicate_step.addNode(efeito_node)
             #scheduled_predicates[@step_number+1] << efeito_node
             next_predicates[efeito] = 1
           elsif(!efeito.start_with?("not"))
             #p "Updating node #{efeito} value: #{@predicate_step.getNode(efeito).depth} new value #{@step_number}"
-            @predicate_step.getNode(efeito).depth = @step_number + 1
+            #@predicate_step.getNode(efeito).depth = @step_number
             next_predicates[efeito] = 1
           end
         end
@@ -106,14 +145,14 @@ class GraphPlannerOptimus
           @action_step.getNode(action.name).depth = @step_number
           actions_added[action.name] = 1
           #p "Action added: #{action.name}"
-          scheduled_actions[action.name] = action
+          @scheduled_actions[action.name] = action
         end
       end
       @step_number += 1
-      #p "Actions applicable: #{scheduled_actions.keys}"
-      #p "Current predicates: #{current_predicates.keys}"
-      #p "Next predicates: #{next_predicates.keys}"
-      current_predicates = next_predicates.clone
+      # p "Actions applicable: #{scheduled_actions.keys}"
+      # p "Current predicates: #{current_predicates.keys}"
+      # p "Next predicates: #{next_predicates.keys}"
+      current_predicates.merge!(next_predicates.clone)
       next_predicates.clear
     end
   end
