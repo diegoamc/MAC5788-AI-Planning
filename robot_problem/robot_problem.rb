@@ -11,7 +11,7 @@ problem = Problem.new problem_pddl.data.drop 1
 domain = Domain.new domain_pddl.data.drop 1
 
 start_time = Time.now
-node_solution = Search.a_star_tree_search(domain.grounded_actions, problem, domain, "graphPlanHeuristicOpt", ground)
+node_solution = Search.a_star_tree_search(domain.grounded_actions, problem, domain, "graphPlanHeuristic", ground)
 end_time = (Time.now - start_time) * 1000
 time = ("Time: %.2f" % end_time + "ms")
 
@@ -21,6 +21,6 @@ else
   result = Search.path_to(node_solution)
 end
 
-out_file = File.new("results/result_#{problem_test.gsub(".pddl", "")}_#{ground}.txt", "w")
+out_file = File.new("results/HeuristicFF/result_nonOp_#{problem_test.gsub(".pddl", "")}_#{ground}.txt", "w")
 out_file.puts("#{time}\n#{result}")
 out_file.close
