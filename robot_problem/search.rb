@@ -33,7 +33,6 @@ class Search
       else
         actions_applicable = domain.ground_applicable_actions(problem, node.state)
       end
-
       actions_applicable.each do |action|
         new_state = expand(action, node.state)
         @generated_nodes +=1

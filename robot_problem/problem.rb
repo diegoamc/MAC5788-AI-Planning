@@ -12,7 +12,11 @@ class Problem
         when :":objects"
           parse_objects definition.drop 1
         when :":init"
-          @initial_state = parse_predicate definition.drop 1
+          if(definition[1].first.to_s == "and")
+            @initial_state = parse_predicate(definition.drop(1).first.drop(1))
+          else
+            @initial_state = parse_predicate definition.drop 1
+          end
         when :":goal"
           @goal = parse_predicate(definition.drop(1).first.drop(1))
         else
@@ -22,6 +26,7 @@ class Problem
   end
 
   def goal_test(node)
+
     goal.each do |key, value|
       if not node.state.has_key?(key.to_s)
         return false
@@ -37,9 +42,20 @@ class Problem
     same_type_objects = []
     last_object = nil
     raw.each do |element|
+      element = element.downcase
       if last_object == :-
-        @objects[element] = same_type_objects.take(same_type_objects.size-1)
-        same_type_objects = []
+        #------mudança
+        if(@objects.has_key?(element))
+          aux_array = []
+          aux_array = @objects[element]
+          aux_array << same_type_objects.take(same_type_objects.size-1)
+          same_type_objects = []
+          @objects[element] = aux_array.flatten
+        #------end-mudança
+        else
+          @objects[element] = same_type_objects.take(same_type_objects.size-1)
+          same_type_objects = []
+        end
       else
         same_type_objects << element
       end
@@ -60,7 +76,7 @@ class Problem
     state_hash = Hash.new([])
     p raw
     raw.each do |element|
-      state_hash[element.join(" ")]=1
+      state_hash[element.join(" ").downcase]=1
     end
     return state_hash
   end

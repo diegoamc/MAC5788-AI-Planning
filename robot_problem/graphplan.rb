@@ -30,8 +30,7 @@ class GraphPlanner
     @relaxed_plan.each do |key, subplan|
       heuristic_value = heuristic_value + subplan.size
     end
-    p @relaxed_plan
-    #return heuristic_value
+    return heuristic_value
   end
 
   def extractPlan last_step
