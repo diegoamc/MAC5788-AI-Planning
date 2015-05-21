@@ -21,6 +21,6 @@ else
   result = Search.path_to(node_solution)
 end
 
-out_file = File.new("results/result_#{problem_test.gsub(".pddl", "")}_#{ground}.txt", "w")
+out_file = File.new("results/HeuristicFF/result_nonOp_#{problem_test.gsub(".pddl", "")}_#{ground}.txt", "w")
 out_file.puts("#{time}\n#{result}")
 out_file.close
