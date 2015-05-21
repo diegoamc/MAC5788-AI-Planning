@@ -145,6 +145,7 @@ class Domain
         result << [el, elb].flatten if el != elb
       end
     end
+
     return result
   end
 
@@ -188,9 +189,20 @@ class Domain
       end
     things[last_key] = same_element_action
     action.prepare(action.effects, things["effect"].flatten(1))
-    action.prepare(action.precond, things["precondition"].flatten(1))
+    #p things["precondition"].flatten(1)
+    action.prepare(action.precond, cleanNegatPreconditions(things["precondition"].flatten(1)))
     action.prepare_parameters things["parameters"].flatten
     return action
+  end
+
+  def cleanNegatPreconditions(precondition)
+    cleaned_precondition = []
+    precondition.each do |elem|
+      if(!(elem.class == Array && elem.first.to_s == "not"))
+        cleaned_precondition << elem
+      end
+    end
+    return cleaned_precondition
   end
 
   def parse_predicates(raw)
