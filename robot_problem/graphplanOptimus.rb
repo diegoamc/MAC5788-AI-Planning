@@ -14,20 +14,26 @@ class GraphPlannerOptimus
     expandPlan(state, @domain.grounded_actions, @problem.goal)
     p "Pronto, vamos extrair o plano"
     extractRelaxedPlan(@problem.goal)
+    p "Acabei"
   end
 
+  # def getAction(goal)
+  #   @domain.grounded_actions.each do |action|
+  #     action.effects.each do |efeito|
+  #     end
+  #   end
+  # end
+
   def extractRelaxedPlan(goal_list)
-    gMembership = []
+    goal_true = {}
+    gMembership = Hash.new([])
     goal_list.each do |predicate_goal, value|
-      gMembership << @predicate_step.getNode(predicate_goal).depth
+      p "Goal : #{predicate_goal} at deep #{@predicate_step.getNode(predicate_goal).depth}"
+      gMembership[@predicate_step.getNode(predicate_goal).depth] << predicate_goal
     end
-    gMembership.each do |layer|
-      @action_step.state.each do |key, node|
-        action_in_layer = @action_step.getNode(key)
-        if(action_in_layer.depth == layer-1)
-          p action_in_layer
-        end
-      end
+    p gMembership
+    @step_number.downto(0) do |i|
+      p "Goal : #{gMembership[i]} at deep #{i}"
     end
   end
 
@@ -60,10 +66,10 @@ class GraphPlannerOptimus
     end
 
     #Main Loop
-    step_number = 0
+    @step_number = 0
     #for i in 1..2
     while(!goalAchieved(goal_list))
-      p "Iteracao #{step_number} ======================="
+      #p "Iteracao #{@step_number} ======================="
       #First:
       #Adicionando efeitos das açoes possiveis
       #p scheduled_actions
@@ -73,13 +79,13 @@ class GraphPlannerOptimus
           if(!efeito.start_with?("not") && (!current_predicates.has_key?(efeito)))
           #if(!efeito.start_with?("not") && (!@predicate_step.state.has_key?(efeito)))
             efeito_node = RelaxedNode.new(efeito)
-            efeito_node.depth = step_number + 1
+            efeito_node.depth = @step_number + 1
             @predicate_step.addNode(efeito_node)
-            #scheduled_predicates[step_number+1] << efeito_node
+            #scheduled_predicates[@step_number+1] << efeito_node
             next_predicates[efeito] = 1
           elsif(!efeito.start_with?("not"))
-            #p "Updating node #{efeito} value: #{@predicate_step.getNode(efeito).depth} new value #{step_number}"
-            @predicate_step.getNode(efeito).depth = step_number + 1
+            #p "Updating node #{efeito} value: #{@predicate_step.getNode(efeito).depth} new value #{@step_number}"
+            @predicate_step.getNode(efeito).depth = @step_number + 1
             next_predicates[efeito] = 1
           end
         end
@@ -97,12 +103,13 @@ class GraphPlannerOptimus
         end
         #p "Action: #{action.name} counter: #{@action_step.getNode(action.name).counter}"
         if(@action_step.getNode(action.name).counter == 0 && !actions_added.has_key?(action.name))
-          @action_step.getNode(action.name).depth = step_number
+          @action_step.getNode(action.name).depth = @step_number
           actions_added[action.name] = 1
+          #p "Action added: #{action.name}"
           scheduled_actions[action.name] = action
         end
       end
-      step_number += 1
+      @step_number += 1
       #p "Actions applicable: #{scheduled_actions.keys}"
       #p "Current predicates: #{current_predicates.keys}"
       #p "Next predicates: #{next_predicates.keys}"
