@@ -13,9 +13,10 @@ class Hsp
   # h_type: max or add
   #def self.hsp(state, problem, domain, actions, ground, h_type)
   def hsp(state, problem, domain, h_type)
-
     @set_preposition = state.clone
+    p @set_preposition
     heuristic = Hash.new # predicate,value
+    set_actions = Hash.new
 
     problem.goal.each_key do |predicate|
       state.has_key?(predicate)? heuristic[predicate] = 0 : heuristic[predicate] = @@infinity
@@ -27,22 +28,27 @@ class Hsp
 
     @change = true
     while @change do
-
       #actions_applicable = actions_applicable(problem, domain, ground, actions, @set_preposition)
       actions_applicable = domain.ground_applicable_actions(problem, @set_preposition)
 
-      @change = false
+      # TODO isso mesmo?
+      if actions_applicable.empty?
+        return @@infinity
+      end
+
       actions_applicable.each do |action|
+        set_actions.has_key?(action.name)? @change = false : @change = true
+        set_actions[action.name] = 1
+
         action.effects.each do |effect|
           if effect.split(" ")[0] != "not" # positive effects
-            @change = !@set_preposition.has_key?(effect)
             @set_preposition[effect] = 1
+            heuristic[effect] = predicate_cost(h_type, effect, heuristic, action)
           end
-          heuristic[effect] = predicate_cost(h_type, effect, heuristic, action)
         end
       end
     end
-    return h_value(heuristic, h_type)
+    return h_value(heuristic, h_type, problem)
   end
 
   private
@@ -60,7 +66,7 @@ class Hsp
   end
 
   def preconditions_cost_max(action, heuristic)
-    preconditions_value = 0
+    preconditions_value = -1
     action.precond.each do |precond|
       if preconditions_value < heuristic[precond]
         preconditions_value = heuristic[precond]
@@ -77,29 +83,31 @@ class Hsp
     return preconditions_value
   end
 
-  def h_value(heuristic, h_type)
+  def h_value(heuristic, h_type, problem)
     if h_type == "max"
-      return h_value_max(heuristic)
+      return h_value_max(heuristic, problem)
     else
-      return h_value_add(heuristic)
+      return h_value_add(heuristic, problem)
     end
   end
 
-  def h_value_max(heuristic)
-    heuristic_value = 0
-    heuristic.each do |predicate, value|
-      if heuristic_value < value
-        heuristic_value = value
+  def h_value_max(heuristic, problem)
+    heuristic_value = -1
+    problem.goal.each_key do |predicate|
+      if heuristic_value < heuristic[predicate]
+        heuristic_value = heuristic[predicate]
       end
     end
+    p heuristic_value
     return heuristic_value
   end
 
-  def h_value_add(heuristic)
+  def h_value_add(heuristic, problem)
     heuristic_value = 0
-    heuristic.each do |predicate, value|
-      heuristic_value += value
+    problem.goal.each_key do |predicate|
+      heuristic_value += heuristic[predicate]
     end
+    p heuristic_value
     return heuristic_value
   end
 

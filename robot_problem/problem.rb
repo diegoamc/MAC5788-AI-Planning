@@ -58,6 +58,7 @@ class Problem
 
   def parse_predicate(raw)
     state_hash = Hash.new([])
+    p raw
     raw.each do |element|
       state_hash[element.join(" ")]=1
     end
