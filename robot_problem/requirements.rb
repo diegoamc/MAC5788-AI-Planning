@@ -1,4 +1,5 @@
 require 'pqueue'
+require 'timeout'
 
 require_relative 'heuristics'
 require_relative 'node'

@@ -18,15 +18,30 @@ problem_pddl = SExpr.new File.read("problems/#{domain_name.gsub(".pddl", "")}/" 
 problem = Problem.new problem_pddl.data.drop 1
 domain = Domain.new domain_pddl.data.drop 1
 
-start_time = Time.now
-node_solution = Search.a_star_tree_search(domain.grounded_actions, problem, domain, heuristic, ground)
-end_time = (Time.now - start_time) * 1000
-time = ("Time: %.2f" % end_time + "ms")
+#TODO:
+# 1 - selecionar cada dominio e: para cada problema, testar com cada configuração
+# 2 - Outputar num arquivo para cada dominio, separando com pontos e virgulas especificando os nomes do dominio
+#   e do problema, as heurísticas usadas e tudo.
+# 3 - Se der timeout (30 min.), ele tem que mostrar simplesmente um -1
+# 4 - Criar os graficos
+#30 min = 1800 seg.
 
-if node_solution == "Failure"
-  result = ":("
-else
-  result = Search.path_to(node_solution)
+time_selected = 1800
+begin
+  Timeout.timeout(time_selected) do
+    start_time = Time.now
+    node_solution = Search.a_star_tree_search(domain.grounded_actions, problem, domain, heuristic, ground)
+    end_time = (Time.now - start_time) * 1000
+    time = ("Time: %.2f" % end_time + "ms")
+
+    if node_solution == "Failure"
+      result = ":("
+    else
+      result = Search.path_to(node_solution)
+    end
+  end
+rescue
+  puts "Demorou muito tempo, teste nao conseguido."
 end
 
 out_file = File.new("results/#{domain_name.gsub(".pddl", "")}/#{problem_test.gsub(".pddl", "")}_#{heuristic}_#{ground}.txt", "w")
