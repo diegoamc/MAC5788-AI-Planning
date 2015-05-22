@@ -4,7 +4,7 @@ class Problem
   def initialize(definitions=[])
     raw_objects = raw_initial_state = raw_goal = []
     definitions.each do |definition|
-        case definition.first
+        case definition.first.downcase
         when :problem
           @name = definition.last
         when :":domain"
@@ -20,6 +20,7 @@ class Problem
         when :":goal"
           @goal = parse_predicate(definition.drop(1).first.drop(1))
         else
+          p definition
           puts "You shouldn't be here"
         end
     end

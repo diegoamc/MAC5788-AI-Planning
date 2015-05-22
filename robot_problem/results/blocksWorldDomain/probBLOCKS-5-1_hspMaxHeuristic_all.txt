@@ -1,0 +1,19 @@
+Time: 67.64ms
+
+================= Results =================
+Path cost: 10
+Depth: 10
+Visited nodes: 110
+Generated nodes: 152
+Factor: 1.382
+	Plan Action
+	stack d_c
+	pick-up d
+	stack c_b
+	pick-up c
+	stack b_a
+	pick-up b
+	stack a_e
+	unstack a_d
+	put-down b
+	unstack b_a

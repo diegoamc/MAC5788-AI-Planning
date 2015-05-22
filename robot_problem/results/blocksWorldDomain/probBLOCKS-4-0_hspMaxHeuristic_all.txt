@@ -1,11 +1,11 @@
-Time: 12.72ms
+Time: 18.92ms
 
 ================= Results =================
 Path cost: 6
 Depth: 6
-Visited nodes: 125
-Generated nodes: 257
-Factor: 2.056
+Visited nodes: 38
+Generated nodes: 53
+Factor: 1.395
 	Plan Action
 	stack d_c
 	pick-up d
