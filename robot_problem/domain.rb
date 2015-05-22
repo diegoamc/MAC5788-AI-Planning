@@ -145,6 +145,7 @@ class Domain
         result << [el, elb].flatten if el != elb && !el.include?(elb.first)
       end
     end
+
     return result
   end
 

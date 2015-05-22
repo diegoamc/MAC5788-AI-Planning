@@ -1,3 +1,5 @@
+require_relative 'requirements'
+
 class Search
   @@all_nodes = Hash.new
   @@number_nodes = 0
@@ -12,11 +14,6 @@ class Search
                    end
     @@all_nodes[root_node.state] = root_node
     @generated_nodes = 0
-    #p problem
-    #p domain
-    if ground == "all"
-      domain.ground_all_actions(problem)
-    end
 
     loop {
       return "Failure" if fringe.empty?
@@ -32,8 +29,10 @@ class Search
         new_state = expand(action, node.state)
         @generated_nodes +=1
         if not @@all_nodes[new_state]
+          heuristic_value = Heuristics.evaluation_heuristic(heuristic, new_state, domain, problem)
           successor = Node.new(state: new_state, parent: node, action: action,
-                                            path_cost: (node.path_cost + 1), depth: (node.depth + 1))
+                                            path_cost: (node.path_cost + 1), depth: (node.depth + 1),
+                                            heuristic_value: (heuristic_value + node.depth + 1))
           fringe.push(successor)
           @@all_nodes[successor.state] = successor
         end
