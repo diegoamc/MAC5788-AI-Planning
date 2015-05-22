@@ -1,11 +1,11 @@
 class Hsp
   @@infinity = 999999
 
-  def hspAdd(state, domain, problem)
+  def hspAdd(state, problem, domain)
     return hsp(state, problem, domain, "add")
   end
 
-  def hspMax(state, domain, problem)
+  def hspMax(state, problem, domain)
     return hsp(state, problem, domain, "max")
   end
 
@@ -14,7 +14,7 @@ class Hsp
   #def self.hsp(state, problem, domain, actions, ground, h_type)
   def hsp(state, problem, domain, h_type)
     @set_preposition = state.clone
-    p @set_preposition
+    #p @set_preposition
     heuristic = Hash.new # predicate,value
     set_actions = Hash.new
 
@@ -29,7 +29,8 @@ class Hsp
     @change = true
     while @change do
       #actions_applicable = actions_applicable(problem, domain, ground, actions, @set_preposition)
-      actions_applicable = domain.ground_applicable_actions(problem, @set_preposition)
+      #actions_applicable = domain.ground_applicable_actions(problem, @set_preposition)
+      actions_applicable = domain.match_applicable_actions(domain.grounded_actions, @set_preposition)
 
       # TODO isso mesmo?
       if actions_applicable.empty?
@@ -98,7 +99,7 @@ class Hsp
         heuristic_value = heuristic[predicate]
       end
     end
-    p heuristic_value
+    # p heuristic_value
     return heuristic_value
   end
 
@@ -107,7 +108,7 @@ class Hsp
     problem.goal.each_key do |predicate|
       heuristic_value += heuristic[predicate]
     end
-    p heuristic_value
+    # p heuristic_value
     return heuristic_value
   end
 

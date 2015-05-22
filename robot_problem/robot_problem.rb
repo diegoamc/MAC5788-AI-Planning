@@ -3,7 +3,7 @@ require_relative 'requirements'
 domain_name = ARGV[0] # domain.pddl | blocksWorldDomain.pddl | satelliteDomain.pddl
 #problem_test = ARGV[1]
 #heuristic = ARGV[2] # graphPlanHeuristic | heuristic0 | heuristic1
-heuristic = ["graphPlanHeuristic", "graphPlanHeuristicOpt", "heuristic0"]
+heuristic = ["heuristic0", "graphPlanHeuristic", "graphPlanHeuristicOpt", "hspAddHeuristic", "hspMaxHeuristic"]
 ground = ARGV[1] # all
 
 # run examples:
@@ -12,12 +12,12 @@ ground = ARGV[1] # all
 # ruby robot_problem.rb blocksWorldDomain.pddl probBLOCKS-4-0.pddl graphPlanHeuristic all
 # ruby robot_problem.rb blocksWorldDomain.pddl probBLOCKS-4-0.pddl heuristic0 all
 
+# ruby robot_problem.rb robotDomain.pddl all
+
 # parse the PDDL input
 domain_pddl = SExpr.new File.read(domain_name)
 global_file = File.new("results/Global_Result#{domain_name.gsub(".pddl", "")}.txt", "w")
-####################################
 
-###############################################
 #TODO:
 # 1 - selecionar cada dominio e: para cada problema, testar com cada configuração
 # 2 - Outputar num arquivo para cada dominio, separando com pontos e virgulas especificando os nomes do dominio
