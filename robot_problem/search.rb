@@ -15,6 +15,8 @@ class Search
       domain.ground_all_actions(problem)
     end
 
+    
+
     loop {
       return "Failure" if fringe.empty?
       node = fringe.pop

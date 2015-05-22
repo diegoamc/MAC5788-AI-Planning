@@ -1,0 +1,18 @@
+Time: 127.74ms
+
+================= Results =================
+Path cost: 9
+Depth: 9
+Visited nodes: 1018
+Generated nodes: 4670
+Factor: 4.587
+	Plan Action
+	take_image satellite0_phenomenon6_instrument0_thermograph0
+	turn_to satellite0_phenomenon6_star5
+	take_image satellite0_star5_instrument0_thermograph0
+	turn_to satellite0_star5_phenomenon4
+	take_image satellite0_phenomenon4_instrument0_thermograph0
+	turn_to satellite0_phenomenon4_groundstation2
+	calibrate satellite0_instrument0_groundstation2
+	switch_on instrument0_satellite0
+	turn_to satellite0_groundstation2_phenomenon6

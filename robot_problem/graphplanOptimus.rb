@@ -25,25 +25,19 @@ class GraphPlannerOptimus
     true_Membership = Hash.new([])
     goals_array = []
     goal_list.each do |predicate_goal, value|
-      #p "Goal : #{predicate_goal} at deep #{@predicate_step.getNode(predicate_goal).depth}"
       goals_array << predicate_goal
       goal_Membership[@predicate_step.getNode(predicate_goal).depth] = goals_array
     end
     @step_number.downto(1) do |i|
-      #p "Iteracao: #{i}--------------------------------"
       iterator_array = []
       iterator_array = goal_Membership[i].clone
       iterator_array.each do |goal_at_i|
-        achieving_action_node = @predicate_step.getNode(goal_at_i).parent.pop
-        #p "Predicate: #{@predicate_step.getNode(goal_at_i).predicate} depth: #{@predicate_step.getNode(goal_at_i).depth}"
-        if(!true_Membership[i].include?(goal_at_i) && (@predicate_step.getNode(goal_at_i).depth != 0))
-          #G_layer membership <- G_layer membership U {f}
+        if(!true_Membership[i].include?(goal_at_i) && (@predicate_step.getNode(goal_at_i).depth != 0) && (@predicate_step.getNode(goal_at_i).parent.size > 0) )
+          achieving_action_node = @predicate_step.getNode(goal_at_i).parent.pop
           achieving_action = @scheduled_actions[achieving_action_node.predicate]
-          #p "Name achieving action: #{achieving_action.name} depth :#{achieving_action_node.depth}"
           @relaxed_plan << achieving_action
           if(achieving_action_node.depth == i -1)
             achieving_action.precond.each do |precondition|
-              #p "Precond: #{precondition} Depth: #{@predicate_step.getNode(precondition).depth}"
               if(!true_Membership[i-1].include?(precondition) && @predicate_step.getNode(precondition).depth != 0)
                 #p precondition
                 goal_Membership[@predicate_step.getNode(precondition).depth-1] << precondition
@@ -118,6 +112,7 @@ class GraphPlannerOptimus
           #if(!efeito.start_with?("not") && (!@predicate_step.state.has_key?(efeito)))
             efeito_node = RelaxedNode.new(efeito)
             efeito_node.depth = @step_number
+            #p @action_step.getNode(action_scheduled.name)
             efeito_node.parent.push(@action_step.getNode(action_scheduled.name))
             @predicate_step.addNode(efeito_node)
             #scheduled_predicates[@step_number+1] << efeito_node

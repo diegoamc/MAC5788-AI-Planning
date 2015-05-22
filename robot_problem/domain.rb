@@ -142,10 +142,9 @@ class Domain
     result =[]
     vector2.each do |el|
       vector1.each do |elb|
-        result << [el, elb].flatten if el != elb
+        result << [el, elb].flatten if el != elb && !el.include?(elb.first)
       end
     end
-
     return result
   end
 
