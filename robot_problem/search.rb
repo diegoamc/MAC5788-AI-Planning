@@ -1,21 +1,22 @@
 class Search
   @@all_nodes = Hash.new
+  @@number_nodes = 0
   attr_accessor :generated_nodes
 
   def self.a_star_tree_search(actions, problem, domain, heuristic, ground)
     root_node = Node.new(state: problem.initial_state, parent: nil, action: nil, path_cost: 0, depth: 0)
     # Initializes a PriorityQueue. Elements with higher priority will be the ones with lower evaluation_functions
+    @@all_nodes.clear
     fringe = PQueue.new([root_node]) do |node, other_node|
                       node.evaluation_function(heuristic, node.state, domain, problem) < other_node.evaluation_function(heuristic, node.state, domain, problem)
                    end
     @@all_nodes[root_node.state] = root_node
     @generated_nodes = 0
-
+    #p problem
+    #p domain
     if ground == "all"
       domain.ground_all_actions(problem)
     end
-
-    
 
     loop {
       return "Failure" if fringe.empty?
@@ -46,6 +47,7 @@ class Search
     output_string << "\nPath cost: #{node.path_cost}"
     output_string << "\nDepth: #{node.depth}"
     output_string << "\nVisited nodes: #{@@all_nodes.size}"
+    @@number_nodes = @generated_nodes
     output_string << "\nGenerated nodes: #{@generated_nodes}"
     output_string << "\nFactor: %.3f" % (@generated_nodes.to_f/@@all_nodes.size)
     output_string << "\n\tPlan Action"
@@ -56,6 +58,14 @@ class Search
       node = node.parent
     end
     return output_string
+  end
+
+  def self.all_nodes
+    return @@all_nodes
+  end
+
+  def self.number_nodes
+    return @@number_nodes
   end
 
   private
