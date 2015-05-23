@@ -5,6 +5,7 @@ domain_name = ARGV[0] # domain.pddl | blocksWorldDomain.pddl | satelliteDomain.p
 #heuristic = ARGV[2] # graphPlanHeuristic | heuristic0 | heuristic1
 heuristic = ["heuristic0", "graphPlanHeuristic", "graphPlanHeuristicOpt", "hspAddHeuristic", "hspMaxHeuristic"]
 ground = ARGV[1] # all
+w = ARGV[2].nil? ? 1 : ARGV[2].to_i # WA* parameter. Default is 1
 
 # run examples:
 # ruby robot_problem.rb robotDomain.pddl problem2Box2Room.pddl graphPlanHeuristic all
@@ -45,7 +46,7 @@ Dir.foreach(dir_string) do |item|
         domain = Domain.new domain_pddl.data.drop 1
 
         start_time = Time.now
-        node_solution = Search.a_star_tree_search(domain.grounded_actions, problem, domain, heuristic_used, "all")
+        node_solution = Search.a_star_tree_search(domain.grounded_actions, problem, domain, heuristic_used, w, "all")
         end_time = (Time.now - start_time) * 1000
         time = ("Time: %.2f" % end_time + "ms")
 

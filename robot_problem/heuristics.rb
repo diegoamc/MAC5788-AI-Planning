@@ -12,8 +12,8 @@ module Heuristics
     return 1
   end
 
-  def self.evaluation_function(heuristic, state, problem, domain)
-    send("#{heuristic}", state, problem, domain)
+  def self.evaluation_function(w, heuristic, state, problem, domain)
+    w * send("#{heuristic}", state, problem, domain)
   end
 
   def self.graphPlanHeuristic(state, problem, domain)
