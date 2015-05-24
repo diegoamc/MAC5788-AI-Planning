@@ -3,7 +3,8 @@ require_relative 'requirements'
 domain_name = ARGV[0] # domain.pddl | blocksWorldDomain.pddl | satelliteDomain.pddl
 #problem_test = ARGV[1]
 #heuristic = ARGV[2] # graphPlanHeuristic | heuristic0 | heuristic1
-heuristic = ["heuristic0", "graphPlanHeuristic", "graphPlanHeuristicOpt", "hspAddHeuristic", "hspMaxHeuristic"]
+#heuristic = ["heuristic0", "graphPlanHeuristic", "graphPlanHeuristicOpt", "hspAddHeuristic", "hspMaxHeuristic"]
+heuristic = ["graphPlanHeuristicOpt"]
 ground = ARGV[1] # all
 w = ARGV[2].nil? ? 1 : ARGV[2].to_i # WA* parameter. Default is 1
 
@@ -65,10 +66,14 @@ Dir.foreach(dir_string) do |item|
         out_file.close
       end
     rescue Exception => e
-      p e
+      #e.backtrace[0].split(":")
+      e.backtrace.each do |message|
+        p message
+      end
       out_string = "Domain:#{domain_name.gsub(".pddl", "")};Problem:#{item.gsub(".pddl", "")};#{heuristic_used};Time: -1;Path cost: -1;Visited nodes: -1;Generated nodes: -1;Factor: -1;"
       global_file.puts(out_string)
       puts "Demorou muito tempo, teste nao conseguido."
+      return
     end
 
   end

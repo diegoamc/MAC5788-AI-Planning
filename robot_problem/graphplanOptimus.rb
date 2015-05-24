@@ -38,7 +38,7 @@ class GraphPlannerOptimus
           @relaxed_plan << achieving_action
           if(achieving_action_node.depth == i -1)
             achieving_action.precond.each do |precondition|
-              if(!true_Membership[i-1].include?(precondition) && @predicate_step.getNode(precondition).depth != 0)
+              if(!true_Membership[i-1].include?(precondition) && @predicate_step.state.has_key?(precondition) && @predicate_step.getNode(precondition).depth != 0)
                 #p precondition
                 goal_Membership[@predicate_step.getNode(precondition).depth-1] << precondition
                 goal_Membership[@predicate_step.getNode(precondition).depth-1].uniq!
@@ -131,7 +131,7 @@ class GraphPlannerOptimus
           #TODO: Revisar condiçao
           if(@predicate_step.state.has_key?(precond) && @predicate_step.getNode(precond).depth != Float::INFINITY)
             #p "Action name: #{action.name} counter: #{@action_step.getNode(action.name).counter}"
-            @action_step.getNode(action.name).counter -= 1 if @action_step.getNode(action.name).counter > 0
+            @action_step.getNode(action.name).counter -= 1 if (@action_step.state.has_key?(action.name) && @action_step.getNode(action.name).counter > 0)
             #p "Action name: #{action.name} counter: #{@action_step.getNode(action.name).counter}"
           end
         end
