@@ -127,21 +127,23 @@ class GraphPlannerOptimus
       #Second: Verify actions applicable
       actions_list.each do |action|
         #action_node = RelaxedNode.new(action.name)
-        action.precond.each do |precond|
-          #TODO: Revisar condiçao
-          if(@predicate_step.state.has_key?(precond) && @predicate_step.getNode(precond).depth != Float::INFINITY)
-            #p "Action name: #{action.name} counter: #{@action_step.getNode(action.name).counter}"
-            @action_step.getNode(action.name).counter -= 1 if (@action_step.state.has_key?(action.name) && @action_step.getNode(action.name).counter > 0)
-            #p "Action name: #{action.name} counter: #{@action_step.getNode(action.name).counter}"
+        if(!actions_added.has_key?(action.name))
+          action.precond.each do |precond|
+            #TODO: Revisar condiçao
+            if(@predicate_step.state.has_key?(precond) && @predicate_step.getNode(precond).depth != Float::INFINITY)
+              #p "Action name: #{action.name} counter: #{@action_step.getNode(action.name).counter}"
+              @action_step.getNode(action.name).counter -= 1 if (@action_step.state.has_key?(action.name) && @action_step.getNode(action.name).counter > 0)
+              #p "Action name: #{action.name} counter: #{@action_step.getNode(action.name).counter}"
+            end
           end
-        end
-        #p "Action: #{action.name} counter: #{@action_step.getNode(action.name).counter}"
-        if(@action_step.getNode(action.name).counter == 0 && !actions_added.has_key?(action.name))
-          @action_step.getNode(action.name).depth = @step_number
-          actions_added[action.name] = 1
-          #p "Action added: #{action.name}"
-          @scheduled_actions[action.name] = action
-        end
+          #p "Action: #{action.name} counter: #{@action_step.getNode(action.name).counter}"
+          if(@action_step.getNode(action.name).counter == 0 && !actions_added.has_key?(action.name))
+            @action_step.getNode(action.name).depth = @step_number
+            actions_added[action.name] = 1
+            #p "Action added: #{action.name}"
+            @scheduled_actions[action.name] = action
+          end
+        end        
       end
       @step_number += 1
       # p "Actions applicable: #{scheduled_actions.keys}"

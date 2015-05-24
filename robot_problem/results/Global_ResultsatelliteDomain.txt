@@ -1,4 +1,0 @@
-Domain:satelliteDomain;Problem:pfile01;graphPlanHeuristicOpt;Time:410.28700000000003;Path cost: 9;Visited nodes: 245;Generated nodes: 741;Factor: 3.024 ;
-Domain:satelliteDomain;Problem:pfile02;graphPlanHeuristicOpt;Time:128452.28;Path cost: 13;Visited nodes: 35735;Generated nodes: 76881;Factor: 2.151 ;
-Domain:satelliteDomain;Problem:pfile03;graphPlanHeuristicOpt;Time:603831.7039999999;Path cost: 11;Visited nodes: 55904;Generated nodes: 183889;Factor: 3.289 ;
-Domain:satelliteDomain;Problem:pfile04;graphPlanHeuristicOpt;Time: -1;Path cost: -1;Visited nodes: -1;Generated nodes: -1;Factor: -1;
