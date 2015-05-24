@@ -73,7 +73,6 @@ Dir.foreach(dir_string) do |item|
       out_string = "Domain:#{domain_name.gsub(".pddl", "")};Problem:#{item.gsub(".pddl", "")};#{heuristic_used};Time: -1;Path cost: -1;Visited nodes: -1;Generated nodes: -1;Factor: -1;"
       global_file.puts(out_string)
       puts "Demorou muito tempo, teste nao conseguido."
-      return
     end
 
   end
