@@ -1,9 +1,0 @@
-Domain:robotDomain;Problem:problem3Box2Room;graphPlanHeuristic;Time:58.005383;Path cost: 9;Visited nodes: 51;Generated nodes: 87;Factor: 1.706 ;
-Domain:robotDomain;Problem:problem2Box2Room;graphPlanHeuristic;Time:17.388761;Path cost: 5;Visited nodes: 23;Generated nodes: 41;Factor: 1.783 ;
-Domain:robotDomain;Problem:problem9Box2Room;graphPlanHeuristic;Time:174882.712604;Path cost: 33;Visited nodes: 28343;Generated nodes: 113157;Factor: 3.992 ;
-Domain:robotDomain;Problem:problem4Box2Room;graphPlanHeuristic;Time:477.643214;Path cost: 13;Visited nodes: 192;Generated nodes: 486;Factor: 2.531 ;
-Domain:robotDomain;Problem:problem7Box2Room;graphPlanHeuristic;Time:12490.332449;Path cost: 25;Visited nodes: 4537;Generated nodes: 16707;Factor: 3.682 ;
-Domain:robotDomain;Problem:problem5Box2Room;graphPlanHeuristic;Time:1198.6571079999999;Path cost: 17;Visited nodes: 603;Generated nodes: 1857;Factor: 3.080 ;
-Domain:robotDomain;Problem:problem8Box2Room;graphPlanHeuristic;Time:41159.438937;Path cost: 29;Visited nodes: 11516;Generated nodes: 44450;Factor: 3.860 ;
-Domain:robotDomain;Problem:problem6Box2Room;graphPlanHeuristic;Time:4020.5746099999997;Path cost: 21;Visited nodes: 1710;Generated nodes: 5876;Factor: 3.436 ;
-Domain:robotDomain;Problem:problem10Box2Room;graphPlanHeuristic;Time: -1;Path cost: -1;Visited nodes: -1;Generated nodes: -1;Factor: -1;
