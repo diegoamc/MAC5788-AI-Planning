@@ -1,0 +1,363 @@
+\documentclass[12pt,a4paper]{article}
+\usepackage[portuges]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{pgfplots}
+\usepackage{filecontents}
+\usepackage{cite}
+\usepackage{subfigure}
+\usepackage{tikz}
+\usepackage{caption}
+\usepackage{graphicx}
+\usepackage{float}
+
+%%%%%%Information of the paper
+\pdfinfo{
+/Title (EP2 - Planejamento IA)
+/Author (Diego Araujo, Viviane Bonadia, Ignasi Andres)
+}
+
+%%%%%%%%Title
+\title{MAC5788 - Relatório do EP2}
+\author{Viviane Bonadia NUSP 9167607, Diego Ara\'{u}jo NUSP 7157092, \\ Ignasi Andr\'{e}s NUSP 8193481\\
+Universidade de S\~{a}o Paulo\\
+S\~{a}o Paulo, Brazil\\ \{vbonadia, diegoamc, ignasi\} @ime.usp.br}
+
+\begin{document}
+\maketitle
+
+\section{Introdução}
+Neste trabalho vamos apresentar uma implementação do problema de planejamento dos robôs visto na aula. 
+Em primeiro lugar discutiremos como o planejamento pode ser visto como um problema de busca. 
+Na seção \ref{astar} descreveremos brevemente o algoritmo A*, e como pode ser adaptado para funcionar raciocinando sobre as ações.
+Na seção \ref{implementacao} explicaremos concisamente a implementação do algoritmo, e por fim apresentaremos os resultados.
+
+\section{Planejamento Automatizado}\label{planejamentoBusca}
+O planejamento consiste na elaboração de um plano de ação, ou seja um conjunto de ações, para atingir um determinado objetivo \cite{russell1995artificial}. 
+O planejamento automatizado é a sub-área da inteligência artificial que estuda este processo de raciocínio de maneira computacional.
+
+Os problemas de busca precisam ter o grafo completo de estados, as possíveis ações para escolher a melhor ação e saber onde essa ação leva o agente. 
+Porém, em um problema de planejamento isso não é sempre possível pois o tamanho do grafo e dos estados pode ser muito grande. Isso se deve ao fato de que um estado, em geral, é composto de várias variáveis.
+Portanto, o grafo é criado a medida que as melhores ações e seus estados sucessores são selecionados. 
+
+O planejamento automatizado pode ser usado em ambientes que podem ser modelados, mas se usarmos uma representação explícita o tamanho do problema pode ser muito grande e conter estados que não são possíveis, ou que nunca serão visitados.
+
+Para modelar os ambientes, podemos usar um conjunto de variáveis para representar o estado do mundo. 
+Essas variáveis podem ser de dois tipos, segundo os valores que possam tomar \cite{geffner2013concise}:
+
+\begin{itemize}
+\item Booleanos: as variáveis somente podem tomar os valores de verdadeiro ou falso.
+\item Multivaloradas: as variáveis podem tomar valores de um conjunto finito de dados.
+\end{itemize}
+
+No primeiro caso, por exemplo, podemos ter o predicado \textit{(robot-at room1)}, que toma o valor verdadeiro se o robot se acha na localização indicada (room1).
+No segundo caso podemos ter \textit{(robot-at ?x)}, onde $?x$ pode tomar valores no intervalo de $\{ room1, room2 \}$.
+As duas representações podem ser equivalentes, pois podemos instanciar o predicado \textit{(robot-at ?x)} com os dois valores e ter as seguintes variáveis booleanas: $\{ (robot-at~room1), (robot-at~room2) \}$.
+
+A linguagem STRIPS é a base das linguagens usadas atualmente para representar problemas de planejamento.
+Esta linguagem usa variáveis booleanas para representar o estado do mundo.
+Um problema de planejamento representado em STRIPS é uma tupla $P=\langle F,O,I,G \rangle$, onde:
+
+\begin{itemize}
+\item $F$: representa o conjunto de proposições, ou variáveis booleanas que são usadas para representar os estados do mundo.
+\item $O$: representa o conjunto de operadores ou ações que podem ser aplicadas.
+\item $I\subseteq F$: representa a situação inicial, e é composto por um subconjunto das proposições $F$.
+\item $G \subseteq F$: representa a meta, e também é composta por um subconjunto de $F$.
+\end{itemize}
+
+Em STRIPS as ações $a \in O$ estão representadas por três listas de proposições de $F$: a lista de Precondições ($Pre(o)$), a lista de efeitos positivos ($Eff^+$), e a lista de efeitos negativos ($Eff^-$).
+
+PDDL é uma linguagem que usa a representação STRIPS com uma sintaxe baseada em Lisp. 
+Nosso problema de planejamento está escrito em PDDL e armazenado em dois arquivos. O primeiro é o arquivo do domínio (\textit{domain.pddl}) que contém informações gerais sobre o problema, como a descrição das ações e o tipo de predicados que existem, assim como algumas constantes. O segundo é o arquivo do problema (\textit{problem.pddl}), que contém informações relativas a uma instância particular do problema, como o número de objetos, a situação inicial e a situação meta.
+
+Por exemplo, no caso do robô que leva as caixas de uma sala para outra, o arquivo do domínio contém a descrição das ações e dos predicados, usando variáveis multivaloradas como $?x, ?y$ para não instanciar todo o conjunto. 
+O planejador desenvolvido instancia todas as ações de duas maneiras:
+\begin{itemize}
+\item Instanciando todo o conjunto de ações antes de realizar a busca,
+\item Instanciando as ações sob demanda.
+\end{itemize}
+
+Na seção \ref{astar} esses conceitos serão detalhados.
+
+\section{Algoritmo A*}\label{astar}
+O algoritmo que resolve o problema de planejamento é o $A^*$ funcionando em grafo, adaptado do código do Coursera \footnote{https://class.coursera.org/aiplan-003/wiki/week2}.
+
+A principal diferença entre o código do nosso planejador e do mostrado no Coursera, é que nosso planejador raciocina diretamente sobre ações, implementando as seguintes funções:
+
+\begin{enumerate}
+\item \textit{goalTest(s)} Conforme explicado na seção \ref{implementacao:detalhes:problema}, esta função verifica se os predicados da meta estão contidos no estado \textit{s}.
+\item \textit{groundAllActions(Problem)} Esta função está descrita na seção \ref{implementacao:detalhes:dominio}. Como indicado anteriormente, as ações podem ser instanciadas no instante inicial ou sob demanda. Esta função realiza a instanciação no instante inicial, e devolve o conjunto completo de ações instanciadas.
+\item \textit{matchApplicableActions(A,s)}, descrita na mesma seção que a função anterior, seleciona do conjunto de ações \textit{A}, quais são as ações que tem as precondições satisfeitas e podem ser executadas no estado \textit{s}. Se as ações foram instanciadas todas no instante inicial, a cada iteração do $A^*$ temos de executar esta função.
+\item \textit{groudApplicableActions(Problem, s)}, esta função realiza a instanciação sob demanda, a cada iteração do $A^*$. Esta função realiza duas tarefas, em primeiro lugar seleciona as ações aplicáveis e depois as instancia. Para implementar esta função, nos baseamos na função \textit{AddAplicables} dos slides do Coursera.
+\item \textit{expand(a,s)}, descrita na seção \ref{implementacao:detalhes:busca}, realiza a expansão do nó, executando a ação \textit{a} no estado \textit{s}. Para realizar a expansão, a função elimina do estado os efeitos negativos da ação ($Eff^-(a)$) e acrescenta os positivos ($Eff^+(a)$).
+\end{enumerate}
+
+As heurísticas usadas ($h=1$ e $h=0$) não fazem diferença no resultado final, e pelo fato de serem constantes, transformam a busca em uma busca em largura.
+
+
+\section{Implementação}\label{implementacao}
+Nesta seção, apresentaremos como executar o programa e os seus detalhes de implementação, ressaltando decisões importantes que tomamos durante o desenvolvimento. Explicaremos cada classe individualmente, com ênfase nos seus principais métodos.
+
+\subsection{Como executar o programa?}\label{implementacao:execucao}
+É preciso ter o Ruby (versão acima da 1.9.3) instalado no computador. Além disso, nosso EP possui uma dependência externa, a biblioteca PQueue\footnote{https://github.com/rubyworks/pqueue}. Ela é responsável por criar e gerenciar a fila de prioridades que usamos durante o algoritmo. Para instalá-la no Linux, basta rodar:
+
+\begin{center}{gem install pqueue}\end{center}
+
+Dependendo de como a instalação do Ruby foi feita, esse comando precisará de permissão de \textit{root}.
+
+Com as dependências instaladas, na pasta raíz do projeto execute:
+
+\begin{center}{ruby robot\_problem.rb problem4Box2Room.pddl}\end{center}
+
+Esse comando rodará o EP para um problema com quatro caixas e duas salas e fará a proposicionalização das ações por demanda. Os problemas que escrevemos em PDDL estão no diretório \textit{problems}. Para proposicionalizar todas as ações antes de realizar a busca, rode:
+
+\begin{center}{ruby robot\_problem.rb problem4Box2Room.pddl \textbf{all}}\end{center}
+
+
+
+\subsection{Detalhes do código}\label{implementacao:detalhes}
+Os arquivos mais simples estão descritos a seguir. Arquivos mais complexos, como a classe \textit{Domain} são explicados na próximas subseções.
+    \begin{itemize}
+        \item \textbf{requirements.rb}: Arquivo que importa todos os outros.
+        \item \textbf{robot\_problem.rb}: Arquivo que roda o problema. Ele analisa os arquivos PDDL do domínio e do problema, roda o algoritmo, mede o tempo de execução e escreve os resultados em um arquivo de texto dentro do diretório \textit{results}, usando o nome do arquivo PDDL do problema.
+        \item \textbf{parser.rb}: Analisador de Lisp\footnote{http://rosettacode.org/wiki/S-Expressions\#Ruby} que adaptamos para analisar PDDL.
+        \item \textbf{action.rb}: Representa uma ação do domínio. Ela pode estar instanciada ou não.
+        \item \textbf{node.rb}: Representa um nó. Por questões de facilidade de programação, as heurísticas e função de avaliação também ficam definidas nele.
+    \end{itemize}
+    
+\subsubsection{Domain.rb}\label{implementacao:detalhes:dominio}
+Em sua inicialiazação, essa classe recebe o resultado da análise feita pelo \textit{parser.rb} do arquivo \textit{domain.pddl}. A partir disso, instanciamos seus atributos. É nessa classe que ficam os métodos de proposicionalização das ações:
+    \begin{itemize}
+        \item \textbf{ground\_all\_actions}: Recebe o problema de parâmetro e devolve um vetor com todas as ações proposicionalizadas do domínio.
+        \item \textbf{groud\_applicable\_actions}: Recebe o problema e um estado como parâmetros e devolve um vetor com as ações que são aplicáveis no estado.
+        \item \textbf{add\_applicable}: Recebe o problema, uma ação não proposicionalizada, um conjunto de pré-condições, um conjunto de substuições que foram realizadas e um estado. Recursivamente substitui as variáveis por objetos e decide se a substituição realizada é válida. Se não for, para e testa para o próximo objeto. Se for, continua até não existirem mais variáveis nas pré-condições. Nesse momento, cria uma nova ação e a inclui em um vetor com as ações válidas. Essa função é utilizada pela \textbf{groud\_applicable\_actions} para adicionar as ações aplicáveis de um tipo específico de ação.
+        \item \textbf{match\_applicable\_actions}: Recebe um conjunto de ações e um estado. Retorna um vetor com as ações aplicáveis no estado.
+    \end{itemize}
+
+\subsubsection{Problem.rb}\label{implementacao:detalhes:problema}
+Essa classe é uma abstração do problema. Em sua inicialiazação, ela recebe o resultado da análise feita pelo \textit{parser.rb} de algum dos arquivos PDDL de problemas, localizados no diretório \textit{problems}. A partir disso, instanciamos seus atributos. É nessa classe que fica o teste de meta:
+    \begin{itemize}
+        \item \textbf{goal\_test}: Recebe um nó e verifica se a meta está contida no estado. Retorna \textit{true} em caso afirmativo e \textit{false} caso contário.
+    \end{itemize}
+
+\subsubsection{Search.rb}\label{implementacao:detalhes:busca}
+Essa classe executa o algoritmo. Ela possui alguns detalhes interessantes que valem ser ressaltados.
+    \begin{itemize}
+        \item \textbf{path\_to}: Recebe um nó e imprime informações dele, subindo na árvore de busca gerada até a raíz. É nesse método que fazemos os cálculos das estatísticas mostrados nos arquivos de saída.
+        \item \textbf{expand}: Recebe uma ação e um estado. Usa a representação de conjuntos vista em aula, ou seja, faz união do estado com os efeitos positivos e depois deleta, do estado resultante, os efeitos negativos.
+        \item \textbf{a\_star\_tree\_search}: Recebe o conjunto de ações, o problema, o domínio, a heurística que será utilizada e uma variável \textit{booleana} que indica se a proposicionalização das ações deve ser feita previamente. O nó raíz, a \textit{fringe} e um dicionário de nós visitados são inicializados. Vale notar que a \textit{fringe} é uma fila de prioridade. Para implementá-la, utilizamos a biblioteca PQueue. Em sua inicialização, ela recebe o vetor inicial (que contém apenas o nó raíz) e o critério usado para definir a prioridade dos nós. No algoritmo A*, esse critério é o menor valor da função de avaliação.
+        Depois, obtemos o conjunto de ações aplicáveis para o estado. Isso depende se a proposicionalização foi feita previamente.
+        Em seguida, selecionamos uma ação do conjunto de ações aplicáveis e expandimos o estado utilizando essa ação. Se o estado resultante ainda não foi visitado, criamos um novo nó e o incluímos na \textit{fringe} e no dicionário de estados. É importante ressaltar que, como os custos dos caminhos são unitários, não há necessidade de verificar se o nó criado tem custo menor do que um outro nó, com o mesmo estado, que já tenha sido encontrado em alguma iteração anterior.
+    \end{itemize}
+
+\section{Resultados}
+Os algoritmos descritos na seção \ref{implementacao:detalhes} foram testados no problema do robô que transporta caixas.
+Neste problema temos um robô equipado com dois braços que podem segurar uma caixa cada braço, uma certa quantidade de caixas e uma certa quantidade de salas. A resolução do problema consiste em transportar as caixas que estão em uma determinada sala (esta informação está descrita no estado inicial do problema) para uma outra sala (descritas no estado meta).
+
+No menor caso do problema testado, temos dois quartos, nos quais podemos armazenar as caixas e quatro caixas. 
+Inicialmente o primeiro quarto contém as caixas e o segundo está vazio e a meta é levar todas as caixas do primeiro quarto até o segundo.
+
+Nos testes realizados, crescemos este problema variando o número de caixas que devem ser transportadas de um quarto para o outro. Analisamos o tamanho do plano solução obtido, o tempo de execução gasto pelo algoritmo, o número total de estados gerados e visitados durante a busca e o fator de ramificação médio. Para cada tamanho de problema, rodamos o algoritmo com todas as ações previamente instanciadas e com as ações geradas sob demanda.
+
+Executamos o algoritmo com problemas de 2 até 10 caixas. A figura \ref{fig:plano} apresenta o tamanho do plano solução obtido para cada um dos testes realizados. Tanto no caso em que as ações são previamente instanciadas quanto no caso em que são geradas sob demanda, para a mesma quantidade de caixas, o tamanho do plano foi o mesmo. Já o tempo de execução não foram os mesmos para a mesma quantidade de caixas. A Figura \ref{fig:time} apresenta os resultados obtidos. A Tabela \ref{tab:time} descreve com mais detalhes os resultados da Figura \ref{fig:time}.
+
+
+
+%Grafico tamanho do plano
+\begin{figure}[htb]
+\centering
+\begin{tikzpicture}
+\begin{axis}[
+    xtick=data, xticklabels from table={plot/plano.dat}{caixas},
+    xticklabel style={rotate=0},
+    axis lines=left,
+    xlabel={Quantidade de Caixas},
+    ylabel={Tamanho do plano solução},
+    enlarge x limits={abs={0.5*\pgfplotbarwidth}},
+    legend style={at={(0.5,-0.20)},anchor=north, legend columns=2},
+    enlarge y limits={0.3, upper},
+    nodes near coords]  
+    \addplot table [x expr=\coordindex, y=plano]{plot/plano.dat};
+\end{axis}
+\end{tikzpicture}
+\caption{Tamanho do Plano}
+\label{fig:plano}
+\end{figure}
+
+
+
+%Grafico para time
+\begin{figure}[H]
+\centering
+\begin{tikzpicture}
+\begin{axis}[
+    xtick=data, xticklabels from table={plot/time.dat}{caixas},
+    xticklabel style={rotate=0},
+    axis lines=left,
+    xlabel={Quantidade de Caixas},
+    ylabel={Tempo de Execução em milissegundos},
+    enlarge x limits={abs={0.5*\pgfplotbarwidth}},
+    legend style={at={(0.5,-0.20)},anchor=north,legend columns=-1},
+    enlarge y limits={0.1,upper}]
+  
+    \addplot table [x expr=\coordindex, y=ondemand]{plot/time.dat};
+    \addplot table [x expr=\coordindex, y=all]{plot/time.dat};
+    
+\legend{Ações sob demanda, Todas as ações}
+\end{axis}
+\end{tikzpicture}
+\caption{Tempo de Execução}
+\label{fig:time}
+\end{figure}
+
+
+%Tabela para time
+\begin{table}[H]
+\centering
+\scriptsize
+\begin{tabular}{|c|r|r|}
+\hline
+\textbf{Quantidade de caixas}&\textbf{Ações sob demanda}&\textbf{Todas as 
+ações}	\\ \hline
+2	&	8.8	&	2.4	\\ \hline
+3	&	23.01	&	8.72	\\ \hline
+4	&	77.63	&	35.55	\\ \hline
+5	&	255.23	&	106.76	\\ \hline
+6	&	659.28	&	243.69	\\ \hline
+7	&	1694.17	&	691.84	\\ \hline
+8	&	4560.15	&	1782.61	\\ \hline
+9	&	12403.77	&	4900.63	\\ \hline
+10	&	34762.09	&	13949.89	\\ \hline
+
+\end{tabular}
+\caption{Tempo de execução em milissegundos}
+\label{tab:time}
+\end{table}
+
+A quantidade de nós gerados e explorados também apresentou resultados diferentes quando as ações foram previamente instanciadas ou sob demanda. A Figura \ref{fig:ramificacao} apresenta o fator de ramificação para cada um dos testes realizados. O fator de ramificação é calculado a partir da divisão do número de nós gerados pelo número de nós explorados. A Figura \ref{fig:nos} apresenta a quantidade de nós gerados durante a busca e, a Tabela \ref{tab:sobDemanda} e a Tabela \ref{tab:all} descrevem com mais detalhes os valores apresentados no gráfico da Figura \ref{fig:nos}.
+
+%Grafico para fator de ramificacao
+\begin{figure}[H]
+\centering
+\begin{tikzpicture}
+\begin{axis}[
+    xtick=data, xticklabels from table={plot/fatorRamificacao.dat}{caixas},
+    xticklabel style={rotate=0},
+    axis lines=left,
+    xlabel={Quantidade de Caixas},
+    ylabel={Fato de Ramificação},
+    enlarge x limits={abs={0.5*\pgfplotbarwidth}},
+    legend style={at={(0.5,-0.20)},anchor=north,legend columns=-1},
+    enlarge y limits={0.1,upper}, nodes near coords]
+  
+    \addplot table [x expr=\coordindex, y=ondemand]{plot/fatorRamificacao.dat};
+    \addplot table [x expr=\coordindex, y=all]{plot/fatorRamificacao.dat};
+    
+\legend{Ações sob demanda, Todas as ações}
+\end{axis}
+\end{tikzpicture}
+\caption{Fator de Ramificação}
+\label{fig:ramificacao}
+\end{figure}
+
+
+%Grafico para Nos gerados e explorados
+\begin{figure}[H]
+\centering
+\begin{tikzpicture}
+\begin{axis}[
+    xtick=data, xticklabels from table={plot/geradosVisitados.dat}{caixas},
+    xticklabel style={rotate=0},
+    axis lines=left,
+    xlabel={Quantidade de Caixas},
+    ylabel={Quantidade de nós gerados e explorados},
+    enlarge x limits={abs={0.5*\pgfplotbarwidth}},
+    legend style={at={(0.5,-0.20)},anchor=north, legend columns=2},
+    enlarge y limits={0.3, upper}]
+  
+    \addplot table [x expr=\coordindex, y=visitadosOndemand]{plot/geradosVisitados.dat};
+    \addlegendentry{Visitados sob demanda}
+    \addplot table [x expr=\coordindex, y=geradosOndemand]{plot/geradosVisitados.dat};
+    \addlegendentry{Gerados sob demanda}
+    \addplot table [x expr=\coordindex, y=visitadosAll]{plot/geradosVisitados.dat};
+    \addlegendentry{Visitados com todas ações instanciadas}
+    \addplot table [x expr=\coordindex, y=geradosAll]{plot/geradosVisitados.dat};
+    \addlegendentry{Gerados com todas ações instanciadas}
+\end{axis}
+\end{tikzpicture}
+\caption{Nós Gerados e Explorados}
+\label{fig:nos}
+\end{figure}
+
+
+%Tabela para nos gerados
+\begin{table}[H]
+\centering
+\scriptsize
+\begin{tabular}{|c|r|r|}
+\hline
+\textbf{Quantidade de caixas}	&	\textbf{Visitados}	&	
+\textbf{Gerados}	\\ \hline
+2	&	40	&	90	\\ \hline
+3	&	130	&	358	\\ \hline
+4	&	382	&	1134	\\ \hline
+5	&	1054	&	3314	\\ \hline
+6	&	2782	&	9066	\\ \hline
+7	&	7102	&	23790	\\ \hline
+8	&	17662	&	60390	\\ \hline
+9	&	43006	&	149482	\\ \hline
+10	&	102910	&	362466	\\ \hline
+\end{tabular}	
+\caption{Nós Visitados e Gerados para ações criadas sob demanda}
+\label{tab:sobDemanda}
+\end{table}
+
+
+%Tabela para nos gerados
+\begin{table}[H]
+\centering
+\scriptsize
+\begin{tabular}[width=\textwidth]{|c|r|r|}
+\hline
+\textbf{Quantidade de caixas}&\textbf{Visitados}&\textbf{Gerados}	
+\\ \hline
+2&	27	&	66	\\ \hline
+3&	87	&	272	\\ \hline
+4&	255	&	882	\\ \hline
+5&	703	&	2612	\\ \hline
+6&	1855	&	7214	\\ \hline
+7&	4735	&	19056	\\ \hline
+8&	11775	&	48618	\\ \hline
+9&	28671	&	120812	\\ \hline
+10&	68607	&	293862	\\\hline
+\end{tabular}
+\caption{Nós Visitados e Gerados para ações instanciadas}
+\label{tab:all}
+\end{table}
+
+
+
+
+
+
+
+
+
+
+
+\section{Conclusões}\label{conclusao}
+Observando os resultados, podemos ver que o algoritmo que instancia todas as ações antes de começar a busca é realmente melhor. 
+Segundo a figura (fig. \ref{fig:time}) o tempo de execução do algoritmo que gera as ações sob demanda é muito maior e cresce muito mais rápido que o tempo de execução do algoritmo que instancia todas as ações. 
+Mesmo que no início do programa possa ter uma sobrecarga por causa do fato de calcular o conjunto de ações, ele se compensa posteriormente pois não tem que criá-las de novo.
+Mas, por outro lado, gerar as ações sob demanda resulta em um fator de ramificação menor (fig. \ref{fig:ramificacao}).
+
+Por último, temos que ressaltar que o tamanho do plano cresce de forma linear (fig. \ref{fig:plano}), pois as soluções tem uma estrutura semelhante (levar duas caixas para a outra sala varias vezes), que se repete dependendo do tamanho do problema. A diferença entre os planos de tamanho ímpar e par e sempre de duas ações, por exemplo os pares 5 e 6, 7 e 8, e assim por diante. 
+Essa diferença é causada por ter que recolher mais uma caixa (ação \textit{pickup}) e descarregá-la depois (ação \textit{putdown}). 
+
+\bibliographystyle{apalike}	% Tipo do formato da bibliografia
+\bibliography{bibliografia}
+
+\end{document}
