@@ -1,0 +1,99 @@
+\documentclass[12pt,a4paper]{article}
+\usepackage[latin1]{inputenc}
+\usepackage[portuguese]{babel}
+\usepackage[T1]{fontenc}
+\usepackage{graphicx,url}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{float}
+\title{MAC 5788 - Planejamento em Inteligência Artificial}
+\author{Diego de Araújo Martinez Camarinha\\ 7157092}
+\begin{document}
+\maketitle
+\newpage
+\section{Introdução}
+Este relatório diz respeito à implementação de três estratégias para buscas em grafo, com o intuito de resolver o problema dos Missionários e Canibais. Ele está dividido da seguinte maneira: na seção 2, enunciamos o problema; na seção 3, cada uma das estratégias utilizadas é descrita; na seção 4, é explicado como rodar o programa e o que cada uma das classes implementadas faz e, por fim, na seção 5 são apresentados alguns resultados.
+
+\section{Enunciado}
+No problema dos missionários e canibais, três missionários e três canibais devem atravessar um rio com um barco que pode transportar no máximo duas pessoas. Em cada margem, se há missionários presentes, eles devem estar em número maior ou igual ao número de canibais. Caso contrário, os canibais comem os missionários. O barco não pode atravessar o rio por si só, sem pessoas a bordo. O objetivo é que todos os missionários e canibais cheguem na outra margem.
+
+\section{Estratégias}
+Neste exercício, foram implementadas 3 estratégias para a seleção do próximo nó a ser visitado, para o algoritmo de busca em grafos visto em aula. Duas delas, FIFO e LIFO, escolhem o próximo nó sem considerar informações sobre o problema. No nosso caso, significa que elas não usam dados sobre os custos dos caminhos e nem heurísticas para estimar a distância até a solução. A outra, A*, usa informação do problema e faz estimativas da distância até a meta.
+
+\subsection{Estratégias FIFO e LIFO}
+Na estratégia FIFO (\textbf{First In, First Out}), incluímos os nós da borda em um vetor e, para escolhermos qual deles será o próximo a ser explorado, seguimos a regra de uma \textbf{fila}: \textit{o primeiro que chegou é o primeiro a sair}. Ou seja, o primeiro nó colocado no vetor será o primeiro a ser explorado. Buscas em grafos com essa estratégia são conhecidas como \textbf{buscas em largura}.
+
+Na estratégia LIFO (\textbf{Last in, first out}), também adicionamos os nós da borda em um vetor. Porém, para escolhermos qual deles será o próximo a ser explorado seguimos a regra de uma \textbf{pilha}: \textit{o primeiro que entrou é o último a sair}. Nesse caso, o primeiro nó colocado no vetor será o último a ser explorado. Buscas em grafos que usam essa estratégia são conhecidas como \textbf{buscas em profundidade}.
+
+\subsection{A*}
+Ao contrário das anteriores, aqui usaremos informações sobre o problema para realizar a busca. Em particular, levaremos em consideração o custo de cada ação. Também usaremos heurísticas para fornecer uma estimativa da distância até a meta.
+
+Foram implementadas duas heurísticas. Ambas foram criadas a partir do relaxamento de uma restrição do problema: não consideramos que canibais podem comer missionários. Assim, podemos computar quantas viagens são necessárias para que todos atravessem o rio. O barco tem capacidade para duas pessoas, mas depois de cada viagem para a margem destino, o barco tem que voltar para a margem de origem. Portanto, pelo menos uma pessoa precisa voltar também. Isso nos leva a seguinte heurística:
+
+\begin{center}{$h_1(n) = (NumeroDePessoasNaMargemInicial) - 1$}\end{center}
+
+Essa heurística é admissível porque todas as viagens (menos a última) resultam na trasferência de, no máximo, uma pessoa para a margem destino.
+
+Outra heurística resultante desse relaxamento é:
+
+\begin{center}{\[h_2(n) = \dfrac{NumeroDePessoasNaMargemInicial}{CapacidadeDoBarco} \]}\end{center}
+
+Essa heurística também é admissível e é englobada pela primeira, já que $\forall$ n, n/2 $\geq$ n - 1.
+
+\section{Detalhes de Implementação}
+Para rodar o programa, é preciso ter o Ruby instalado. Depois, no diretório raíz do programa, execute:
+
+\begin{center}{ruby missionaries\_cannibals.rb <strategy>}\end{center}
+
+Onde <strategy> pode ser uma das seguintes opções: LIFO, FIFO ou Astar.
+\newpage
+Cada arquivo funciona da seguinte maneira:
+\begin{itemize}
+  \item \textbf{missionaries\_cannibals.rb}: É o arquivo que roda o problema. Ele prepara o nó inicial, a meta, roda o algoritmo e imprime os resultados.
+  \item \textbf{requirements.rb}: Arquivo que importa todos os outros.
+  \item \textbf{state.rb}: Define um estado do problema. Um estado pode calcular seus sucessores por meio do método \textit{successors}. Cada estado possui um dicionário com duas chaves, \textit{left} e \textit{right}. Cada uma dessas chaves possui como valor outro dicionário, com chaves \textit{missionaries}, \textit{cannibals} e \textit{boat}, que representam o número de missionários, canibais e um booleano que indica se o barco está daquele lado, respectivamente. Por exemplo, para o estado inicial temos:
+
+  \begin{center}\{left: \{missionaries: 3, cannibals: 3, boat: true\}, right: \{missionaries: 0, cannibals: 0, boat: false\}\}\end{center}
+  \item \textbf{action.rb}: Modela as possíveis ações como um dicionário. As chaves são os nomes da ações e os valores são as pessoas que elas movimentam. Por exemplo, a ação de transferir dois canibais de uma margem para outra é:
+
+  \begin{center}cc: \{missionaries: 0, cannibals: 2\}\end{center}
+
+  Também faz o cálculo das ações aplicáveis a um determinado estado, retornando uma matriz na qual cada linha possui o nome da ação e o estado resultante.
+  \item \textbf{node.rb}: Modela um nó do grafo. Possui os seguintes atributos: um estado, um pai, a ação que foi executada no pai para alcançá-lo, o custo do caminho para alcançá-lo e sua profundidade na busca. O método \textit{is\_goal\_state?} verifica se o nó tem o estado meta. O método \textit{expand} expande o nó, retornando os nós que são alcançáveis por ele através de uma ação.
+  \item \textbf{search.rb}: Possui apenas métodos estáticos. Faz a busca no método \textit{graph\_search}. Imprime o caminho até um nó no método \textit{path\_to}. Verifica se um nó já foi visitado e se ele já está na borda com custo maior nos métodos \textit{already\_visited?} e \textit{insert\_on}, respectivamente.
+  \item \textbf{strategy.rb}: Fábrica abstrata de estratégias. O método estático \textit{strategies} imprime as estratégias disponíveis.
+  \item \textbf{a\_star.rb}: Implementa a estratégia que usa informação do problema. Possui métodos para as duas heurísticas citadas. O nó com menor valor calculado pela \textit{evaluation\_function} e a borda atualizada são retornados pelo método \textit{select\_node\_from}. Ruby não possui um limite máximo para inteiros, portanto, para a comparação inicial, foi estipulado um valor alto o suficiente que fosse maior que qualquer valor que possa ser retornado pela função de avaliação. Para problemas que possam gerar um número grande de nós na borda, o recomendado é que seja implementado uma estrutura de \textit{heap}. Para trocar a heurística utilizada, é preciso mudar o código da função de avaliação.
+  \item \textbf{fifo.rb}: Implementa a estratégia de FIFO. Remove o primeiro elemento da borda. Retorna esse elemento e a borda atualizada.
+  \item \textbf{lifo.rb}: Implementa a estratégia de LIFO. Remove o último elemento da borda. Retorna esse elemento e a borda atualizada.
+\end{itemize}
+
+\section{Resultados}
+Os resultados para cada estratégia são apresentado a seguir:
+
+\subsection{A*}
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=\textwidth]{astar.png}
+\end{figure}
+
+\subsection{LIFO}
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=\textwidth]{lifo.png}
+\end{figure}
+
+\subsection{FIFO}
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=\textwidth]{fifo.png}
+\end{figure}
+
+\subsection{Comparação}
+Das figuras anteriores, podemos ver que todas as estratégias encontraram caminhos de custos e profundidades iguais. Porém, a estratégia FIFO visitou mais nós do que as outras. Isso é de se esperar, já que ela corresponde a uma busca em largura. Também podemos ver que a heurística usada conseguiu reduzir o número de nós visitados no A*. Isso indica que ela ajudou a guiar o algoritmo a encontrar uma meta mais diretamente.
+
+Das três estratégias, a que consumiu menos tempo foi a LIFO. Porém, os tempos de todas foram baixos. Para realmente entender a diferença no tempo de execução, precisaríamos rodar esses algoritmos em problemas maiores.
+
+Por fim, é interessante notar que as estratégias FIFO e A* geraram soluções iguais, mas diferentes da solução gerada pela estratégia LIFO.
+
+\end{document}
