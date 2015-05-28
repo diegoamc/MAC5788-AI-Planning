@@ -1,0 +1,58 @@
+%\usepackage[lined]{algorithm2e}
+\SetKwRepeat{Do}{do}{while}%
+\subsection{HSP: Planejamento com Busca Heurística}\label{heuristicas:hsp}
+
+Implementamos no planejador duas variações das heurísticas usadas no planejador HSP \cite{hsp2000}, a heurística aditiva e heurística de maximização.
+
+Esta heurística ignora os efeitos negativos das ações e computa o custo para alcançar cada um dos predicados presentes no estado meta. O valor da heurística para o caso aditivo é a soma dos valores computados para todos os predicados da meta e, para a maximização é o valor do maior predicado computado.
+
+O Algoritmo \ref{alg:hsp} apresenta a implementação usada na heurística aditiva.
+
+\IncMargin{1em}
+\begin{algorithm}[H]
+\LinesNumbered
+\KwData{$state$, $domain$, $problem$}
+\KwResult{$heuristic$}
+\BlankLine
+\For{$p \in predicates(domain.goal$)}{
+    \lIf{$p \in preconditions(state)$}{$heuristic(p, state) \gets 0$}
+    \lElse{$heuristic(p, state) \gets \infty$}
+}
+U $\gets$ state.prepositions\;
+\While {there update to heuristic}{
+    \While {$\exists$ a $|$ preconditions(a) $\subseteq$ U}{
+        U $\gets$ U $\cup effect^+(a)$ \;
+        \For{$p \in effect^+(a)$}{
+            $heuristic(p, state) \gets min \{ heuristic(p, state),$
+                $1+\sum_{q \in preconditions(a)}heuristic(q, state)\}$        
+        }
+    }
+}
+\Return{ $\sum_{p \in domain.goal}heuristic(p, state)$ }
+\caption{HSP Aditiva}\label{alg:hsp}
+\end{algorithm}\DecMargin{1em}
+
+
+A heurística de maximização segue a mesma implementação da heurística aditiva. A diferença entre as implementações estão nas linhas 10 e 14. Na heurística de maximização, conforme citado anteriormente, ao invés de somar o valor de cada predicado,  escolhemos o maior valor computado. O valor de cada predicado é dado como segue:
+
+\begin{centering}
+heuristic(p, state) = min 
+\left\{
+  \begin{array}{l}
+    heuristic(p, state) \\
+    1+ max_{q \in preconditions(a)}heuristic(q, state) \\
+  \end{array}
+\right.
+\end{centering}
+
+A heurística do HSP assume que as submetas do problema (ou seja os predicados que estão na meta) são independentes, com isso a heurística aditiva não é uma heurística admissível, ou seja, em alguns casos ela pode superestimar o custo para alcançar a meta. 
+
+Isso acontece porque a heurística soma todas as ações que devem ser executadas para alcançar cada uma das submetas separadamente. Contudo, podemos ter uma ação que tem como efeito positivo duas submetas. Neste caso não precisaríamos considerar a mesma ação duas vezes. Diferente da heurística aditiva, a heurística de maximização nunca superestima o custo para alcançar a meta pois ela considera apenas o maior custo para alcançar um predicado da meta. Contudo, esta heurística é pouco informativa. Em nossos experimentos, descritos na seção \ref{problemas}, a heurística aditiva apresentou resultados melhores que a de maximização. Porém, usando a heurística aditiva, perdemos a garantia de otimalidade dos resultados obtidos.
+
+
+
+
+
+
+%\subsubsection{HSP - Heurística Aditiva}\label{heuristicas:hspAdd}
+%\subsubsection{HSP - Heurística Maximiza}\label{heuristicas:hspMax}

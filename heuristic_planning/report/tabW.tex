@@ -1,0 +1,21 @@
+Para a maior parte dos problemas, a variação do W não teve impacto significativo em sua resolução. Porém, para o domínio dos satélites, a diferença foi notável. A tabela \ref{analisew} mostra os tempos de execução para os problemas resolvidos do domínio dos satélites, com W=2 e W=5. A heurística usada foi a HSPAdd. Não houve muita diferença entre o tempo de resposta entre eles porém o resultado mais surpreendente é que nenhuma das outras heurísticas conseguiu terminar as instancias a partir da 7. Isso se deve ao fato de que, com o W maior, o plano vai mais diretamente para a meta. Por fim, vale ressaltar que a instância 18 do problema foi resolvida por provavelmente ter uma configuração mais simples.
+
+\begin{table}[H]
+\begin{tabular}{|l|l|l|}
+\hline
+Problema & \multicolumn{1}{c|}{W=2} & W=5        \\ \hline
+1        & 66.44                    & 89.6       \\ \hline
+2        & 403.7                    & 647.47     \\ \hline
+3        & 1101.91                  & 789.21     \\ \hline
+4        & 4445.59                  & 4750       \\ \hline
+6        & 9818.14                  & 10287.3    \\ \hline
+7        & 47314.89                 & 54180.04   \\ \hline
+8        & 102525.41                & 105250.48  \\ \hline
+9        & 315038.23                & 330873.44  \\ \hline
+10       & 192070.33                & 196693.99  \\ \hline
+18       & 1031454.12               & 1096534.54 \\ \hline
+\end{tabular}
+\caption{Tempo de Execução para W=2 e 5 HSP ADD - Problema dos Satélites}
+\label{analisew}
+\end{table}
+

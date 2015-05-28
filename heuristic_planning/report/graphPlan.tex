@@ -1,0 +1,59 @@
+%\usepackage[lined]{algorithm2e}
+\subsection{FF: GraphPlan}\label{heuristicas:graphplan}
+
+O algoritmo \textit{FF} usa como heurística uma versão relaxada do \textit{GraphPlan} \cite{Blum1997281}. 
+
+O algoritmo Graphplan original funciona em duas fases (expansão do plano, e extração do plano) da seguinte maneira:
+\begin{itemize}
+\item No instante inicial é criado um passo de predicados verdadeiros e outro de ações aplicáveis a esses predicados, ou seja, cujas precondições contém os predicados do passo de predicados anterior.
+No passo das ações também são incluídas ações do tipo \textit{NOOP} que servem para manter os predicados de um passo \textit{i} no passo \textit{i+1}.
+A cada nova iteração são expandidos os passos de predicados e de ações, por meio da adição de novas ações aplicáveis e os predicados que são efeito dessas ações.
+Como a cada passo se adicionam os predicados e os que já estavam se mantém, o algoritmo eventualmente expande todas as ações e adiciona os predicados da meta. Aqui, assumimos que não há \textit{dead-ends} nos domínios que estamos estudando. Ou seja, que não existem estados que não alcançam a meta por nenhuma sequência de ações.
+\item Na segunda fase o algoritmo começa pela meta na camada \textit{$i_g$}, selecionando uma ação que atinge um dos predicados da meta, e marcando as precondições da ação como a nova meta a ser atingida na camada \textit{$i_g$-1} até o estado inicial. 
+Assim que o algoritmo alcança os predicados que se encontram no estado inicial, o algoritmo para e devolve o plano.
+\end{itemize}
+
+
+
+Um dos problemas do GraphPlan original é que, ao expandir as ações, podem ser incluídos os efeitos negativos.
+Os efeitos negativos podem dar conflitos e gerar \textit{mutex} (\textit{mutual exclusion}) nos seguintes casos:
+\begin{enumerate}
+\item Um par de ações $(a,a')$ é marcado como \textit{mutex} se $a$ e $a'$ interferem uma com a outra, ou seja, se uma ação deleta uma precondição ou um efeito positivo da outra.
+\item Um par de predicados $(f,f')$ é \textit{mutex} se uma ação $a$ que atinge $f$ é mutuamente exclusiva de uma ação $a'$ que atinge $f'$.
+\item Um par de ações $(a,a')$ é marcado como \textit{mutex} se existe algum predicado $f$ das precondições de $a$ que seja exclusivo com um predicado $f'$ que pertence às precondições de $a'$.
+\end{enumerate}
+
+Esta versão relaxada difere da original no cálculo dos estados sucessores.
+Enquanto a versão original do algoritmo \textit{GraphPlan} tem de lidar com efeitos negativos e \textit{mutex}, a versão relaxada os ignora, já que nenhum efeito elimina ou interfere com outros \cite{hoffmann2001ff}.
+
+A prova da afirmação anterior é fácil de mostrar por indução na profundidade do grafo: começando no instante de tempo 0, nenhum efeito negativo é adicionado.
+E para um instante de tempo \textit{i}, todos os predicados não são exclusivos pois as ações que geram estes predicados também não interferem mutuamente.
+
+A relaxação do \textit{GraphPlan} também permite que no momento de extrair o plano, ele nunca vai retroceder pois nenhuma ação selecionada teria conflito com outras ações.
+
+O custo do algoritmo GraphPlan relaxado é polinomial no número de ações $\vert O \vert$ pois, como não existem efeitos negativos, se o problema tem solução no instante $\vert O \vert$ o algoritmo terá criado todos os passos de ações.
+Na parte de extrair o plano, como não é preciso retroceder se escolhermos uma ação para uma camada, o grafo será percorrido do final até o inicio também em tempo polinomial.
+
+\subsubsection{Otimizações}\label{heuristicas:noop}
+Algumas das otimizações que os autores do FF e do GraphPlan consideram importantes são as seguintes:
+
+\begin{enumerate}
+\item \textit{NOOP}-first: esta heurística, que faz parte do GraphPlan original, consiste de, no momento de escolher as ações, favorecer a escolha de ações de \textit{NOOP}. A justificativa é que, dessa forma, poderemos atingir algum predicado com custo 0.
+\item Dificuldade das ações: esta heurística pode completar a heurística anterior, calculando a dificuldade de cada ação como a soma do número da camada onde as precondições aparecem pela primeira vez. A ação escolhida é aquela com menor dificuldade.
+\end{enumerate}
+
+Estas heurísticas estão implementadas no nosso planejador que usa a heurística do GraphPlan.
+
+\subsubsection{Implementação eficiente}\label{heuristicas:opt}
+Como o algoritmo do GraphPlan relaxado não considera os efeitos negativos, os autores do algoritmo \textit{FF} implementaram uma versão otimizada das fases de expansão e de extração do plano:
+
+\begin{itemize}
+\item Na versão da expansão, simplesmente queremos guardar para cada predicado em que instante de tempo foram adicionados aos passos. Ou seja, a primeira camada em que eles aparecem. 
+Para isso, ele inicializa todos os predicados da meta como aparecendo na camada com valor infinito, e os que existem no instante inicial com custo 0.
+
+As ações contém um contador do número de precondições, inicializado a 0. No instante $i$, cada vez que um predicado $f$ aparece com custo menor de infinito, cada ação que contém $f$ nas precondições aumenta o contador em um.
+Quando o valor do contador é igual ao número das precondições da ação, ela é colocada na fila de ações a serem expandidas na próxima camada $i+1$.
+E assim, depois para cada ação que tem de ser expandida, o algoritmo coloca no instante $i+1$ os predicados efeito.
+
+\item A parte de extração fica mais fácil, pois a cada camada escolhe uma ação da camada $i-1$ que alcança a meta na camada $i$. Se existir mais de uma ação elegível, ele escolhe a melhor de acordo com as heurísticas definidas na seção \ref{heuristicas:noop}.
+\end{itemize}

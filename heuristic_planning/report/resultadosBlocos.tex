@@ -1,0 +1,128 @@
+%http://pgfplots.sourceforge.net/gallery.html
+\subsection{Mundo dos Blocos}\label{problemas:blocos}
+
+O mundo dos blocos consiste de um conjunto de blocos, uma mesa e uma mão de robô. Os blocos podem ser empilhados ou estar em cima da mesa. Um bloco está \textbf{livre} se não há blocos em cima dele. Um bloco $A$ pode ser movido para cima de outro bloco $B$, se $B$ estiver livre. A mão robótica pode segurar um bloco ou estar livre.
+
+Os blocos podem estar inicialmente em qualquer posição. O objetivo é encontrar um plano que move de uma configuração de blocos para outra.
+
+A figura \ref{fig:blocos} mostra um exemplo de como seria um estado inicial e um estado final neste domínio.
+
+\begin{figure}[H]%[htb]
+  \centering
+  \includegraphics[width=10cm]{figures/blocos.png}
+  \caption{Exemplo de estado inicial e final para o Mundo dos Blocos}
+  \label{fig:blocos}
+\end{figure}
+
+Com o domínio do mundo dos blocos, fizemos trinta e cinco testes com um número de blocos de quatro até dezessete. Para cada número de blocos do problema, tínhamos três diferentes configurações de estado inicial e final.
+
+\subsubsection{Resultados}\label{problemas:blocos:resultados}
+
+%Grafico para time - Mundo dos blocos
+\begin{figure}[H]
+\centering
+\begin{tikzpicture}
+  \begin{axis}[
+      only marks, xtick=data, xticklabels 
+from table={plot/timeBlocos2.dat}{Problema},
+      xticklabel style={rotate=90},
+      axis lines=left,
+      xlabel={Problemas do Mundo dos Blocos},
+      xlabel style={at={(0.5,-0.05)}},
+      ylabel={Tempo de Execução em milissegundos $log_{10}$},
+      enlarge x limits={abs={0.0001*\pgfplotbarwidth}},
+      legend style={at={(0.5,-0.20)},anchor=north,legend columns=1},
+      height=9cm, width=15cm]
+
+      \addplot table [x expr=\coordindex, y=H0]{plot/timeBlocos2.dat};
+      \addplot table [x expr=\coordindex,
+      y=GraphPlanHeuristic]{plot/timeBlocos2.dat};
+      \addplot table [x expr=\coordindex, 
+      y=GraphPlanHeuristicOpt]{plot/timeBlocos2.dat};
+      \addplot table [x expr=\coordindex, 
+      y=HSP_AddHeuristic]{plot/timeBlocos2.dat};
+      \addplot table [x expr=\coordindex, 
+      y=HSP_MaxHeuristic]{plot/timeBlocos2.dat};
+
+  \legend{H0, Graph Plan, Graph Plan Otimo, HSP ADD, HSP MAX}
+  \end{axis}
+\end{tikzpicture}
+\caption{Tempo de Execução - Mundo dos blocos}
+\label{fig:timeBlocos}
+\end{figure}
+%%%%%%%%%%%%
+
+Quanto ao tempo de execução, vemos na figura \ref{fig:timeBlocos} que a heurística HSPAdd foi a que melhor produziu resultados, conseguindo resolver problemas mais difíceis. Já o GraphPlan foi o que teve o pior comportamento: foi o que mais demorou para devolver uma solução e o que resolveu a menor quantidade de problemas.
+
+%Grafico para nos Visitados - Mundo dos blocos
+\begin{figure}[H]
+\centering
+\begin{tikzpicture}
+  \begin{axis}[
+      only marks, xtick=data, xticklabels 
+from table={plot/visitadosBlocos.dat}{Problema},
+      xticklabel style={rotate=90},
+      axis lines=left,
+      xlabel={Problemas do Mundo dos Blocos},
+      xlabel style={at={(0.5,-0.05)}},
+      ylabel={Número de nós Visitados ($log_{10}$)},
+      enlarge x limits={abs={0.0001*\pgfplotbarwidth}},
+      legend style={at={(0.5,-0.20)},anchor=north,legend columns=1},
+      height=9cm, width=15cm]
+
+      \addplot table [x expr=\coordindex, y=H0]{plot/visitadosBlocos.dat};
+      \addplot table [x expr=\coordindex,
+      y=GraphPlanHeuristic]{plot/visitadosBlocos.dat};
+      \addplot table [x expr=\coordindex, 
+      y=GraphPlanHeuristicOpt]{plot/visitadosBlocos.dat};
+      \addplot table [x expr=\coordindex, 
+      y=HSP_AddHeuristic]{plot/visitadosBlocos.dat};
+      \addplot table [x expr=\coordindex, 
+      y=HSP_MaxHeuristic]{plot/visitadosBlocos.dat};
+  \legend{H0, Graph Plan, Graph Plan Otimo, HSP ADD, HSP MAX}
+  \end{axis}
+\end{tikzpicture}
+\caption{Nós Visitados - Mundo dos blocos}
+\label{fig:visitadosBlocos}
+\end{figure}
+
+A figura \ref{fig:visitadosBlocos} mostra que a heurística HSPAdd visitou o menor número de nós para todas os problemas. Já a heurística H0 foi a que visitou o maior número de nós. Isso já era esperado porque a H0 produz uma busca em largura no grafo.
+
+%Nos gerados e visitados Blocos
+\input{tabNosBlocos}
+
+A tabela \ref{fig:custoBlocos} apresenta os nós visitados e gerados para todas as heurísticas usadas. Valores -1 significam que o problema não terminou de ser resolvido. Ressaltamos que a otimização feita no GraphPlan resultou em menor número de nós visitados e gerados. Porém, o HSPAdd foi a heurística que apresentou melhores resultados nesses quesitos.
+
+%Grafico para custo - Mundo dos blocos
+\begin{figure}[H]
+\centering
+\begin{tikzpicture}
+  \begin{axis}[
+      only marks, xtick=data, xticklabels 
+from table={plot/custoBlocos.dat}{Problema},
+      xticklabel style={rotate=90},
+      axis lines=left,
+      xlabel={Problemas do Mundo dos blocos},
+      xlabel style={at={(0.5,-0.05)}},
+      ylabel={Custo da Solução},
+      enlarge x limits={abs={0.0001*\pgfplotbarwidth}},
+      legend style={at={(0.5,-0.20)},anchor=north,legend columns=1},
+      height=9cm, width=15cm]
+
+      \addplot table [x expr=\coordindex, y=H0]{plot/custoBlocos.dat};
+      \addplot table [x expr=\coordindex,
+      y=GraphPlanHeuristic]{plot/custoBlocos.dat};
+      \addplot table [x expr=\coordindex, 
+      y=GraphPlanHeuristicOpt]{plot/custoBlocos.dat};
+      \addplot table [x expr=\coordindex, 
+      y=HSP_AddHeuristic]{plot/custoBlocos.dat};
+      \addplot table [x expr=\coordindex, 
+      y=HSP_MaxHeuristic]{plot/custoBlocos.dat};
+  \legend{H0, Graph Plan, Graph Plan Otimo, HSP ADD, HSP MAX}
+  \end{axis}
+\end{tikzpicture}
+\caption{Custo da Solução - Mundo dos blocos}
+\label{fig:custoBlocos}
+\end{figure}
+
+Por fim, em relação ao custo da solução, a figura \ref{fig:custoBlocos} mostra que, para as primeiras instâncias do problema, as heurísticas empatam. Já para instâncias maiores, o GraphPlan otimizado e a H0 apresentam as soluções com menor custo.

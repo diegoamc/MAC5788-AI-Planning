@@ -1,0 +1,80 @@
+\subsection{Satélites}\label{problemas:satelites}
+
+Neste domínio, há um conjunto de satélites equipados com diferentes instrumentos, os quais com características diferentes em relação a calibração dos alvos, produção de dados e consumo de energia. Os satélites coletam dados e os mandam para uma estação base.
+
+O objetivo é adquirir imagens desejadas da forma mais eficiente possível, dividindo as tarefas de observação entre os satélites baseado nas capacidades de seus instrumentos.
+
+Para este domínio, fizemos testes com vinte problemas diferentes. Neles, variamos a quantidade de satélites, seus instrumentos e suas configurações e também o número de fenômenos, estrelas, planetas e imagens. Este domínio é o mais complexo dos três que testamos pela variabilidade de objetos, ações e predicados.
+
+\subsubsection{Resultados}\label{problemas:satelites:resultados}
+
+Por ser muito complexo, o domínio dos satélites foi o que apresentou menos resultados como podemos ver na figura \ref{fig:timeSatellite}.
+Neste domínio vemos que a heurística H0 somente consegue resolver o primeiro problema, e que HSP Add é quem apresenta melhores resultados, conseguindo resolver mais problemas que o resto de heurísticas.
+
+Uma das causas do baixo desempenho das heurísticas GraphPlan é o alto número de ações que precisam ser tratadas na heurística e que precisariam ser ordenadas resultando em um custo computacional mais alto.
+
+Na seção \ref{analise} poderão ser vistos melhores resultados neste domínio obtidos modificando o peso da função heurística (WA*).
+
+
+%Time Satellite
+\begin{figure}[H]
+\centering
+\begin{tikzpicture}
+  \begin{axis}[
+      only marks, xtick=data, xticklabels 
+from table={plot/timeSatellite.dat}{Problema},
+      xticklabel style={rotate=0},
+      axis lines=left,
+      xlabel={Problemas dos Satélites},
+      ylabel={Tempo de Execução em milissegundos $log_{10}$},
+      enlarge x limits={abs={0.0001*\pgfplotbarwidth}},
+      legend style={at={(0.85,0.4)},anchor=north,legend columns=1},
+      height=9cm, width=9cm]
+
+      \addplot table [x expr=\coordindex, y=H0]{plot/timeSatellite.dat};
+      \addplot table [x expr=\coordindex,
+      y=GraphPlanHeuristic]{plot/timeSatellite.dat};
+      \addplot table [x expr=\coordindex, 
+      y=GraphPlanHeuristicOpt]{plot/timeSatellite.dat};
+      \addplot table [x expr=\coordindex, 
+      y=HSP_AddHeuristic]{plot/timeSatellite.dat};
+      \addplot table [x expr=\coordindex, 
+      y=HSP_MaxHeuristic]{plot/timeSatellite.dat};
+  \legend{H0, Graph Plan, Graph Plan Otimo, HSP ADD, HSP MAX}
+  \end{axis}
+\end{tikzpicture}
+\caption{Tempo de Execução - Problema dos Satélites}
+\label{fig:timeSatellite}
+\end{figure}
+
+
+%Custo Satellite
+\begin{figure}[H]
+\centering
+\begin{tikzpicture}
+  \begin{axis}[
+      only marks, xtick=data, xticklabels 
+from table={plot/custoSatellite.dat}{Problema},
+      xticklabel style={rotate=0},
+      axis lines=left,
+      xlabel={Problemas dos Satélites},
+      ylabel={Custo da Solução},
+      enlarge x limits={abs={0.0001*\pgfplotbarwidth}},
+      legend style={at={(0.85,0.4)},anchor=north,legend columns=1},
+      height=9cm, width=9cm]
+
+      \addplot table [x expr=\coordindex, y=H0]{plot/custoSatellite.dat};
+      \addplot table [x expr=\coordindex,
+      y=GraphPlanHeuristic]{plot/custoSatellite.dat};
+      \addplot table [x expr=\coordindex, 
+      y=GraphPlanHeuristicOpt]{plot/custoSatellite.dat};
+      \addplot table [x expr=\coordindex, 
+      y=HSP_AddHeuristic]{plot/custoSatellite.dat};
+      \addplot table [x expr=\coordindex, 
+      y=HSP_MaxHeuristic]{plot/custoSatellite.dat};
+  \legend{H0, Graph Plan, Graph Plan Otimo, HSP ADD, HSP MAX}
+  \end{axis}
+\end{tikzpicture}
+\caption{Custo da Solução - Problema dos Satélites}
+\label{fig:timeSatellite}
+\end{figure}
