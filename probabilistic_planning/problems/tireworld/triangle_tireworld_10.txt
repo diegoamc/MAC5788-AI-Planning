@@ -1,0 +1,2309 @@
+states
+	car-at-x01y01, car-at-x01y01-flattired, car-at-x01y01-hasspare, car-at-x01y01-flattired-hasspare, car-at-x01y03, car-at-x01y03-flattired, car-at-x01y03-hasspare, car-at-x01y03-flattired-hasspare, car-at-x01y05, car-at-x01y05-flattired, car-at-x01y05-hasspare, car-at-x01y05-flattired-hasspare, car-at-x01y07, car-at-x01y07-flattired, car-at-x01y07-hasspare, car-at-x01y07-flattired-hasspare, car-at-x01y09, car-at-x01y09-flattired, car-at-x01y09-hasspare, car-at-x01y09-flattired-hasspare, car-at-x01y11, car-at-x01y11-flattired, car-at-x01y11-hasspare, car-at-x01y11-flattired-hasspare, car-at-x01y13, car-at-x01y13-flattired, car-at-x01y13-hasspare, car-at-x01y13-flattired-hasspare, car-at-x01y15, car-at-x01y15-flattired, car-at-x01y15-hasspare, car-at-x01y15-flattired-hasspare, car-at-x01y17, car-at-x01y17-flattired, car-at-x01y17-hasspare, car-at-x01y17-flattired-hasspare, car-at-x01y19, car-at-x01y19-flattired, car-at-x01y19-hasspare, car-at-x01y19-flattired-hasspare, car-at-x01y21, car-at-x01y21-flattired, car-at-x01y21-hasspare, car-at-x01y21-flattired-hasspare, car-at-x01y23, car-at-x01y23-flattired, car-at-x01y23-hasspare, car-at-x01y23-flattired-hasspare, car-at-x02y02, car-at-x02y02-flattired, car-at-x02y02-hasspare, car-at-x02y02-flattired-hasspare, car-at-x02y04, car-at-x02y04-flattired, car-at-x02y04-hasspare, car-at-x02y04-flattired-hasspare, car-at-x02y06, car-at-x02y06-flattired, car-at-x02y06-hasspare, car-at-x02y06-flattired-hasspare, car-at-x02y08, car-at-x02y08-flattired, car-at-x02y08-hasspare, car-at-x02y08-flattired-hasspare, car-at-x02y10, car-at-x02y10-flattired, car-at-x02y10-hasspare, car-at-x02y10-flattired-hasspare, car-at-x02y12, car-at-x02y12-flattired, car-at-x02y12-hasspare, car-at-x02y12-flattired-hasspare, car-at-x02y14, car-at-x02y14-flattired, car-at-x02y14-hasspare, car-at-x02y14-flattired-hasspare, car-at-x02y16, car-at-x02y16-flattired, car-at-x02y16-hasspare, car-at-x02y16-flattired-hasspare, car-at-x02y18, car-at-x02y18-flattired, car-at-x02y18-hasspare, car-at-x02y18-flattired-hasspare, car-at-x02y20, car-at-x02y20-flattired, car-at-x02y20-hasspare, car-at-x02y20-flattired-hasspare, car-at-x02y22, car-at-x02y22-flattired, car-at-x02y22-hasspare, car-at-x02y22-flattired-hasspare, car-at-x03y03, car-at-x03y03-flattired, car-at-x03y03-hasspare, car-at-x03y03-flattired-hasspare, car-at-x03y05, car-at-x03y05-flattired, car-at-x03y05-hasspare, car-at-x03y05-flattired-hasspare, car-at-x03y07, car-at-x03y07-flattired, car-at-x03y07-hasspare, car-at-x03y07-flattired-hasspare, car-at-x03y09, car-at-x03y09-flattired, car-at-x03y09-hasspare, car-at-x03y09-flattired-hasspare, car-at-x03y11, car-at-x03y11-flattired, car-at-x03y11-hasspare, car-at-x03y11-flattired-hasspare, car-at-x03y13, car-at-x03y13-flattired, car-at-x03y13-hasspare, car-at-x03y13-flattired-hasspare, car-at-x03y15, car-at-x03y15-flattired, car-at-x03y15-hasspare, car-at-x03y15-flattired-hasspare, car-at-x03y17, car-at-x03y17-flattired, car-at-x03y17-hasspare, car-at-x03y17-flattired-hasspare, car-at-x03y19, car-at-x03y19-flattired, car-at-x03y19-hasspare, car-at-x03y19-flattired-hasspare, car-at-x03y21, car-at-x03y21-flattired, car-at-x03y21-hasspare, car-at-x03y21-flattired-hasspare, car-at-x04y04, car-at-x04y04-flattired, car-at-x04y04-hasspare, car-at-x04y04-flattired-hasspare, car-at-x04y06, car-at-x04y06-flattired, car-at-x04y06-hasspare, car-at-x04y06-flattired-hasspare, car-at-x04y08, car-at-x04y08-flattired, car-at-x04y08-hasspare, car-at-x04y08-flattired-hasspare, car-at-x04y10, car-at-x04y10-flattired, car-at-x04y10-hasspare, car-at-x04y10-flattired-hasspare, car-at-x04y12, car-at-x04y12-flattired, car-at-x04y12-hasspare, car-at-x04y12-flattired-hasspare, car-at-x04y14, car-at-x04y14-flattired, car-at-x04y14-hasspare, car-at-x04y14-flattired-hasspare, car-at-x04y16, car-at-x04y16-flattired, car-at-x04y16-hasspare, car-at-x04y16-flattired-hasspare, car-at-x04y18, car-at-x04y18-flattired, car-at-x04y18-hasspare, car-at-x04y18-flattired-hasspare, car-at-x04y20, car-at-x04y20-flattired, car-at-x04y20-hasspare, car-at-x04y20-flattired-hasspare, car-at-x05y05, car-at-x05y05-flattired, car-at-x05y05-hasspare, car-at-x05y05-flattired-hasspare, car-at-x05y07, car-at-x05y07-flattired, car-at-x05y07-hasspare, car-at-x05y07-flattired-hasspare, car-at-x05y09, car-at-x05y09-flattired, car-at-x05y09-hasspare, car-at-x05y09-flattired-hasspare, car-at-x05y11, car-at-x05y11-flattired, car-at-x05y11-hasspare, car-at-x05y11-flattired-hasspare, car-at-x05y13, car-at-x05y13-flattired, car-at-x05y13-hasspare, car-at-x05y13-flattired-hasspare, car-at-x05y15, car-at-x05y15-flattired, car-at-x05y15-hasspare, car-at-x05y15-flattired-hasspare, car-at-x05y17, car-at-x05y17-flattired, car-at-x05y17-hasspare, car-at-x05y17-flattired-hasspare, car-at-x05y19, car-at-x05y19-flattired, car-at-x05y19-hasspare, car-at-x05y19-flattired-hasspare, car-at-x06y06, car-at-x06y06-flattired, car-at-x06y06-hasspare, car-at-x06y06-flattired-hasspare, car-at-x06y08, car-at-x06y08-flattired, car-at-x06y08-hasspare, car-at-x06y08-flattired-hasspare, car-at-x06y10, car-at-x06y10-flattired, car-at-x06y10-hasspare, car-at-x06y10-flattired-hasspare, car-at-x06y12, car-at-x06y12-flattired, car-at-x06y12-hasspare, car-at-x06y12-flattired-hasspare, car-at-x06y14, car-at-x06y14-flattired, car-at-x06y14-hasspare, car-at-x06y14-flattired-hasspare, car-at-x06y16, car-at-x06y16-flattired, car-at-x06y16-hasspare, car-at-x06y16-flattired-hasspare, car-at-x06y18, car-at-x06y18-flattired, car-at-x06y18-hasspare, car-at-x06y18-flattired-hasspare, car-at-x07y07, car-at-x07y07-flattired, car-at-x07y07-hasspare, car-at-x07y07-flattired-hasspare, car-at-x07y09, car-at-x07y09-flattired, car-at-x07y09-hasspare, car-at-x07y09-flattired-hasspare, car-at-x07y11, car-at-x07y11-flattired, car-at-x07y11-hasspare, car-at-x07y11-flattired-hasspare, car-at-x07y13, car-at-x07y13-flattired, car-at-x07y13-hasspare, car-at-x07y13-flattired-hasspare, car-at-x07y15, car-at-x07y15-flattired, car-at-x07y15-hasspare, car-at-x07y15-flattired-hasspare, car-at-x07y17, car-at-x07y17-flattired, car-at-x07y17-hasspare, car-at-x07y17-flattired-hasspare, car-at-x08y08, car-at-x08y08-flattired, car-at-x08y08-hasspare, car-at-x08y08-flattired-hasspare, car-at-x08y10, car-at-x08y10-flattired, car-at-x08y10-hasspare, car-at-x08y10-flattired-hasspare, car-at-x08y12, car-at-x08y12-flattired, car-at-x08y12-hasspare, car-at-x08y12-flattired-hasspare, car-at-x08y14, car-at-x08y14-flattired, car-at-x08y14-hasspare, car-at-x08y14-flattired-hasspare, car-at-x08y16, car-at-x08y16-flattired, car-at-x08y16-hasspare, car-at-x08y16-flattired-hasspare, car-at-x09y09, car-at-x09y09-flattired, car-at-x09y09-hasspare, car-at-x09y09-flattired-hasspare, car-at-x09y11, car-at-x09y11-flattired, car-at-x09y11-hasspare, car-at-x09y11-flattired-hasspare, car-at-x09y13, car-at-x09y13-flattired, car-at-x09y13-hasspare, car-at-x09y13-flattired-hasspare, car-at-x09y15, car-at-x09y15-flattired, car-at-x09y15-hasspare, car-at-x09y15-flattired-hasspare, car-at-x10y10, car-at-x10y10-flattired, car-at-x10y10-hasspare, car-at-x10y10-flattired-hasspare, car-at-x10y12, car-at-x10y12-flattired, car-at-x10y12-hasspare, car-at-x10y12-flattired-hasspare, car-at-x10y14, car-at-x10y14-flattired, car-at-x10y14-hasspare, car-at-x10y14-flattired-hasspare, car-at-x11y11, car-at-x11y11-flattired, car-at-x11y11-hasspare, car-at-x11y11-flattired-hasspare, car-at-x11y13, car-at-x11y13-flattired, car-at-x11y13-hasspare, car-at-x11y13-flattired-hasspare, car-at-x12y12, car-at-x12y12-flattired, car-at-x12y12-hasspare, car-at-x12y12-flattired-hasspare
+endstates
+
+action change-tire
+	car-at-x01y01 car-at-x01y01 1.000000
+	car-at-x01y01-flattired car-at-x01y01-flattired 1.000000
+	car-at-x01y01-hasspare car-at-x01y01-hasspare 1.000000
+	car-at-x01y01-flattired-hasspare car-at-x01y01 1.000000
+	car-at-x01y03 car-at-x01y03 1.000000
+	car-at-x01y03-flattired car-at-x01y03-flattired 1.000000
+	car-at-x01y03-hasspare car-at-x01y03-hasspare 1.000000
+	car-at-x01y03-flattired-hasspare car-at-x01y03 1.000000
+	car-at-x01y05 car-at-x01y05 1.000000
+	car-at-x01y05-flattired car-at-x01y05-flattired 1.000000
+	car-at-x01y05-hasspare car-at-x01y05-hasspare 1.000000
+	car-at-x01y05-flattired-hasspare car-at-x01y05 1.000000
+	car-at-x01y07 car-at-x01y07 1.000000
+	car-at-x01y07-flattired car-at-x01y07-flattired 1.000000
+	car-at-x01y07-hasspare car-at-x01y07-hasspare 1.000000
+	car-at-x01y07-flattired-hasspare car-at-x01y07 1.000000
+	car-at-x01y09 car-at-x01y09 1.000000
+	car-at-x01y09-flattired car-at-x01y09-flattired 1.000000
+	car-at-x01y09-hasspare car-at-x01y09-hasspare 1.000000
+	car-at-x01y09-flattired-hasspare car-at-x01y09 1.000000
+	car-at-x01y11 car-at-x01y11 1.000000
+	car-at-x01y11-flattired car-at-x01y11-flattired 1.000000
+	car-at-x01y11-hasspare car-at-x01y11-hasspare 1.000000
+	car-at-x01y11-flattired-hasspare car-at-x01y11 1.000000
+	car-at-x01y13 car-at-x01y13 1.000000
+	car-at-x01y13-flattired car-at-x01y13-flattired 1.000000
+	car-at-x01y13-hasspare car-at-x01y13-hasspare 1.000000
+	car-at-x01y13-flattired-hasspare car-at-x01y13 1.000000
+	car-at-x01y15 car-at-x01y15 1.000000
+	car-at-x01y15-flattired car-at-x01y15-flattired 1.000000
+	car-at-x01y15-hasspare car-at-x01y15-hasspare 1.000000
+	car-at-x01y15-flattired-hasspare car-at-x01y15 1.000000
+	car-at-x01y17 car-at-x01y17 1.000000
+	car-at-x01y17-flattired car-at-x01y17-flattired 1.000000
+	car-at-x01y17-hasspare car-at-x01y17-hasspare 1.000000
+	car-at-x01y17-flattired-hasspare car-at-x01y17 1.000000
+	car-at-x01y19 car-at-x01y19 1.000000
+	car-at-x01y19-flattired car-at-x01y19-flattired 1.000000
+	car-at-x01y19-hasspare car-at-x01y19-hasspare 1.000000
+	car-at-x01y19-flattired-hasspare car-at-x01y19 1.000000
+	car-at-x01y21 car-at-x01y21 1.000000
+	car-at-x01y21-flattired car-at-x01y21-flattired 1.000000
+	car-at-x01y21-hasspare car-at-x01y21-hasspare 1.000000
+	car-at-x01y21-flattired-hasspare car-at-x01y21 1.000000
+	car-at-x01y23 car-at-x01y23 1.000000
+	car-at-x01y23-flattired car-at-x01y23-flattired 1.000000
+	car-at-x01y23-hasspare car-at-x01y23-hasspare 1.000000
+	car-at-x01y23-flattired-hasspare car-at-x01y23-flattired-hasspare 1.000000
+	car-at-x02y02 car-at-x02y02 1.000000
+	car-at-x02y02-flattired car-at-x02y02-flattired 1.000000
+	car-at-x02y02-hasspare car-at-x02y02-hasspare 1.000000
+	car-at-x02y02-flattired-hasspare car-at-x02y02 1.000000
+	car-at-x02y04 car-at-x02y04 1.000000
+	car-at-x02y04-flattired car-at-x02y04-flattired 1.000000
+	car-at-x02y04-hasspare car-at-x02y04-hasspare 1.000000
+	car-at-x02y04-flattired-hasspare car-at-x02y04 1.000000
+	car-at-x02y06 car-at-x02y06 1.000000
+	car-at-x02y06-flattired car-at-x02y06-flattired 1.000000
+	car-at-x02y06-hasspare car-at-x02y06-hasspare 1.000000
+	car-at-x02y06-flattired-hasspare car-at-x02y06 1.000000
+	car-at-x02y08 car-at-x02y08 1.000000
+	car-at-x02y08-flattired car-at-x02y08-flattired 1.000000
+	car-at-x02y08-hasspare car-at-x02y08-hasspare 1.000000
+	car-at-x02y08-flattired-hasspare car-at-x02y08 1.000000
+	car-at-x02y10 car-at-x02y10 1.000000
+	car-at-x02y10-flattired car-at-x02y10-flattired 1.000000
+	car-at-x02y10-hasspare car-at-x02y10-hasspare 1.000000
+	car-at-x02y10-flattired-hasspare car-at-x02y10 1.000000
+	car-at-x02y12 car-at-x02y12 1.000000
+	car-at-x02y12-flattired car-at-x02y12-flattired 1.000000
+	car-at-x02y12-hasspare car-at-x02y12-hasspare 1.000000
+	car-at-x02y12-flattired-hasspare car-at-x02y12 1.000000
+	car-at-x02y14 car-at-x02y14 1.000000
+	car-at-x02y14-flattired car-at-x02y14-flattired 1.000000
+	car-at-x02y14-hasspare car-at-x02y14-hasspare 1.000000
+	car-at-x02y14-flattired-hasspare car-at-x02y14 1.000000
+	car-at-x02y16 car-at-x02y16 1.000000
+	car-at-x02y16-flattired car-at-x02y16-flattired 1.000000
+	car-at-x02y16-hasspare car-at-x02y16-hasspare 1.000000
+	car-at-x02y16-flattired-hasspare car-at-x02y16 1.000000
+	car-at-x02y18 car-at-x02y18 1.000000
+	car-at-x02y18-flattired car-at-x02y18-flattired 1.000000
+	car-at-x02y18-hasspare car-at-x02y18-hasspare 1.000000
+	car-at-x02y18-flattired-hasspare car-at-x02y18 1.000000
+	car-at-x02y20 car-at-x02y20 1.000000
+	car-at-x02y20-flattired car-at-x02y20-flattired 1.000000
+	car-at-x02y20-hasspare car-at-x02y20-hasspare 1.000000
+	car-at-x02y20-flattired-hasspare car-at-x02y20 1.000000
+	car-at-x02y22 car-at-x02y22 1.000000
+	car-at-x02y22-flattired car-at-x02y22-flattired 1.000000
+	car-at-x02y22-hasspare car-at-x02y22-hasspare 1.000000
+	car-at-x02y22-flattired-hasspare car-at-x02y22 1.000000
+	car-at-x03y03 car-at-x03y03 1.000000
+	car-at-x03y03-flattired car-at-x03y03-flattired 1.000000
+	car-at-x03y03-hasspare car-at-x03y03-hasspare 1.000000
+	car-at-x03y03-flattired-hasspare car-at-x03y03 1.000000
+	car-at-x03y05 car-at-x03y05 1.000000
+	car-at-x03y05-flattired car-at-x03y05-flattired 1.000000
+	car-at-x03y05-hasspare car-at-x03y05-hasspare 1.000000
+	car-at-x03y05-flattired-hasspare car-at-x03y05 1.000000
+	car-at-x03y07 car-at-x03y07 1.000000
+	car-at-x03y07-flattired car-at-x03y07-flattired 1.000000
+	car-at-x03y07-hasspare car-at-x03y07-hasspare 1.000000
+	car-at-x03y07-flattired-hasspare car-at-x03y07 1.000000
+	car-at-x03y09 car-at-x03y09 1.000000
+	car-at-x03y09-flattired car-at-x03y09-flattired 1.000000
+	car-at-x03y09-hasspare car-at-x03y09-hasspare 1.000000
+	car-at-x03y09-flattired-hasspare car-at-x03y09 1.000000
+	car-at-x03y11 car-at-x03y11 1.000000
+	car-at-x03y11-flattired car-at-x03y11-flattired 1.000000
+	car-at-x03y11-hasspare car-at-x03y11-hasspare 1.000000
+	car-at-x03y11-flattired-hasspare car-at-x03y11 1.000000
+	car-at-x03y13 car-at-x03y13 1.000000
+	car-at-x03y13-flattired car-at-x03y13-flattired 1.000000
+	car-at-x03y13-hasspare car-at-x03y13-hasspare 1.000000
+	car-at-x03y13-flattired-hasspare car-at-x03y13 1.000000
+	car-at-x03y15 car-at-x03y15 1.000000
+	car-at-x03y15-flattired car-at-x03y15-flattired 1.000000
+	car-at-x03y15-hasspare car-at-x03y15-hasspare 1.000000
+	car-at-x03y15-flattired-hasspare car-at-x03y15 1.000000
+	car-at-x03y17 car-at-x03y17 1.000000
+	car-at-x03y17-flattired car-at-x03y17-flattired 1.000000
+	car-at-x03y17-hasspare car-at-x03y17-hasspare 1.000000
+	car-at-x03y17-flattired-hasspare car-at-x03y17 1.000000
+	car-at-x03y19 car-at-x03y19 1.000000
+	car-at-x03y19-flattired car-at-x03y19-flattired 1.000000
+	car-at-x03y19-hasspare car-at-x03y19-hasspare 1.000000
+	car-at-x03y19-flattired-hasspare car-at-x03y19 1.000000
+	car-at-x03y21 car-at-x03y21 1.000000
+	car-at-x03y21-flattired car-at-x03y21-flattired 1.000000
+	car-at-x03y21-hasspare car-at-x03y21-hasspare 1.000000
+	car-at-x03y21-flattired-hasspare car-at-x03y21 1.000000
+	car-at-x04y04 car-at-x04y04 1.000000
+	car-at-x04y04-flattired car-at-x04y04-flattired 1.000000
+	car-at-x04y04-hasspare car-at-x04y04-hasspare 1.000000
+	car-at-x04y04-flattired-hasspare car-at-x04y04 1.000000
+	car-at-x04y06 car-at-x04y06 1.000000
+	car-at-x04y06-flattired car-at-x04y06-flattired 1.000000
+	car-at-x04y06-hasspare car-at-x04y06-hasspare 1.000000
+	car-at-x04y06-flattired-hasspare car-at-x04y06 1.000000
+	car-at-x04y08 car-at-x04y08 1.000000
+	car-at-x04y08-flattired car-at-x04y08-flattired 1.000000
+	car-at-x04y08-hasspare car-at-x04y08-hasspare 1.000000
+	car-at-x04y08-flattired-hasspare car-at-x04y08 1.000000
+	car-at-x04y10 car-at-x04y10 1.000000
+	car-at-x04y10-flattired car-at-x04y10-flattired 1.000000
+	car-at-x04y10-hasspare car-at-x04y10-hasspare 1.000000
+	car-at-x04y10-flattired-hasspare car-at-x04y10 1.000000
+	car-at-x04y12 car-at-x04y12 1.000000
+	car-at-x04y12-flattired car-at-x04y12-flattired 1.000000
+	car-at-x04y12-hasspare car-at-x04y12-hasspare 1.000000
+	car-at-x04y12-flattired-hasspare car-at-x04y12 1.000000
+	car-at-x04y14 car-at-x04y14 1.000000
+	car-at-x04y14-flattired car-at-x04y14-flattired 1.000000
+	car-at-x04y14-hasspare car-at-x04y14-hasspare 1.000000
+	car-at-x04y14-flattired-hasspare car-at-x04y14 1.000000
+	car-at-x04y16 car-at-x04y16 1.000000
+	car-at-x04y16-flattired car-at-x04y16-flattired 1.000000
+	car-at-x04y16-hasspare car-at-x04y16-hasspare 1.000000
+	car-at-x04y16-flattired-hasspare car-at-x04y16 1.000000
+	car-at-x04y18 car-at-x04y18 1.000000
+	car-at-x04y18-flattired car-at-x04y18-flattired 1.000000
+	car-at-x04y18-hasspare car-at-x04y18-hasspare 1.000000
+	car-at-x04y18-flattired-hasspare car-at-x04y18 1.000000
+	car-at-x04y20 car-at-x04y20 1.000000
+	car-at-x04y20-flattired car-at-x04y20-flattired 1.000000
+	car-at-x04y20-hasspare car-at-x04y20-hasspare 1.000000
+	car-at-x04y20-flattired-hasspare car-at-x04y20 1.000000
+	car-at-x05y05 car-at-x05y05 1.000000
+	car-at-x05y05-flattired car-at-x05y05-flattired 1.000000
+	car-at-x05y05-hasspare car-at-x05y05-hasspare 1.000000
+	car-at-x05y05-flattired-hasspare car-at-x05y05 1.000000
+	car-at-x05y07 car-at-x05y07 1.000000
+	car-at-x05y07-flattired car-at-x05y07-flattired 1.000000
+	car-at-x05y07-hasspare car-at-x05y07-hasspare 1.000000
+	car-at-x05y07-flattired-hasspare car-at-x05y07 1.000000
+	car-at-x05y09 car-at-x05y09 1.000000
+	car-at-x05y09-flattired car-at-x05y09-flattired 1.000000
+	car-at-x05y09-hasspare car-at-x05y09-hasspare 1.000000
+	car-at-x05y09-flattired-hasspare car-at-x05y09 1.000000
+	car-at-x05y11 car-at-x05y11 1.000000
+	car-at-x05y11-flattired car-at-x05y11-flattired 1.000000
+	car-at-x05y11-hasspare car-at-x05y11-hasspare 1.000000
+	car-at-x05y11-flattired-hasspare car-at-x05y11 1.000000
+	car-at-x05y13 car-at-x05y13 1.000000
+	car-at-x05y13-flattired car-at-x05y13-flattired 1.000000
+	car-at-x05y13-hasspare car-at-x05y13-hasspare 1.000000
+	car-at-x05y13-flattired-hasspare car-at-x05y13 1.000000
+	car-at-x05y15 car-at-x05y15 1.000000
+	car-at-x05y15-flattired car-at-x05y15-flattired 1.000000
+	car-at-x05y15-hasspare car-at-x05y15-hasspare 1.000000
+	car-at-x05y15-flattired-hasspare car-at-x05y15 1.000000
+	car-at-x05y17 car-at-x05y17 1.000000
+	car-at-x05y17-flattired car-at-x05y17-flattired 1.000000
+	car-at-x05y17-hasspare car-at-x05y17-hasspare 1.000000
+	car-at-x05y17-flattired-hasspare car-at-x05y17 1.000000
+	car-at-x05y19 car-at-x05y19 1.000000
+	car-at-x05y19-flattired car-at-x05y19-flattired 1.000000
+	car-at-x05y19-hasspare car-at-x05y19-hasspare 1.000000
+	car-at-x05y19-flattired-hasspare car-at-x05y19 1.000000
+	car-at-x06y06 car-at-x06y06 1.000000
+	car-at-x06y06-flattired car-at-x06y06-flattired 1.000000
+	car-at-x06y06-hasspare car-at-x06y06-hasspare 1.000000
+	car-at-x06y06-flattired-hasspare car-at-x06y06 1.000000
+	car-at-x06y08 car-at-x06y08 1.000000
+	car-at-x06y08-flattired car-at-x06y08-flattired 1.000000
+	car-at-x06y08-hasspare car-at-x06y08-hasspare 1.000000
+	car-at-x06y08-flattired-hasspare car-at-x06y08 1.000000
+	car-at-x06y10 car-at-x06y10 1.000000
+	car-at-x06y10-flattired car-at-x06y10-flattired 1.000000
+	car-at-x06y10-hasspare car-at-x06y10-hasspare 1.000000
+	car-at-x06y10-flattired-hasspare car-at-x06y10 1.000000
+	car-at-x06y12 car-at-x06y12 1.000000
+	car-at-x06y12-flattired car-at-x06y12-flattired 1.000000
+	car-at-x06y12-hasspare car-at-x06y12-hasspare 1.000000
+	car-at-x06y12-flattired-hasspare car-at-x06y12 1.000000
+	car-at-x06y14 car-at-x06y14 1.000000
+	car-at-x06y14-flattired car-at-x06y14-flattired 1.000000
+	car-at-x06y14-hasspare car-at-x06y14-hasspare 1.000000
+	car-at-x06y14-flattired-hasspare car-at-x06y14 1.000000
+	car-at-x06y16 car-at-x06y16 1.000000
+	car-at-x06y16-flattired car-at-x06y16-flattired 1.000000
+	car-at-x06y16-hasspare car-at-x06y16-hasspare 1.000000
+	car-at-x06y16-flattired-hasspare car-at-x06y16 1.000000
+	car-at-x06y18 car-at-x06y18 1.000000
+	car-at-x06y18-flattired car-at-x06y18-flattired 1.000000
+	car-at-x06y18-hasspare car-at-x06y18-hasspare 1.000000
+	car-at-x06y18-flattired-hasspare car-at-x06y18 1.000000
+	car-at-x07y07 car-at-x07y07 1.000000
+	car-at-x07y07-flattired car-at-x07y07-flattired 1.000000
+	car-at-x07y07-hasspare car-at-x07y07-hasspare 1.000000
+	car-at-x07y07-flattired-hasspare car-at-x07y07 1.000000
+	car-at-x07y09 car-at-x07y09 1.000000
+	car-at-x07y09-flattired car-at-x07y09-flattired 1.000000
+	car-at-x07y09-hasspare car-at-x07y09-hasspare 1.000000
+	car-at-x07y09-flattired-hasspare car-at-x07y09 1.000000
+	car-at-x07y11 car-at-x07y11 1.000000
+	car-at-x07y11-flattired car-at-x07y11-flattired 1.000000
+	car-at-x07y11-hasspare car-at-x07y11-hasspare 1.000000
+	car-at-x07y11-flattired-hasspare car-at-x07y11 1.000000
+	car-at-x07y13 car-at-x07y13 1.000000
+	car-at-x07y13-flattired car-at-x07y13-flattired 1.000000
+	car-at-x07y13-hasspare car-at-x07y13-hasspare 1.000000
+	car-at-x07y13-flattired-hasspare car-at-x07y13 1.000000
+	car-at-x07y15 car-at-x07y15 1.000000
+	car-at-x07y15-flattired car-at-x07y15-flattired 1.000000
+	car-at-x07y15-hasspare car-at-x07y15-hasspare 1.000000
+	car-at-x07y15-flattired-hasspare car-at-x07y15 1.000000
+	car-at-x07y17 car-at-x07y17 1.000000
+	car-at-x07y17-flattired car-at-x07y17-flattired 1.000000
+	car-at-x07y17-hasspare car-at-x07y17-hasspare 1.000000
+	car-at-x07y17-flattired-hasspare car-at-x07y17 1.000000
+	car-at-x08y08 car-at-x08y08 1.000000
+	car-at-x08y08-flattired car-at-x08y08-flattired 1.000000
+	car-at-x08y08-hasspare car-at-x08y08-hasspare 1.000000
+	car-at-x08y08-flattired-hasspare car-at-x08y08 1.000000
+	car-at-x08y10 car-at-x08y10 1.000000
+	car-at-x08y10-flattired car-at-x08y10-flattired 1.000000
+	car-at-x08y10-hasspare car-at-x08y10-hasspare 1.000000
+	car-at-x08y10-flattired-hasspare car-at-x08y10 1.000000
+	car-at-x08y12 car-at-x08y12 1.000000
+	car-at-x08y12-flattired car-at-x08y12-flattired 1.000000
+	car-at-x08y12-hasspare car-at-x08y12-hasspare 1.000000
+	car-at-x08y12-flattired-hasspare car-at-x08y12 1.000000
+	car-at-x08y14 car-at-x08y14 1.000000
+	car-at-x08y14-flattired car-at-x08y14-flattired 1.000000
+	car-at-x08y14-hasspare car-at-x08y14-hasspare 1.000000
+	car-at-x08y14-flattired-hasspare car-at-x08y14 1.000000
+	car-at-x08y16 car-at-x08y16 1.000000
+	car-at-x08y16-flattired car-at-x08y16-flattired 1.000000
+	car-at-x08y16-hasspare car-at-x08y16-hasspare 1.000000
+	car-at-x08y16-flattired-hasspare car-at-x08y16 1.000000
+	car-at-x09y09 car-at-x09y09 1.000000
+	car-at-x09y09-flattired car-at-x09y09-flattired 1.000000
+	car-at-x09y09-hasspare car-at-x09y09-hasspare 1.000000
+	car-at-x09y09-flattired-hasspare car-at-x09y09 1.000000
+	car-at-x09y11 car-at-x09y11 1.000000
+	car-at-x09y11-flattired car-at-x09y11-flattired 1.000000
+	car-at-x09y11-hasspare car-at-x09y11-hasspare 1.000000
+	car-at-x09y11-flattired-hasspare car-at-x09y11 1.000000
+	car-at-x09y13 car-at-x09y13 1.000000
+	car-at-x09y13-flattired car-at-x09y13-flattired 1.000000
+	car-at-x09y13-hasspare car-at-x09y13-hasspare 1.000000
+	car-at-x09y13-flattired-hasspare car-at-x09y13 1.000000
+	car-at-x09y15 car-at-x09y15 1.000000
+	car-at-x09y15-flattired car-at-x09y15-flattired 1.000000
+	car-at-x09y15-hasspare car-at-x09y15-hasspare 1.000000
+	car-at-x09y15-flattired-hasspare car-at-x09y15 1.000000
+	car-at-x10y10 car-at-x10y10 1.000000
+	car-at-x10y10-flattired car-at-x10y10-flattired 1.000000
+	car-at-x10y10-hasspare car-at-x10y10-hasspare 1.000000
+	car-at-x10y10-flattired-hasspare car-at-x10y10 1.000000
+	car-at-x10y12 car-at-x10y12 1.000000
+	car-at-x10y12-flattired car-at-x10y12-flattired 1.000000
+	car-at-x10y12-hasspare car-at-x10y12-hasspare 1.000000
+	car-at-x10y12-flattired-hasspare car-at-x10y12 1.000000
+	car-at-x10y14 car-at-x10y14 1.000000
+	car-at-x10y14-flattired car-at-x10y14-flattired 1.000000
+	car-at-x10y14-hasspare car-at-x10y14-hasspare 1.000000
+	car-at-x10y14-flattired-hasspare car-at-x10y14 1.000000
+	car-at-x11y11 car-at-x11y11 1.000000
+	car-at-x11y11-flattired car-at-x11y11-flattired 1.000000
+	car-at-x11y11-hasspare car-at-x11y11-hasspare 1.000000
+	car-at-x11y11-flattired-hasspare car-at-x11y11 1.000000
+	car-at-x11y13 car-at-x11y13 1.000000
+	car-at-x11y13-flattired car-at-x11y13-flattired 1.000000
+	car-at-x11y13-hasspare car-at-x11y13-hasspare 1.000000
+	car-at-x11y13-flattired-hasspare car-at-x11y13 1.000000
+	car-at-x12y12 car-at-x12y12 1.000000
+	car-at-x12y12-flattired car-at-x12y12-flattired 1.000000
+	car-at-x12y12-hasspare car-at-x12y12-hasspare 1.000000
+	car-at-x12y12-flattired-hasspare car-at-x12y12 1.000000
+endaction
+
+action move-northwest
+	car-at-x01y01 car-at-x01y01 1.000000
+	car-at-x01y01-flattired car-at-x01y01-flattired 1.000000
+	car-at-x01y01-hasspare car-at-x01y01-hasspare 1.000000
+	car-at-x01y01-flattired-hasspare car-at-x01y01-flattired-hasspare 1.000000
+	car-at-x01y03 car-at-x01y03 1.000000
+	car-at-x01y03-flattired car-at-x01y03-flattired 1.000000
+	car-at-x01y03-hasspare car-at-x01y03-hasspare 1.000000
+	car-at-x01y03-flattired-hasspare car-at-x01y03-flattired-hasspare 1.000000
+	car-at-x01y05 car-at-x01y05 1.000000
+	car-at-x01y05-flattired car-at-x01y05-flattired 1.000000
+	car-at-x01y05-hasspare car-at-x01y05-hasspare 1.000000
+	car-at-x01y05-flattired-hasspare car-at-x01y05-flattired-hasspare 1.000000
+	car-at-x01y07 car-at-x01y07 1.000000
+	car-at-x01y07-flattired car-at-x01y07-flattired 1.000000
+	car-at-x01y07-hasspare car-at-x01y07-hasspare 1.000000
+	car-at-x01y07-flattired-hasspare car-at-x01y07-flattired-hasspare 1.000000
+	car-at-x01y09 car-at-x01y09 1.000000
+	car-at-x01y09-flattired car-at-x01y09-flattired 1.000000
+	car-at-x01y09-hasspare car-at-x01y09-hasspare 1.000000
+	car-at-x01y09-flattired-hasspare car-at-x01y09-flattired-hasspare 1.000000
+	car-at-x01y11 car-at-x01y11 1.000000
+	car-at-x01y11-flattired car-at-x01y11-flattired 1.000000
+	car-at-x01y11-hasspare car-at-x01y11-hasspare 1.000000
+	car-at-x01y11-flattired-hasspare car-at-x01y11-flattired-hasspare 1.000000
+	car-at-x01y13 car-at-x01y13 1.000000
+	car-at-x01y13-flattired car-at-x01y13-flattired 1.000000
+	car-at-x01y13-hasspare car-at-x01y13-hasspare 1.000000
+	car-at-x01y13-flattired-hasspare car-at-x01y13-flattired-hasspare 1.000000
+	car-at-x01y15 car-at-x01y15 1.000000
+	car-at-x01y15-flattired car-at-x01y15-flattired 1.000000
+	car-at-x01y15-hasspare car-at-x01y15-hasspare 1.000000
+	car-at-x01y15-flattired-hasspare car-at-x01y15-flattired-hasspare 1.000000
+	car-at-x01y17 car-at-x01y17 1.000000
+	car-at-x01y17-flattired car-at-x01y17-flattired 1.000000
+	car-at-x01y17-hasspare car-at-x01y17-hasspare 1.000000
+	car-at-x01y17-flattired-hasspare car-at-x01y17-flattired-hasspare 1.000000
+	car-at-x01y19 car-at-x01y19 1.000000
+	car-at-x01y19-flattired car-at-x01y19-flattired 1.000000
+	car-at-x01y19-hasspare car-at-x01y19-hasspare 1.000000
+	car-at-x01y19-flattired-hasspare car-at-x01y19-flattired-hasspare 1.000000
+	car-at-x01y21 car-at-x01y21 1.000000
+	car-at-x01y21-flattired car-at-x01y21-flattired 1.000000
+	car-at-x01y21-hasspare car-at-x01y21-hasspare 1.000000
+	car-at-x01y21-flattired-hasspare car-at-x01y21-flattired-hasspare 1.000000
+	car-at-x01y23 car-at-x01y23 1.000000
+	car-at-x01y23-flattired car-at-x01y23-flattired 1.000000
+	car-at-x01y23-hasspare car-at-x01y23-hasspare 1.000000
+	car-at-x01y23-flattired-hasspare car-at-x01y23-flattired-hasspare 1.000000
+	car-at-x02y02 car-at-x01y03 0.827273
+	car-at-x02y02 car-at-x01y03-flattired 0.172727
+	car-at-x02y02-flattired car-at-x02y02-flattired 1.000000
+	car-at-x02y02-hasspare car-at-x01y03-hasspare 0.827273
+	car-at-x02y02-hasspare car-at-x01y03-flattired-hasspare 0.172727
+	car-at-x02y02-flattired-hasspare car-at-x02y02-flattired-hasspare 1.000000
+	car-at-x02y04 car-at-x01y05 0.754545
+	car-at-x02y04 car-at-x01y05-flattired 0.245455
+	car-at-x02y04-flattired car-at-x02y04-flattired 1.000000
+	car-at-x02y04-hasspare car-at-x01y05-hasspare 0.754545
+	car-at-x02y04-hasspare car-at-x01y05-flattired-hasspare 0.245455
+	car-at-x02y04-flattired-hasspare car-at-x02y04-flattired-hasspare 1.000000
+	car-at-x02y06 car-at-x01y07 0.681818
+	car-at-x02y06 car-at-x01y07-flattired 0.318182
+	car-at-x02y06-flattired car-at-x02y06-flattired 1.000000
+	car-at-x02y06-hasspare car-at-x01y07-hasspare 0.681818
+	car-at-x02y06-hasspare car-at-x01y07-flattired-hasspare 0.318182
+	car-at-x02y06-flattired-hasspare car-at-x02y06-flattired-hasspare 1.000000
+	car-at-x02y08 car-at-x01y09 0.609091
+	car-at-x02y08 car-at-x01y09-flattired 0.390909
+	car-at-x02y08-flattired car-at-x02y08-flattired 1.000000
+	car-at-x02y08-hasspare car-at-x01y09-hasspare 0.609091
+	car-at-x02y08-hasspare car-at-x01y09-flattired-hasspare 0.390909
+	car-at-x02y08-flattired-hasspare car-at-x02y08-flattired-hasspare 1.000000
+	car-at-x02y10 car-at-x01y11 0.536364
+	car-at-x02y10 car-at-x01y11-flattired 0.463636
+	car-at-x02y10-flattired car-at-x02y10-flattired 1.000000
+	car-at-x02y10-hasspare car-at-x01y11-hasspare 0.536364
+	car-at-x02y10-hasspare car-at-x01y11-flattired-hasspare 0.463636
+	car-at-x02y10-flattired-hasspare car-at-x02y10-flattired-hasspare 1.000000
+	car-at-x02y12 car-at-x01y13 0.463636
+	car-at-x02y12 car-at-x01y13-flattired 0.536364
+	car-at-x02y12-flattired car-at-x02y12-flattired 1.000000
+	car-at-x02y12-hasspare car-at-x01y13-hasspare 0.463636
+	car-at-x02y12-hasspare car-at-x01y13-flattired-hasspare 0.536364
+	car-at-x02y12-flattired-hasspare car-at-x02y12-flattired-hasspare 1.000000
+	car-at-x02y14 car-at-x01y15 0.390909
+	car-at-x02y14 car-at-x01y15-flattired 0.609091
+	car-at-x02y14-flattired car-at-x02y14-flattired 1.000000
+	car-at-x02y14-hasspare car-at-x01y15-hasspare 0.390909
+	car-at-x02y14-hasspare car-at-x01y15-flattired-hasspare 0.609091
+	car-at-x02y14-flattired-hasspare car-at-x02y14-flattired-hasspare 1.000000
+	car-at-x02y16 car-at-x01y17 0.318182
+	car-at-x02y16 car-at-x01y17-flattired 0.681818
+	car-at-x02y16-flattired car-at-x02y16-flattired 1.000000
+	car-at-x02y16-hasspare car-at-x01y17-hasspare 0.318182
+	car-at-x02y16-hasspare car-at-x01y17-flattired-hasspare 0.681818
+	car-at-x02y16-flattired-hasspare car-at-x02y16-flattired-hasspare 1.000000
+	car-at-x02y18 car-at-x01y19 0.245455
+	car-at-x02y18 car-at-x01y19-flattired 0.754545
+	car-at-x02y18-flattired car-at-x02y18-flattired 1.000000
+	car-at-x02y18-hasspare car-at-x01y19-hasspare 0.245455
+	car-at-x02y18-hasspare car-at-x01y19-flattired-hasspare 0.754545
+	car-at-x02y18-flattired-hasspare car-at-x02y18-flattired-hasspare 1.000000
+	car-at-x02y20 car-at-x01y21 0.172727
+	car-at-x02y20 car-at-x01y21-flattired 0.827273
+	car-at-x02y20-flattired car-at-x02y20-flattired 1.000000
+	car-at-x02y20-hasspare car-at-x01y21-hasspare 0.172727
+	car-at-x02y20-hasspare car-at-x01y21-flattired-hasspare 0.827273
+	car-at-x02y20-flattired-hasspare car-at-x02y20-flattired-hasspare 1.000000
+	car-at-x02y22 car-at-x01y23 0.100000
+	car-at-x02y22 car-at-x01y23-flattired 0.900000
+	car-at-x02y22-flattired car-at-x02y22-flattired 1.000000
+	car-at-x02y22-hasspare car-at-x01y23-hasspare 0.100000
+	car-at-x02y22-hasspare car-at-x01y23-flattired-hasspare 0.900000
+	car-at-x02y22-flattired-hasspare car-at-x02y22-flattired-hasspare 1.000000
+	car-at-x03y03 car-at-x02y04 0.790909
+	car-at-x03y03 car-at-x02y04-flattired 0.209091
+	car-at-x03y03-flattired car-at-x03y03-flattired 1.000000
+	car-at-x03y03-hasspare car-at-x02y04-hasspare 0.790909
+	car-at-x03y03-hasspare car-at-x02y04-flattired-hasspare 0.209091
+	car-at-x03y03-flattired-hasspare car-at-x03y03-flattired-hasspare 1.000000
+	car-at-x03y05 car-at-x02y06 0.718182
+	car-at-x03y05 car-at-x02y06-flattired 0.281818
+	car-at-x03y05-flattired car-at-x03y05-flattired 1.000000
+	car-at-x03y05-hasspare car-at-x02y06-hasspare 0.718182
+	car-at-x03y05-hasspare car-at-x02y06-flattired-hasspare 0.281818
+	car-at-x03y05-flattired-hasspare car-at-x03y05-flattired-hasspare 1.000000
+	car-at-x03y07 car-at-x02y08 0.645455
+	car-at-x03y07 car-at-x02y08-flattired 0.354545
+	car-at-x03y07-flattired car-at-x03y07-flattired 1.000000
+	car-at-x03y07-hasspare car-at-x02y08-hasspare 0.645455
+	car-at-x03y07-hasspare car-at-x02y08-flattired-hasspare 0.354545
+	car-at-x03y07-flattired-hasspare car-at-x03y07-flattired-hasspare 1.000000
+	car-at-x03y09 car-at-x02y10 0.572727
+	car-at-x03y09 car-at-x02y10-flattired 0.427273
+	car-at-x03y09-flattired car-at-x03y09-flattired 1.000000
+	car-at-x03y09-hasspare car-at-x02y10-hasspare 0.572727
+	car-at-x03y09-hasspare car-at-x02y10-flattired-hasspare 0.427273
+	car-at-x03y09-flattired-hasspare car-at-x03y09-flattired-hasspare 1.000000
+	car-at-x03y11 car-at-x02y12 0.500000
+	car-at-x03y11 car-at-x02y12-flattired 0.500000
+	car-at-x03y11-flattired car-at-x03y11-flattired 1.000000
+	car-at-x03y11-hasspare car-at-x02y12-hasspare 0.500000
+	car-at-x03y11-hasspare car-at-x02y12-flattired-hasspare 0.500000
+	car-at-x03y11-flattired-hasspare car-at-x03y11-flattired-hasspare 1.000000
+	car-at-x03y13 car-at-x02y14 0.427273
+	car-at-x03y13 car-at-x02y14-flattired 0.572727
+	car-at-x03y13-flattired car-at-x03y13-flattired 1.000000
+	car-at-x03y13-hasspare car-at-x02y14-hasspare 0.427273
+	car-at-x03y13-hasspare car-at-x02y14-flattired-hasspare 0.572727
+	car-at-x03y13-flattired-hasspare car-at-x03y13-flattired-hasspare 1.000000
+	car-at-x03y15 car-at-x02y16 0.354545
+	car-at-x03y15 car-at-x02y16-flattired 0.645455
+	car-at-x03y15-flattired car-at-x03y15-flattired 1.000000
+	car-at-x03y15-hasspare car-at-x02y16-hasspare 0.354545
+	car-at-x03y15-hasspare car-at-x02y16-flattired-hasspare 0.645455
+	car-at-x03y15-flattired-hasspare car-at-x03y15-flattired-hasspare 1.000000
+	car-at-x03y17 car-at-x02y18 0.281818
+	car-at-x03y17 car-at-x02y18-flattired 0.718182
+	car-at-x03y17-flattired car-at-x03y17-flattired 1.000000
+	car-at-x03y17-hasspare car-at-x02y18-hasspare 0.281818
+	car-at-x03y17-hasspare car-at-x02y18-flattired-hasspare 0.718182
+	car-at-x03y17-flattired-hasspare car-at-x03y17-flattired-hasspare 1.000000
+	car-at-x03y19 car-at-x02y20 0.209091
+	car-at-x03y19 car-at-x02y20-flattired 0.790909
+	car-at-x03y19-flattired car-at-x03y19-flattired 1.000000
+	car-at-x03y19-hasspare car-at-x02y20-hasspare 0.209091
+	car-at-x03y19-hasspare car-at-x02y20-flattired-hasspare 0.790909
+	car-at-x03y19-flattired-hasspare car-at-x03y19-flattired-hasspare 1.000000
+	car-at-x03y21 car-at-x02y22 0.136364
+	car-at-x03y21 car-at-x02y22-flattired 0.863636
+	car-at-x03y21-flattired car-at-x03y21-flattired 1.000000
+	car-at-x03y21-hasspare car-at-x02y22-hasspare 0.136364
+	car-at-x03y21-hasspare car-at-x02y22-flattired-hasspare 0.863636
+	car-at-x03y21-flattired-hasspare car-at-x03y21-flattired-hasspare 1.000000
+	car-at-x04y04 car-at-x03y05 0.754545
+	car-at-x04y04 car-at-x03y05-flattired 0.245455
+	car-at-x04y04-flattired car-at-x04y04-flattired 1.000000
+	car-at-x04y04-hasspare car-at-x03y05-hasspare 0.754545
+	car-at-x04y04-hasspare car-at-x03y05-flattired-hasspare 0.245455
+	car-at-x04y04-flattired-hasspare car-at-x04y04-flattired-hasspare 1.000000
+	car-at-x04y06 car-at-x03y07 0.681818
+	car-at-x04y06 car-at-x03y07-flattired 0.318182
+	car-at-x04y06-flattired car-at-x04y06-flattired 1.000000
+	car-at-x04y06-hasspare car-at-x03y07-hasspare 0.681818
+	car-at-x04y06-hasspare car-at-x03y07-flattired-hasspare 0.318182
+	car-at-x04y06-flattired-hasspare car-at-x04y06-flattired-hasspare 1.000000
+	car-at-x04y08 car-at-x03y09 0.609091
+	car-at-x04y08 car-at-x03y09-flattired 0.390909
+	car-at-x04y08-flattired car-at-x04y08-flattired 1.000000
+	car-at-x04y08-hasspare car-at-x03y09-hasspare 0.609091
+	car-at-x04y08-hasspare car-at-x03y09-flattired-hasspare 0.390909
+	car-at-x04y08-flattired-hasspare car-at-x04y08-flattired-hasspare 1.000000
+	car-at-x04y10 car-at-x03y11 0.536364
+	car-at-x04y10 car-at-x03y11-flattired 0.463636
+	car-at-x04y10-flattired car-at-x04y10-flattired 1.000000
+	car-at-x04y10-hasspare car-at-x03y11-hasspare 0.536364
+	car-at-x04y10-hasspare car-at-x03y11-flattired-hasspare 0.463636
+	car-at-x04y10-flattired-hasspare car-at-x04y10-flattired-hasspare 1.000000
+	car-at-x04y12 car-at-x03y13 0.463636
+	car-at-x04y12 car-at-x03y13-flattired 0.536364
+	car-at-x04y12-flattired car-at-x04y12-flattired 1.000000
+	car-at-x04y12-hasspare car-at-x03y13-hasspare 0.463636
+	car-at-x04y12-hasspare car-at-x03y13-flattired-hasspare 0.536364
+	car-at-x04y12-flattired-hasspare car-at-x04y12-flattired-hasspare 1.000000
+	car-at-x04y14 car-at-x03y15 0.390909
+	car-at-x04y14 car-at-x03y15-flattired 0.609091
+	car-at-x04y14-flattired car-at-x04y14-flattired 1.000000
+	car-at-x04y14-hasspare car-at-x03y15-hasspare 0.390909
+	car-at-x04y14-hasspare car-at-x03y15-flattired-hasspare 0.609091
+	car-at-x04y14-flattired-hasspare car-at-x04y14-flattired-hasspare 1.000000
+	car-at-x04y16 car-at-x03y17 0.318182
+	car-at-x04y16 car-at-x03y17-flattired 0.681818
+	car-at-x04y16-flattired car-at-x04y16-flattired 1.000000
+	car-at-x04y16-hasspare car-at-x03y17-hasspare 0.318182
+	car-at-x04y16-hasspare car-at-x03y17-flattired-hasspare 0.681818
+	car-at-x04y16-flattired-hasspare car-at-x04y16-flattired-hasspare 1.000000
+	car-at-x04y18 car-at-x03y19 0.245455
+	car-at-x04y18 car-at-x03y19-flattired 0.754545
+	car-at-x04y18-flattired car-at-x04y18-flattired 1.000000
+	car-at-x04y18-hasspare car-at-x03y19-hasspare 0.245455
+	car-at-x04y18-hasspare car-at-x03y19-flattired-hasspare 0.754545
+	car-at-x04y18-flattired-hasspare car-at-x04y18-flattired-hasspare 1.000000
+	car-at-x04y20 car-at-x03y21 0.172727
+	car-at-x04y20 car-at-x03y21-flattired 0.827273
+	car-at-x04y20-flattired car-at-x04y20-flattired 1.000000
+	car-at-x04y20-hasspare car-at-x03y21-hasspare 0.172727
+	car-at-x04y20-hasspare car-at-x03y21-flattired-hasspare 0.827273
+	car-at-x04y20-flattired-hasspare car-at-x04y20-flattired-hasspare 1.000000
+	car-at-x05y05 car-at-x04y06 0.718182
+	car-at-x05y05 car-at-x04y06-flattired 0.281818
+	car-at-x05y05-flattired car-at-x05y05-flattired 1.000000
+	car-at-x05y05-hasspare car-at-x04y06-hasspare 0.718182
+	car-at-x05y05-hasspare car-at-x04y06-flattired-hasspare 0.281818
+	car-at-x05y05-flattired-hasspare car-at-x05y05-flattired-hasspare 1.000000
+	car-at-x05y07 car-at-x04y08 0.645455
+	car-at-x05y07 car-at-x04y08-flattired 0.354545
+	car-at-x05y07-flattired car-at-x05y07-flattired 1.000000
+	car-at-x05y07-hasspare car-at-x04y08-hasspare 0.645455
+	car-at-x05y07-hasspare car-at-x04y08-flattired-hasspare 0.354545
+	car-at-x05y07-flattired-hasspare car-at-x05y07-flattired-hasspare 1.000000
+	car-at-x05y09 car-at-x04y10 0.572727
+	car-at-x05y09 car-at-x04y10-flattired 0.427273
+	car-at-x05y09-flattired car-at-x05y09-flattired 1.000000
+	car-at-x05y09-hasspare car-at-x04y10-hasspare 0.572727
+	car-at-x05y09-hasspare car-at-x04y10-flattired-hasspare 0.427273
+	car-at-x05y09-flattired-hasspare car-at-x05y09-flattired-hasspare 1.000000
+	car-at-x05y11 car-at-x04y12 0.500000
+	car-at-x05y11 car-at-x04y12-flattired 0.500000
+	car-at-x05y11-flattired car-at-x05y11-flattired 1.000000
+	car-at-x05y11-hasspare car-at-x04y12-hasspare 0.500000
+	car-at-x05y11-hasspare car-at-x04y12-flattired-hasspare 0.500000
+	car-at-x05y11-flattired-hasspare car-at-x05y11-flattired-hasspare 1.000000
+	car-at-x05y13 car-at-x04y14 0.427273
+	car-at-x05y13 car-at-x04y14-flattired 0.572727
+	car-at-x05y13-flattired car-at-x05y13-flattired 1.000000
+	car-at-x05y13-hasspare car-at-x04y14-hasspare 0.427273
+	car-at-x05y13-hasspare car-at-x04y14-flattired-hasspare 0.572727
+	car-at-x05y13-flattired-hasspare car-at-x05y13-flattired-hasspare 1.000000
+	car-at-x05y15 car-at-x04y16 0.354545
+	car-at-x05y15 car-at-x04y16-flattired 0.645455
+	car-at-x05y15-flattired car-at-x05y15-flattired 1.000000
+	car-at-x05y15-hasspare car-at-x04y16-hasspare 0.354545
+	car-at-x05y15-hasspare car-at-x04y16-flattired-hasspare 0.645455
+	car-at-x05y15-flattired-hasspare car-at-x05y15-flattired-hasspare 1.000000
+	car-at-x05y17 car-at-x04y18 0.281818
+	car-at-x05y17 car-at-x04y18-flattired 0.718182
+	car-at-x05y17-flattired car-at-x05y17-flattired 1.000000
+	car-at-x05y17-hasspare car-at-x04y18-hasspare 0.281818
+	car-at-x05y17-hasspare car-at-x04y18-flattired-hasspare 0.718182
+	car-at-x05y17-flattired-hasspare car-at-x05y17-flattired-hasspare 1.000000
+	car-at-x05y19 car-at-x04y20 0.209091
+	car-at-x05y19 car-at-x04y20-flattired 0.790909
+	car-at-x05y19-flattired car-at-x05y19-flattired 1.000000
+	car-at-x05y19-hasspare car-at-x04y20-hasspare 0.209091
+	car-at-x05y19-hasspare car-at-x04y20-flattired-hasspare 0.790909
+	car-at-x05y19-flattired-hasspare car-at-x05y19-flattired-hasspare 1.000000
+	car-at-x06y06 car-at-x05y07 0.681818
+	car-at-x06y06 car-at-x05y07-flattired 0.318182
+	car-at-x06y06-flattired car-at-x06y06-flattired 1.000000
+	car-at-x06y06-hasspare car-at-x05y07-hasspare 0.681818
+	car-at-x06y06-hasspare car-at-x05y07-flattired-hasspare 0.318182
+	car-at-x06y06-flattired-hasspare car-at-x06y06-flattired-hasspare 1.000000
+	car-at-x06y08 car-at-x05y09 0.609091
+	car-at-x06y08 car-at-x05y09-flattired 0.390909
+	car-at-x06y08-flattired car-at-x06y08-flattired 1.000000
+	car-at-x06y08-hasspare car-at-x05y09-hasspare 0.609091
+	car-at-x06y08-hasspare car-at-x05y09-flattired-hasspare 0.390909
+	car-at-x06y08-flattired-hasspare car-at-x06y08-flattired-hasspare 1.000000
+	car-at-x06y10 car-at-x05y11 0.536364
+	car-at-x06y10 car-at-x05y11-flattired 0.463636
+	car-at-x06y10-flattired car-at-x06y10-flattired 1.000000
+	car-at-x06y10-hasspare car-at-x05y11-hasspare 0.536364
+	car-at-x06y10-hasspare car-at-x05y11-flattired-hasspare 0.463636
+	car-at-x06y10-flattired-hasspare car-at-x06y10-flattired-hasspare 1.000000
+	car-at-x06y12 car-at-x05y13 0.463636
+	car-at-x06y12 car-at-x05y13-flattired 0.536364
+	car-at-x06y12-flattired car-at-x06y12-flattired 1.000000
+	car-at-x06y12-hasspare car-at-x05y13-hasspare 0.463636
+	car-at-x06y12-hasspare car-at-x05y13-flattired-hasspare 0.536364
+	car-at-x06y12-flattired-hasspare car-at-x06y12-flattired-hasspare 1.000000
+	car-at-x06y14 car-at-x05y15 0.390909
+	car-at-x06y14 car-at-x05y15-flattired 0.609091
+	car-at-x06y14-flattired car-at-x06y14-flattired 1.000000
+	car-at-x06y14-hasspare car-at-x05y15-hasspare 0.390909
+	car-at-x06y14-hasspare car-at-x05y15-flattired-hasspare 0.609091
+	car-at-x06y14-flattired-hasspare car-at-x06y14-flattired-hasspare 1.000000
+	car-at-x06y16 car-at-x05y17 0.318182
+	car-at-x06y16 car-at-x05y17-flattired 0.681818
+	car-at-x06y16-flattired car-at-x06y16-flattired 1.000000
+	car-at-x06y16-hasspare car-at-x05y17-hasspare 0.318182
+	car-at-x06y16-hasspare car-at-x05y17-flattired-hasspare 0.681818
+	car-at-x06y16-flattired-hasspare car-at-x06y16-flattired-hasspare 1.000000
+	car-at-x06y18 car-at-x05y19 0.245455
+	car-at-x06y18 car-at-x05y19-flattired 0.754545
+	car-at-x06y18-flattired car-at-x06y18-flattired 1.000000
+	car-at-x06y18-hasspare car-at-x05y19-hasspare 0.245455
+	car-at-x06y18-hasspare car-at-x05y19-flattired-hasspare 0.754545
+	car-at-x06y18-flattired-hasspare car-at-x06y18-flattired-hasspare 1.000000
+	car-at-x07y07 car-at-x06y08 0.645455
+	car-at-x07y07 car-at-x06y08-flattired 0.354545
+	car-at-x07y07-flattired car-at-x07y07-flattired 1.000000
+	car-at-x07y07-hasspare car-at-x06y08-hasspare 0.645455
+	car-at-x07y07-hasspare car-at-x06y08-flattired-hasspare 0.354545
+	car-at-x07y07-flattired-hasspare car-at-x07y07-flattired-hasspare 1.000000
+	car-at-x07y09 car-at-x06y10 0.572727
+	car-at-x07y09 car-at-x06y10-flattired 0.427273
+	car-at-x07y09-flattired car-at-x07y09-flattired 1.000000
+	car-at-x07y09-hasspare car-at-x06y10-hasspare 0.572727
+	car-at-x07y09-hasspare car-at-x06y10-flattired-hasspare 0.427273
+	car-at-x07y09-flattired-hasspare car-at-x07y09-flattired-hasspare 1.000000
+	car-at-x07y11 car-at-x06y12 0.500000
+	car-at-x07y11 car-at-x06y12-flattired 0.500000
+	car-at-x07y11-flattired car-at-x07y11-flattired 1.000000
+	car-at-x07y11-hasspare car-at-x06y12-hasspare 0.500000
+	car-at-x07y11-hasspare car-at-x06y12-flattired-hasspare 0.500000
+	car-at-x07y11-flattired-hasspare car-at-x07y11-flattired-hasspare 1.000000
+	car-at-x07y13 car-at-x06y14 0.427273
+	car-at-x07y13 car-at-x06y14-flattired 0.572727
+	car-at-x07y13-flattired car-at-x07y13-flattired 1.000000
+	car-at-x07y13-hasspare car-at-x06y14-hasspare 0.427273
+	car-at-x07y13-hasspare car-at-x06y14-flattired-hasspare 0.572727
+	car-at-x07y13-flattired-hasspare car-at-x07y13-flattired-hasspare 1.000000
+	car-at-x07y15 car-at-x06y16 0.354545
+	car-at-x07y15 car-at-x06y16-flattired 0.645455
+	car-at-x07y15-flattired car-at-x07y15-flattired 1.000000
+	car-at-x07y15-hasspare car-at-x06y16-hasspare 0.354545
+	car-at-x07y15-hasspare car-at-x06y16-flattired-hasspare 0.645455
+	car-at-x07y15-flattired-hasspare car-at-x07y15-flattired-hasspare 1.000000
+	car-at-x07y17 car-at-x06y18 0.281818
+	car-at-x07y17 car-at-x06y18-flattired 0.718182
+	car-at-x07y17-flattired car-at-x07y17-flattired 1.000000
+	car-at-x07y17-hasspare car-at-x06y18-hasspare 0.281818
+	car-at-x07y17-hasspare car-at-x06y18-flattired-hasspare 0.718182
+	car-at-x07y17-flattired-hasspare car-at-x07y17-flattired-hasspare 1.000000
+	car-at-x08y08 car-at-x07y09 0.609091
+	car-at-x08y08 car-at-x07y09-flattired 0.390909
+	car-at-x08y08-flattired car-at-x08y08-flattired 1.000000
+	car-at-x08y08-hasspare car-at-x07y09-hasspare 0.609091
+	car-at-x08y08-hasspare car-at-x07y09-flattired-hasspare 0.390909
+	car-at-x08y08-flattired-hasspare car-at-x08y08-flattired-hasspare 1.000000
+	car-at-x08y10 car-at-x07y11 0.536364
+	car-at-x08y10 car-at-x07y11-flattired 0.463636
+	car-at-x08y10-flattired car-at-x08y10-flattired 1.000000
+	car-at-x08y10-hasspare car-at-x07y11-hasspare 0.536364
+	car-at-x08y10-hasspare car-at-x07y11-flattired-hasspare 0.463636
+	car-at-x08y10-flattired-hasspare car-at-x08y10-flattired-hasspare 1.000000
+	car-at-x08y12 car-at-x07y13 0.463636
+	car-at-x08y12 car-at-x07y13-flattired 0.536364
+	car-at-x08y12-flattired car-at-x08y12-flattired 1.000000
+	car-at-x08y12-hasspare car-at-x07y13-hasspare 0.463636
+	car-at-x08y12-hasspare car-at-x07y13-flattired-hasspare 0.536364
+	car-at-x08y12-flattired-hasspare car-at-x08y12-flattired-hasspare 1.000000
+	car-at-x08y14 car-at-x07y15 0.390909
+	car-at-x08y14 car-at-x07y15-flattired 0.609091
+	car-at-x08y14-flattired car-at-x08y14-flattired 1.000000
+	car-at-x08y14-hasspare car-at-x07y15-hasspare 0.390909
+	car-at-x08y14-hasspare car-at-x07y15-flattired-hasspare 0.609091
+	car-at-x08y14-flattired-hasspare car-at-x08y14-flattired-hasspare 1.000000
+	car-at-x08y16 car-at-x07y17 0.318182
+	car-at-x08y16 car-at-x07y17-flattired 0.681818
+	car-at-x08y16-flattired car-at-x08y16-flattired 1.000000
+	car-at-x08y16-hasspare car-at-x07y17-hasspare 0.318182
+	car-at-x08y16-hasspare car-at-x07y17-flattired-hasspare 0.681818
+	car-at-x08y16-flattired-hasspare car-at-x08y16-flattired-hasspare 1.000000
+	car-at-x09y09 car-at-x08y10 0.572727
+	car-at-x09y09 car-at-x08y10-flattired 0.427273
+	car-at-x09y09-flattired car-at-x09y09-flattired 1.000000
+	car-at-x09y09-hasspare car-at-x08y10-hasspare 0.572727
+	car-at-x09y09-hasspare car-at-x08y10-flattired-hasspare 0.427273
+	car-at-x09y09-flattired-hasspare car-at-x09y09-flattired-hasspare 1.000000
+	car-at-x09y11 car-at-x08y12 0.500000
+	car-at-x09y11 car-at-x08y12-flattired 0.500000
+	car-at-x09y11-flattired car-at-x09y11-flattired 1.000000
+	car-at-x09y11-hasspare car-at-x08y12-hasspare 0.500000
+	car-at-x09y11-hasspare car-at-x08y12-flattired-hasspare 0.500000
+	car-at-x09y11-flattired-hasspare car-at-x09y11-flattired-hasspare 1.000000
+	car-at-x09y13 car-at-x08y14 0.427273
+	car-at-x09y13 car-at-x08y14-flattired 0.572727
+	car-at-x09y13-flattired car-at-x09y13-flattired 1.000000
+	car-at-x09y13-hasspare car-at-x08y14-hasspare 0.427273
+	car-at-x09y13-hasspare car-at-x08y14-flattired-hasspare 0.572727
+	car-at-x09y13-flattired-hasspare car-at-x09y13-flattired-hasspare 1.000000
+	car-at-x09y15 car-at-x08y16 0.354545
+	car-at-x09y15 car-at-x08y16-flattired 0.645455
+	car-at-x09y15-flattired car-at-x09y15-flattired 1.000000
+	car-at-x09y15-hasspare car-at-x08y16-hasspare 0.354545
+	car-at-x09y15-hasspare car-at-x08y16-flattired-hasspare 0.645455
+	car-at-x09y15-flattired-hasspare car-at-x09y15-flattired-hasspare 1.000000
+	car-at-x10y10 car-at-x09y11 0.536364
+	car-at-x10y10 car-at-x09y11-flattired 0.463636
+	car-at-x10y10-flattired car-at-x10y10-flattired 1.000000
+	car-at-x10y10-hasspare car-at-x09y11-hasspare 0.536364
+	car-at-x10y10-hasspare car-at-x09y11-flattired-hasspare 0.463636
+	car-at-x10y10-flattired-hasspare car-at-x10y10-flattired-hasspare 1.000000
+	car-at-x10y12 car-at-x09y13 0.463636
+	car-at-x10y12 car-at-x09y13-flattired 0.536364
+	car-at-x10y12-flattired car-at-x10y12-flattired 1.000000
+	car-at-x10y12-hasspare car-at-x09y13-hasspare 0.463636
+	car-at-x10y12-hasspare car-at-x09y13-flattired-hasspare 0.536364
+	car-at-x10y12-flattired-hasspare car-at-x10y12-flattired-hasspare 1.000000
+	car-at-x10y14 car-at-x09y15 0.390909
+	car-at-x10y14 car-at-x09y15-flattired 0.609091
+	car-at-x10y14-flattired car-at-x10y14-flattired 1.000000
+	car-at-x10y14-hasspare car-at-x09y15-hasspare 0.390909
+	car-at-x10y14-hasspare car-at-x09y15-flattired-hasspare 0.609091
+	car-at-x10y14-flattired-hasspare car-at-x10y14-flattired-hasspare 1.000000
+	car-at-x11y11 car-at-x10y12 0.500000
+	car-at-x11y11 car-at-x10y12-flattired 0.500000
+	car-at-x11y11-flattired car-at-x11y11-flattired 1.000000
+	car-at-x11y11-hasspare car-at-x10y12-hasspare 0.500000
+	car-at-x11y11-hasspare car-at-x10y12-flattired-hasspare 0.500000
+	car-at-x11y11-flattired-hasspare car-at-x11y11-flattired-hasspare 1.000000
+	car-at-x11y13 car-at-x10y14 0.427273
+	car-at-x11y13 car-at-x10y14-flattired 0.572727
+	car-at-x11y13-flattired car-at-x11y13-flattired 1.000000
+	car-at-x11y13-hasspare car-at-x10y14-hasspare 0.427273
+	car-at-x11y13-hasspare car-at-x10y14-flattired-hasspare 0.572727
+	car-at-x11y13-flattired-hasspare car-at-x11y13-flattired-hasspare 1.000000
+	car-at-x12y12 car-at-x11y13 0.463636
+	car-at-x12y12 car-at-x11y13-flattired 0.536364
+	car-at-x12y12-flattired car-at-x12y12-flattired 1.000000
+	car-at-x12y12-hasspare car-at-x11y13-hasspare 0.463636
+	car-at-x12y12-hasspare car-at-x11y13-flattired-hasspare 0.536364
+	car-at-x12y12-flattired-hasspare car-at-x12y12-flattired-hasspare 1.000000
+endaction
+
+action move-north
+	car-at-x01y01 car-at-x01y03 0.827273
+	car-at-x01y01 car-at-x01y03-flattired 0.172727
+	car-at-x01y01-flattired car-at-x01y01-flattired 1.000000
+	car-at-x01y01-hasspare car-at-x01y03-hasspare 0.827273
+	car-at-x01y01-hasspare car-at-x01y03-flattired-hasspare 0.172727
+	car-at-x01y01-flattired-hasspare car-at-x01y01-flattired-hasspare 1.000000
+	car-at-x01y03 car-at-x01y05 0.754545
+	car-at-x01y03 car-at-x01y05-flattired 0.245455
+	car-at-x01y03-flattired car-at-x01y03-flattired 1.000000
+	car-at-x01y03-hasspare car-at-x01y05-hasspare 0.754545
+	car-at-x01y03-hasspare car-at-x01y05-flattired-hasspare 0.245455
+	car-at-x01y03-flattired-hasspare car-at-x01y03-flattired-hasspare 1.000000
+	car-at-x01y05 car-at-x01y07 0.681818
+	car-at-x01y05 car-at-x01y07-flattired 0.318182
+	car-at-x01y05-flattired car-at-x01y05-flattired 1.000000
+	car-at-x01y05-hasspare car-at-x01y07-hasspare 0.681818
+	car-at-x01y05-hasspare car-at-x01y07-flattired-hasspare 0.318182
+	car-at-x01y05-flattired-hasspare car-at-x01y05-flattired-hasspare 1.000000
+	car-at-x01y07 car-at-x01y09 0.609091
+	car-at-x01y07 car-at-x01y09-flattired 0.390909
+	car-at-x01y07-flattired car-at-x01y07-flattired 1.000000
+	car-at-x01y07-hasspare car-at-x01y09-hasspare 0.609091
+	car-at-x01y07-hasspare car-at-x01y09-flattired-hasspare 0.390909
+	car-at-x01y07-flattired-hasspare car-at-x01y07-flattired-hasspare 1.000000
+	car-at-x01y09 car-at-x01y11 0.536364
+	car-at-x01y09 car-at-x01y11-flattired 0.463636
+	car-at-x01y09-flattired car-at-x01y09-flattired 1.000000
+	car-at-x01y09-hasspare car-at-x01y11-hasspare 0.536364
+	car-at-x01y09-hasspare car-at-x01y11-flattired-hasspare 0.463636
+	car-at-x01y09-flattired-hasspare car-at-x01y09-flattired-hasspare 1.000000
+	car-at-x01y11 car-at-x01y13 0.463636
+	car-at-x01y11 car-at-x01y13-flattired 0.536364
+	car-at-x01y11-flattired car-at-x01y11-flattired 1.000000
+	car-at-x01y11-hasspare car-at-x01y13-hasspare 0.463636
+	car-at-x01y11-hasspare car-at-x01y13-flattired-hasspare 0.536364
+	car-at-x01y11-flattired-hasspare car-at-x01y11-flattired-hasspare 1.000000
+	car-at-x01y13 car-at-x01y15 0.390909
+	car-at-x01y13 car-at-x01y15-flattired 0.609091
+	car-at-x01y13-flattired car-at-x01y13-flattired 1.000000
+	car-at-x01y13-hasspare car-at-x01y15-hasspare 0.390909
+	car-at-x01y13-hasspare car-at-x01y15-flattired-hasspare 0.609091
+	car-at-x01y13-flattired-hasspare car-at-x01y13-flattired-hasspare 1.000000
+	car-at-x01y15 car-at-x01y17 0.318182
+	car-at-x01y15 car-at-x01y17-flattired 0.681818
+	car-at-x01y15-flattired car-at-x01y15-flattired 1.000000
+	car-at-x01y15-hasspare car-at-x01y17-hasspare 0.318182
+	car-at-x01y15-hasspare car-at-x01y17-flattired-hasspare 0.681818
+	car-at-x01y15-flattired-hasspare car-at-x01y15-flattired-hasspare 1.000000
+	car-at-x01y17 car-at-x01y19 0.245455
+	car-at-x01y17 car-at-x01y19-flattired 0.754545
+	car-at-x01y17-flattired car-at-x01y17-flattired 1.000000
+	car-at-x01y17-hasspare car-at-x01y19-hasspare 0.245455
+	car-at-x01y17-hasspare car-at-x01y19-flattired-hasspare 0.754545
+	car-at-x01y17-flattired-hasspare car-at-x01y17-flattired-hasspare 1.000000
+	car-at-x01y19 car-at-x01y21 0.172727
+	car-at-x01y19 car-at-x01y21-flattired 0.827273
+	car-at-x01y19-flattired car-at-x01y19-flattired 1.000000
+	car-at-x01y19-hasspare car-at-x01y21-hasspare 0.172727
+	car-at-x01y19-hasspare car-at-x01y21-flattired-hasspare 0.827273
+	car-at-x01y19-flattired-hasspare car-at-x01y19-flattired-hasspare 1.000000
+	car-at-x01y21 car-at-x01y23 0.100000
+	car-at-x01y21 car-at-x01y23-flattired 0.900000
+	car-at-x01y21-flattired car-at-x01y21-flattired 1.000000
+	car-at-x01y21-hasspare car-at-x01y23-hasspare 0.100000
+	car-at-x01y21-hasspare car-at-x01y23-flattired-hasspare 0.900000
+	car-at-x01y21-flattired-hasspare car-at-x01y21-flattired-hasspare 1.000000
+	car-at-x01y23 car-at-x01y23 1.000000
+	car-at-x01y23-flattired car-at-x01y23-flattired 1.000000
+	car-at-x01y23-hasspare car-at-x01y23-hasspare 1.000000
+	car-at-x01y23-flattired-hasspare car-at-x01y23-flattired-hasspare 1.000000
+	car-at-x02y02 car-at-x02y04 0.790909
+	car-at-x02y02 car-at-x02y04-flattired 0.209091
+	car-at-x02y02-flattired car-at-x02y02-flattired 1.000000
+	car-at-x02y02-hasspare car-at-x02y04-hasspare 0.790909
+	car-at-x02y02-hasspare car-at-x02y04-flattired-hasspare 0.209091
+	car-at-x02y02-flattired-hasspare car-at-x02y02-flattired-hasspare 1.000000
+	car-at-x02y04 car-at-x02y06 0.718182
+	car-at-x02y04 car-at-x02y06-flattired 0.281818
+	car-at-x02y04-flattired car-at-x02y04-flattired 1.000000
+	car-at-x02y04-hasspare car-at-x02y06-hasspare 0.718182
+	car-at-x02y04-hasspare car-at-x02y06-flattired-hasspare 0.281818
+	car-at-x02y04-flattired-hasspare car-at-x02y04-flattired-hasspare 1.000000
+	car-at-x02y06 car-at-x02y08 0.645455
+	car-at-x02y06 car-at-x02y08-flattired 0.354545
+	car-at-x02y06-flattired car-at-x02y06-flattired 1.000000
+	car-at-x02y06-hasspare car-at-x02y08-hasspare 0.645455
+	car-at-x02y06-hasspare car-at-x02y08-flattired-hasspare 0.354545
+	car-at-x02y06-flattired-hasspare car-at-x02y06-flattired-hasspare 1.000000
+	car-at-x02y08 car-at-x02y10 0.572727
+	car-at-x02y08 car-at-x02y10-flattired 0.427273
+	car-at-x02y08-flattired car-at-x02y08-flattired 1.000000
+	car-at-x02y08-hasspare car-at-x02y10-hasspare 0.572727
+	car-at-x02y08-hasspare car-at-x02y10-flattired-hasspare 0.427273
+	car-at-x02y08-flattired-hasspare car-at-x02y08-flattired-hasspare 1.000000
+	car-at-x02y10 car-at-x02y12 0.500000
+	car-at-x02y10 car-at-x02y12-flattired 0.500000
+	car-at-x02y10-flattired car-at-x02y10-flattired 1.000000
+	car-at-x02y10-hasspare car-at-x02y12-hasspare 0.500000
+	car-at-x02y10-hasspare car-at-x02y12-flattired-hasspare 0.500000
+	car-at-x02y10-flattired-hasspare car-at-x02y10-flattired-hasspare 1.000000
+	car-at-x02y12 car-at-x02y14 0.427273
+	car-at-x02y12 car-at-x02y14-flattired 0.572727
+	car-at-x02y12-flattired car-at-x02y12-flattired 1.000000
+	car-at-x02y12-hasspare car-at-x02y14-hasspare 0.427273
+	car-at-x02y12-hasspare car-at-x02y14-flattired-hasspare 0.572727
+	car-at-x02y12-flattired-hasspare car-at-x02y12-flattired-hasspare 1.000000
+	car-at-x02y14 car-at-x02y16 0.354545
+	car-at-x02y14 car-at-x02y16-flattired 0.645455
+	car-at-x02y14-flattired car-at-x02y14-flattired 1.000000
+	car-at-x02y14-hasspare car-at-x02y16-hasspare 0.354545
+	car-at-x02y14-hasspare car-at-x02y16-flattired-hasspare 0.645455
+	car-at-x02y14-flattired-hasspare car-at-x02y14-flattired-hasspare 1.000000
+	car-at-x02y16 car-at-x02y18 0.281818
+	car-at-x02y16 car-at-x02y18-flattired 0.718182
+	car-at-x02y16-flattired car-at-x02y16-flattired 1.000000
+	car-at-x02y16-hasspare car-at-x02y18-hasspare 0.281818
+	car-at-x02y16-hasspare car-at-x02y18-flattired-hasspare 0.718182
+	car-at-x02y16-flattired-hasspare car-at-x02y16-flattired-hasspare 1.000000
+	car-at-x02y18 car-at-x02y20 0.209091
+	car-at-x02y18 car-at-x02y20-flattired 0.790909
+	car-at-x02y18-flattired car-at-x02y18-flattired 1.000000
+	car-at-x02y18-hasspare car-at-x02y20-hasspare 0.209091
+	car-at-x02y18-hasspare car-at-x02y20-flattired-hasspare 0.790909
+	car-at-x02y18-flattired-hasspare car-at-x02y18-flattired-hasspare 1.000000
+	car-at-x02y20 car-at-x02y22 0.136364
+	car-at-x02y20 car-at-x02y22-flattired 0.863636
+	car-at-x02y20-flattired car-at-x02y20-flattired 1.000000
+	car-at-x02y20-hasspare car-at-x02y22-hasspare 0.136364
+	car-at-x02y20-hasspare car-at-x02y22-flattired-hasspare 0.863636
+	car-at-x02y20-flattired-hasspare car-at-x02y20-flattired-hasspare 1.000000
+	car-at-x02y22 car-at-x02y22 1.000000
+	car-at-x02y22-flattired car-at-x02y22-flattired 1.000000
+	car-at-x02y22-hasspare car-at-x02y22-hasspare 1.000000
+	car-at-x02y22-flattired-hasspare car-at-x02y22-flattired-hasspare 1.000000
+	car-at-x03y03 car-at-x03y05 0.754545
+	car-at-x03y03 car-at-x03y05-flattired 0.245455
+	car-at-x03y03-flattired car-at-x03y03-flattired 1.000000
+	car-at-x03y03-hasspare car-at-x03y05-hasspare 0.754545
+	car-at-x03y03-hasspare car-at-x03y05-flattired-hasspare 0.245455
+	car-at-x03y03-flattired-hasspare car-at-x03y03-flattired-hasspare 1.000000
+	car-at-x03y05 car-at-x03y07 0.681818
+	car-at-x03y05 car-at-x03y07-flattired 0.318182
+	car-at-x03y05-flattired car-at-x03y05-flattired 1.000000
+	car-at-x03y05-hasspare car-at-x03y07-hasspare 0.681818
+	car-at-x03y05-hasspare car-at-x03y07-flattired-hasspare 0.318182
+	car-at-x03y05-flattired-hasspare car-at-x03y05-flattired-hasspare 1.000000
+	car-at-x03y07 car-at-x03y09 0.609091
+	car-at-x03y07 car-at-x03y09-flattired 0.390909
+	car-at-x03y07-flattired car-at-x03y07-flattired 1.000000
+	car-at-x03y07-hasspare car-at-x03y09-hasspare 0.609091
+	car-at-x03y07-hasspare car-at-x03y09-flattired-hasspare 0.390909
+	car-at-x03y07-flattired-hasspare car-at-x03y07-flattired-hasspare 1.000000
+	car-at-x03y09 car-at-x03y11 0.536364
+	car-at-x03y09 car-at-x03y11-flattired 0.463636
+	car-at-x03y09-flattired car-at-x03y09-flattired 1.000000
+	car-at-x03y09-hasspare car-at-x03y11-hasspare 0.536364
+	car-at-x03y09-hasspare car-at-x03y11-flattired-hasspare 0.463636
+	car-at-x03y09-flattired-hasspare car-at-x03y09-flattired-hasspare 1.000000
+	car-at-x03y11 car-at-x03y13 0.463636
+	car-at-x03y11 car-at-x03y13-flattired 0.536364
+	car-at-x03y11-flattired car-at-x03y11-flattired 1.000000
+	car-at-x03y11-hasspare car-at-x03y13-hasspare 0.463636
+	car-at-x03y11-hasspare car-at-x03y13-flattired-hasspare 0.536364
+	car-at-x03y11-flattired-hasspare car-at-x03y11-flattired-hasspare 1.000000
+	car-at-x03y13 car-at-x03y15 0.390909
+	car-at-x03y13 car-at-x03y15-flattired 0.609091
+	car-at-x03y13-flattired car-at-x03y13-flattired 1.000000
+	car-at-x03y13-hasspare car-at-x03y15-hasspare 0.390909
+	car-at-x03y13-hasspare car-at-x03y15-flattired-hasspare 0.609091
+	car-at-x03y13-flattired-hasspare car-at-x03y13-flattired-hasspare 1.000000
+	car-at-x03y15 car-at-x03y17 0.318182
+	car-at-x03y15 car-at-x03y17-flattired 0.681818
+	car-at-x03y15-flattired car-at-x03y15-flattired 1.000000
+	car-at-x03y15-hasspare car-at-x03y17-hasspare 0.318182
+	car-at-x03y15-hasspare car-at-x03y17-flattired-hasspare 0.681818
+	car-at-x03y15-flattired-hasspare car-at-x03y15-flattired-hasspare 1.000000
+	car-at-x03y17 car-at-x03y19 0.245455
+	car-at-x03y17 car-at-x03y19-flattired 0.754545
+	car-at-x03y17-flattired car-at-x03y17-flattired 1.000000
+	car-at-x03y17-hasspare car-at-x03y19-hasspare 0.245455
+	car-at-x03y17-hasspare car-at-x03y19-flattired-hasspare 0.754545
+	car-at-x03y17-flattired-hasspare car-at-x03y17-flattired-hasspare 1.000000
+	car-at-x03y19 car-at-x03y21 0.172727
+	car-at-x03y19 car-at-x03y21-flattired 0.827273
+	car-at-x03y19-flattired car-at-x03y19-flattired 1.000000
+	car-at-x03y19-hasspare car-at-x03y21-hasspare 0.172727
+	car-at-x03y19-hasspare car-at-x03y21-flattired-hasspare 0.827273
+	car-at-x03y19-flattired-hasspare car-at-x03y19-flattired-hasspare 1.000000
+	car-at-x03y21 car-at-x03y21 1.000000
+	car-at-x03y21-flattired car-at-x03y21-flattired 1.000000
+	car-at-x03y21-hasspare car-at-x03y21-hasspare 1.000000
+	car-at-x03y21-flattired-hasspare car-at-x03y21-flattired-hasspare 1.000000
+	car-at-x04y04 car-at-x04y06 0.718182
+	car-at-x04y04 car-at-x04y06-flattired 0.281818
+	car-at-x04y04-flattired car-at-x04y04-flattired 1.000000
+	car-at-x04y04-hasspare car-at-x04y06-hasspare 0.718182
+	car-at-x04y04-hasspare car-at-x04y06-flattired-hasspare 0.281818
+	car-at-x04y04-flattired-hasspare car-at-x04y04-flattired-hasspare 1.000000
+	car-at-x04y06 car-at-x04y08 0.645455
+	car-at-x04y06 car-at-x04y08-flattired 0.354545
+	car-at-x04y06-flattired car-at-x04y06-flattired 1.000000
+	car-at-x04y06-hasspare car-at-x04y08-hasspare 0.645455
+	car-at-x04y06-hasspare car-at-x04y08-flattired-hasspare 0.354545
+	car-at-x04y06-flattired-hasspare car-at-x04y06-flattired-hasspare 1.000000
+	car-at-x04y08 car-at-x04y10 0.572727
+	car-at-x04y08 car-at-x04y10-flattired 0.427273
+	car-at-x04y08-flattired car-at-x04y08-flattired 1.000000
+	car-at-x04y08-hasspare car-at-x04y10-hasspare 0.572727
+	car-at-x04y08-hasspare car-at-x04y10-flattired-hasspare 0.427273
+	car-at-x04y08-flattired-hasspare car-at-x04y08-flattired-hasspare 1.000000
+	car-at-x04y10 car-at-x04y12 0.500000
+	car-at-x04y10 car-at-x04y12-flattired 0.500000
+	car-at-x04y10-flattired car-at-x04y10-flattired 1.000000
+	car-at-x04y10-hasspare car-at-x04y12-hasspare 0.500000
+	car-at-x04y10-hasspare car-at-x04y12-flattired-hasspare 0.500000
+	car-at-x04y10-flattired-hasspare car-at-x04y10-flattired-hasspare 1.000000
+	car-at-x04y12 car-at-x04y14 0.427273
+	car-at-x04y12 car-at-x04y14-flattired 0.572727
+	car-at-x04y12-flattired car-at-x04y12-flattired 1.000000
+	car-at-x04y12-hasspare car-at-x04y14-hasspare 0.427273
+	car-at-x04y12-hasspare car-at-x04y14-flattired-hasspare 0.572727
+	car-at-x04y12-flattired-hasspare car-at-x04y12-flattired-hasspare 1.000000
+	car-at-x04y14 car-at-x04y16 0.354545
+	car-at-x04y14 car-at-x04y16-flattired 0.645455
+	car-at-x04y14-flattired car-at-x04y14-flattired 1.000000
+	car-at-x04y14-hasspare car-at-x04y16-hasspare 0.354545
+	car-at-x04y14-hasspare car-at-x04y16-flattired-hasspare 0.645455
+	car-at-x04y14-flattired-hasspare car-at-x04y14-flattired-hasspare 1.000000
+	car-at-x04y16 car-at-x04y18 0.281818
+	car-at-x04y16 car-at-x04y18-flattired 0.718182
+	car-at-x04y16-flattired car-at-x04y16-flattired 1.000000
+	car-at-x04y16-hasspare car-at-x04y18-hasspare 0.281818
+	car-at-x04y16-hasspare car-at-x04y18-flattired-hasspare 0.718182
+	car-at-x04y16-flattired-hasspare car-at-x04y16-flattired-hasspare 1.000000
+	car-at-x04y18 car-at-x04y20 0.209091
+	car-at-x04y18 car-at-x04y20-flattired 0.790909
+	car-at-x04y18-flattired car-at-x04y18-flattired 1.000000
+	car-at-x04y18-hasspare car-at-x04y20-hasspare 0.209091
+	car-at-x04y18-hasspare car-at-x04y20-flattired-hasspare 0.790909
+	car-at-x04y18-flattired-hasspare car-at-x04y18-flattired-hasspare 1.000000
+	car-at-x04y20 car-at-x04y20 1.000000
+	car-at-x04y20-flattired car-at-x04y20-flattired 1.000000
+	car-at-x04y20-hasspare car-at-x04y20-hasspare 1.000000
+	car-at-x04y20-flattired-hasspare car-at-x04y20-flattired-hasspare 1.000000
+	car-at-x05y05 car-at-x05y07 0.681818
+	car-at-x05y05 car-at-x05y07-flattired 0.318182
+	car-at-x05y05-flattired car-at-x05y05-flattired 1.000000
+	car-at-x05y05-hasspare car-at-x05y07-hasspare 0.681818
+	car-at-x05y05-hasspare car-at-x05y07-flattired-hasspare 0.318182
+	car-at-x05y05-flattired-hasspare car-at-x05y05-flattired-hasspare 1.000000
+	car-at-x05y07 car-at-x05y09 0.609091
+	car-at-x05y07 car-at-x05y09-flattired 0.390909
+	car-at-x05y07-flattired car-at-x05y07-flattired 1.000000
+	car-at-x05y07-hasspare car-at-x05y09-hasspare 0.609091
+	car-at-x05y07-hasspare car-at-x05y09-flattired-hasspare 0.390909
+	car-at-x05y07-flattired-hasspare car-at-x05y07-flattired-hasspare 1.000000
+	car-at-x05y09 car-at-x05y11 0.536364
+	car-at-x05y09 car-at-x05y11-flattired 0.463636
+	car-at-x05y09-flattired car-at-x05y09-flattired 1.000000
+	car-at-x05y09-hasspare car-at-x05y11-hasspare 0.536364
+	car-at-x05y09-hasspare car-at-x05y11-flattired-hasspare 0.463636
+	car-at-x05y09-flattired-hasspare car-at-x05y09-flattired-hasspare 1.000000
+	car-at-x05y11 car-at-x05y13 0.463636
+	car-at-x05y11 car-at-x05y13-flattired 0.536364
+	car-at-x05y11-flattired car-at-x05y11-flattired 1.000000
+	car-at-x05y11-hasspare car-at-x05y13-hasspare 0.463636
+	car-at-x05y11-hasspare car-at-x05y13-flattired-hasspare 0.536364
+	car-at-x05y11-flattired-hasspare car-at-x05y11-flattired-hasspare 1.000000
+	car-at-x05y13 car-at-x05y15 0.390909
+	car-at-x05y13 car-at-x05y15-flattired 0.609091
+	car-at-x05y13-flattired car-at-x05y13-flattired 1.000000
+	car-at-x05y13-hasspare car-at-x05y15-hasspare 0.390909
+	car-at-x05y13-hasspare car-at-x05y15-flattired-hasspare 0.609091
+	car-at-x05y13-flattired-hasspare car-at-x05y13-flattired-hasspare 1.000000
+	car-at-x05y15 car-at-x05y17 0.318182
+	car-at-x05y15 car-at-x05y17-flattired 0.681818
+	car-at-x05y15-flattired car-at-x05y15-flattired 1.000000
+	car-at-x05y15-hasspare car-at-x05y17-hasspare 0.318182
+	car-at-x05y15-hasspare car-at-x05y17-flattired-hasspare 0.681818
+	car-at-x05y15-flattired-hasspare car-at-x05y15-flattired-hasspare 1.000000
+	car-at-x05y17 car-at-x05y19 0.245455
+	car-at-x05y17 car-at-x05y19-flattired 0.754545
+	car-at-x05y17-flattired car-at-x05y17-flattired 1.000000
+	car-at-x05y17-hasspare car-at-x05y19-hasspare 0.245455
+	car-at-x05y17-hasspare car-at-x05y19-flattired-hasspare 0.754545
+	car-at-x05y17-flattired-hasspare car-at-x05y17-flattired-hasspare 1.000000
+	car-at-x05y19 car-at-x05y19 1.000000
+	car-at-x05y19-flattired car-at-x05y19-flattired 1.000000
+	car-at-x05y19-hasspare car-at-x05y19-hasspare 1.000000
+	car-at-x05y19-flattired-hasspare car-at-x05y19-flattired-hasspare 1.000000
+	car-at-x06y06 car-at-x06y08 0.645455
+	car-at-x06y06 car-at-x06y08-flattired 0.354545
+	car-at-x06y06-flattired car-at-x06y06-flattired 1.000000
+	car-at-x06y06-hasspare car-at-x06y08-hasspare 0.645455
+	car-at-x06y06-hasspare car-at-x06y08-flattired-hasspare 0.354545
+	car-at-x06y06-flattired-hasspare car-at-x06y06-flattired-hasspare 1.000000
+	car-at-x06y08 car-at-x06y10 0.572727
+	car-at-x06y08 car-at-x06y10-flattired 0.427273
+	car-at-x06y08-flattired car-at-x06y08-flattired 1.000000
+	car-at-x06y08-hasspare car-at-x06y10-hasspare 0.572727
+	car-at-x06y08-hasspare car-at-x06y10-flattired-hasspare 0.427273
+	car-at-x06y08-flattired-hasspare car-at-x06y08-flattired-hasspare 1.000000
+	car-at-x06y10 car-at-x06y12 0.500000
+	car-at-x06y10 car-at-x06y12-flattired 0.500000
+	car-at-x06y10-flattired car-at-x06y10-flattired 1.000000
+	car-at-x06y10-hasspare car-at-x06y12-hasspare 0.500000
+	car-at-x06y10-hasspare car-at-x06y12-flattired-hasspare 0.500000
+	car-at-x06y10-flattired-hasspare car-at-x06y10-flattired-hasspare 1.000000
+	car-at-x06y12 car-at-x06y14 0.427273
+	car-at-x06y12 car-at-x06y14-flattired 0.572727
+	car-at-x06y12-flattired car-at-x06y12-flattired 1.000000
+	car-at-x06y12-hasspare car-at-x06y14-hasspare 0.427273
+	car-at-x06y12-hasspare car-at-x06y14-flattired-hasspare 0.572727
+	car-at-x06y12-flattired-hasspare car-at-x06y12-flattired-hasspare 1.000000
+	car-at-x06y14 car-at-x06y16 0.354545
+	car-at-x06y14 car-at-x06y16-flattired 0.645455
+	car-at-x06y14-flattired car-at-x06y14-flattired 1.000000
+	car-at-x06y14-hasspare car-at-x06y16-hasspare 0.354545
+	car-at-x06y14-hasspare car-at-x06y16-flattired-hasspare 0.645455
+	car-at-x06y14-flattired-hasspare car-at-x06y14-flattired-hasspare 1.000000
+	car-at-x06y16 car-at-x06y18 0.281818
+	car-at-x06y16 car-at-x06y18-flattired 0.718182
+	car-at-x06y16-flattired car-at-x06y16-flattired 1.000000
+	car-at-x06y16-hasspare car-at-x06y18-hasspare 0.281818
+	car-at-x06y16-hasspare car-at-x06y18-flattired-hasspare 0.718182
+	car-at-x06y16-flattired-hasspare car-at-x06y16-flattired-hasspare 1.000000
+	car-at-x06y18 car-at-x06y18 1.000000
+	car-at-x06y18-flattired car-at-x06y18-flattired 1.000000
+	car-at-x06y18-hasspare car-at-x06y18-hasspare 1.000000
+	car-at-x06y18-flattired-hasspare car-at-x06y18-flattired-hasspare 1.000000
+	car-at-x07y07 car-at-x07y09 0.609091
+	car-at-x07y07 car-at-x07y09-flattired 0.390909
+	car-at-x07y07-flattired car-at-x07y07-flattired 1.000000
+	car-at-x07y07-hasspare car-at-x07y09-hasspare 0.609091
+	car-at-x07y07-hasspare car-at-x07y09-flattired-hasspare 0.390909
+	car-at-x07y07-flattired-hasspare car-at-x07y07-flattired-hasspare 1.000000
+	car-at-x07y09 car-at-x07y11 0.536364
+	car-at-x07y09 car-at-x07y11-flattired 0.463636
+	car-at-x07y09-flattired car-at-x07y09-flattired 1.000000
+	car-at-x07y09-hasspare car-at-x07y11-hasspare 0.536364
+	car-at-x07y09-hasspare car-at-x07y11-flattired-hasspare 0.463636
+	car-at-x07y09-flattired-hasspare car-at-x07y09-flattired-hasspare 1.000000
+	car-at-x07y11 car-at-x07y13 0.463636
+	car-at-x07y11 car-at-x07y13-flattired 0.536364
+	car-at-x07y11-flattired car-at-x07y11-flattired 1.000000
+	car-at-x07y11-hasspare car-at-x07y13-hasspare 0.463636
+	car-at-x07y11-hasspare car-at-x07y13-flattired-hasspare 0.536364
+	car-at-x07y11-flattired-hasspare car-at-x07y11-flattired-hasspare 1.000000
+	car-at-x07y13 car-at-x07y15 0.390909
+	car-at-x07y13 car-at-x07y15-flattired 0.609091
+	car-at-x07y13-flattired car-at-x07y13-flattired 1.000000
+	car-at-x07y13-hasspare car-at-x07y15-hasspare 0.390909
+	car-at-x07y13-hasspare car-at-x07y15-flattired-hasspare 0.609091
+	car-at-x07y13-flattired-hasspare car-at-x07y13-flattired-hasspare 1.000000
+	car-at-x07y15 car-at-x07y17 0.318182
+	car-at-x07y15 car-at-x07y17-flattired 0.681818
+	car-at-x07y15-flattired car-at-x07y15-flattired 1.000000
+	car-at-x07y15-hasspare car-at-x07y17-hasspare 0.318182
+	car-at-x07y15-hasspare car-at-x07y17-flattired-hasspare 0.681818
+	car-at-x07y15-flattired-hasspare car-at-x07y15-flattired-hasspare 1.000000
+	car-at-x07y17 car-at-x07y17 1.000000
+	car-at-x07y17-flattired car-at-x07y17-flattired 1.000000
+	car-at-x07y17-hasspare car-at-x07y17-hasspare 1.000000
+	car-at-x07y17-flattired-hasspare car-at-x07y17-flattired-hasspare 1.000000
+	car-at-x08y08 car-at-x08y10 0.572727
+	car-at-x08y08 car-at-x08y10-flattired 0.427273
+	car-at-x08y08-flattired car-at-x08y08-flattired 1.000000
+	car-at-x08y08-hasspare car-at-x08y10-hasspare 0.572727
+	car-at-x08y08-hasspare car-at-x08y10-flattired-hasspare 0.427273
+	car-at-x08y08-flattired-hasspare car-at-x08y08-flattired-hasspare 1.000000
+	car-at-x08y10 car-at-x08y12 0.500000
+	car-at-x08y10 car-at-x08y12-flattired 0.500000
+	car-at-x08y10-flattired car-at-x08y10-flattired 1.000000
+	car-at-x08y10-hasspare car-at-x08y12-hasspare 0.500000
+	car-at-x08y10-hasspare car-at-x08y12-flattired-hasspare 0.500000
+	car-at-x08y10-flattired-hasspare car-at-x08y10-flattired-hasspare 1.000000
+	car-at-x08y12 car-at-x08y14 0.427273
+	car-at-x08y12 car-at-x08y14-flattired 0.572727
+	car-at-x08y12-flattired car-at-x08y12-flattired 1.000000
+	car-at-x08y12-hasspare car-at-x08y14-hasspare 0.427273
+	car-at-x08y12-hasspare car-at-x08y14-flattired-hasspare 0.572727
+	car-at-x08y12-flattired-hasspare car-at-x08y12-flattired-hasspare 1.000000
+	car-at-x08y14 car-at-x08y16 0.354545
+	car-at-x08y14 car-at-x08y16-flattired 0.645455
+	car-at-x08y14-flattired car-at-x08y14-flattired 1.000000
+	car-at-x08y14-hasspare car-at-x08y16-hasspare 0.354545
+	car-at-x08y14-hasspare car-at-x08y16-flattired-hasspare 0.645455
+	car-at-x08y14-flattired-hasspare car-at-x08y14-flattired-hasspare 1.000000
+	car-at-x08y16 car-at-x08y16 1.000000
+	car-at-x08y16-flattired car-at-x08y16-flattired 1.000000
+	car-at-x08y16-hasspare car-at-x08y16-hasspare 1.000000
+	car-at-x08y16-flattired-hasspare car-at-x08y16-flattired-hasspare 1.000000
+	car-at-x09y09 car-at-x09y11 0.536364
+	car-at-x09y09 car-at-x09y11-flattired 0.463636
+	car-at-x09y09-flattired car-at-x09y09-flattired 1.000000
+	car-at-x09y09-hasspare car-at-x09y11-hasspare 0.536364
+	car-at-x09y09-hasspare car-at-x09y11-flattired-hasspare 0.463636
+	car-at-x09y09-flattired-hasspare car-at-x09y09-flattired-hasspare 1.000000
+	car-at-x09y11 car-at-x09y13 0.463636
+	car-at-x09y11 car-at-x09y13-flattired 0.536364
+	car-at-x09y11-flattired car-at-x09y11-flattired 1.000000
+	car-at-x09y11-hasspare car-at-x09y13-hasspare 0.463636
+	car-at-x09y11-hasspare car-at-x09y13-flattired-hasspare 0.536364
+	car-at-x09y11-flattired-hasspare car-at-x09y11-flattired-hasspare 1.000000
+	car-at-x09y13 car-at-x09y15 0.390909
+	car-at-x09y13 car-at-x09y15-flattired 0.609091
+	car-at-x09y13-flattired car-at-x09y13-flattired 1.000000
+	car-at-x09y13-hasspare car-at-x09y15-hasspare 0.390909
+	car-at-x09y13-hasspare car-at-x09y15-flattired-hasspare 0.609091
+	car-at-x09y13-flattired-hasspare car-at-x09y13-flattired-hasspare 1.000000
+	car-at-x09y15 car-at-x09y15 1.000000
+	car-at-x09y15-flattired car-at-x09y15-flattired 1.000000
+	car-at-x09y15-hasspare car-at-x09y15-hasspare 1.000000
+	car-at-x09y15-flattired-hasspare car-at-x09y15-flattired-hasspare 1.000000
+	car-at-x10y10 car-at-x10y12 0.500000
+	car-at-x10y10 car-at-x10y12-flattired 0.500000
+	car-at-x10y10-flattired car-at-x10y10-flattired 1.000000
+	car-at-x10y10-hasspare car-at-x10y12-hasspare 0.500000
+	car-at-x10y10-hasspare car-at-x10y12-flattired-hasspare 0.500000
+	car-at-x10y10-flattired-hasspare car-at-x10y10-flattired-hasspare 1.000000
+	car-at-x10y12 car-at-x10y14 0.427273
+	car-at-x10y12 car-at-x10y14-flattired 0.572727
+	car-at-x10y12-flattired car-at-x10y12-flattired 1.000000
+	car-at-x10y12-hasspare car-at-x10y14-hasspare 0.427273
+	car-at-x10y12-hasspare car-at-x10y14-flattired-hasspare 0.572727
+	car-at-x10y12-flattired-hasspare car-at-x10y12-flattired-hasspare 1.000000
+	car-at-x10y14 car-at-x10y14 1.000000
+	car-at-x10y14-flattired car-at-x10y14-flattired 1.000000
+	car-at-x10y14-hasspare car-at-x10y14-hasspare 1.000000
+	car-at-x10y14-flattired-hasspare car-at-x10y14-flattired-hasspare 1.000000
+	car-at-x11y11 car-at-x11y13 0.463636
+	car-at-x11y11 car-at-x11y13-flattired 0.536364
+	car-at-x11y11-flattired car-at-x11y11-flattired 1.000000
+	car-at-x11y11-hasspare car-at-x11y13-hasspare 0.463636
+	car-at-x11y11-hasspare car-at-x11y13-flattired-hasspare 0.536364
+	car-at-x11y11-flattired-hasspare car-at-x11y11-flattired-hasspare 1.000000
+	car-at-x11y13 car-at-x11y13 1.000000
+	car-at-x11y13-flattired car-at-x11y13-flattired 1.000000
+	car-at-x11y13-hasspare car-at-x11y13-hasspare 1.000000
+	car-at-x11y13-flattired-hasspare car-at-x11y13-flattired-hasspare 1.000000
+	car-at-x12y12 car-at-x12y12 1.000000
+	car-at-x12y12-flattired car-at-x12y12-flattired 1.000000
+	car-at-x12y12-hasspare car-at-x12y12-hasspare 1.000000
+	car-at-x12y12-flattired-hasspare car-at-x12y12-flattired-hasspare 1.000000
+endaction
+
+action move-northeast
+	car-at-x01y01 car-at-x02y02 0.863636
+	car-at-x01y01 car-at-x02y02-flattired 0.136364
+	car-at-x01y01-flattired car-at-x01y01-flattired 1.000000
+	car-at-x01y01-hasspare car-at-x02y02-hasspare 0.863636
+	car-at-x01y01-hasspare car-at-x02y02-flattired-hasspare 0.136364
+	car-at-x01y01-flattired-hasspare car-at-x01y01-flattired-hasspare 1.000000
+	car-at-x01y03 car-at-x02y04 0.790909
+	car-at-x01y03 car-at-x02y04-flattired 0.209091
+	car-at-x01y03-flattired car-at-x01y03-flattired 1.000000
+	car-at-x01y03-hasspare car-at-x02y04-hasspare 0.790909
+	car-at-x01y03-hasspare car-at-x02y04-flattired-hasspare 0.209091
+	car-at-x01y03-flattired-hasspare car-at-x01y03-flattired-hasspare 1.000000
+	car-at-x01y05 car-at-x02y06 0.718182
+	car-at-x01y05 car-at-x02y06-flattired 0.281818
+	car-at-x01y05-flattired car-at-x01y05-flattired 1.000000
+	car-at-x01y05-hasspare car-at-x02y06-hasspare 0.718182
+	car-at-x01y05-hasspare car-at-x02y06-flattired-hasspare 0.281818
+	car-at-x01y05-flattired-hasspare car-at-x01y05-flattired-hasspare 1.000000
+	car-at-x01y07 car-at-x02y08 0.645455
+	car-at-x01y07 car-at-x02y08-flattired 0.354545
+	car-at-x01y07-flattired car-at-x01y07-flattired 1.000000
+	car-at-x01y07-hasspare car-at-x02y08-hasspare 0.645455
+	car-at-x01y07-hasspare car-at-x02y08-flattired-hasspare 0.354545
+	car-at-x01y07-flattired-hasspare car-at-x01y07-flattired-hasspare 1.000000
+	car-at-x01y09 car-at-x02y10 0.572727
+	car-at-x01y09 car-at-x02y10-flattired 0.427273
+	car-at-x01y09-flattired car-at-x01y09-flattired 1.000000
+	car-at-x01y09-hasspare car-at-x02y10-hasspare 0.572727
+	car-at-x01y09-hasspare car-at-x02y10-flattired-hasspare 0.427273
+	car-at-x01y09-flattired-hasspare car-at-x01y09-flattired-hasspare 1.000000
+	car-at-x01y11 car-at-x02y12 0.500000
+	car-at-x01y11 car-at-x02y12-flattired 0.500000
+	car-at-x01y11-flattired car-at-x01y11-flattired 1.000000
+	car-at-x01y11-hasspare car-at-x02y12-hasspare 0.500000
+	car-at-x01y11-hasspare car-at-x02y12-flattired-hasspare 0.500000
+	car-at-x01y11-flattired-hasspare car-at-x01y11-flattired-hasspare 1.000000
+	car-at-x01y13 car-at-x02y14 0.427273
+	car-at-x01y13 car-at-x02y14-flattired 0.572727
+	car-at-x01y13-flattired car-at-x01y13-flattired 1.000000
+	car-at-x01y13-hasspare car-at-x02y14-hasspare 0.427273
+	car-at-x01y13-hasspare car-at-x02y14-flattired-hasspare 0.572727
+	car-at-x01y13-flattired-hasspare car-at-x01y13-flattired-hasspare 1.000000
+	car-at-x01y15 car-at-x02y16 0.354545
+	car-at-x01y15 car-at-x02y16-flattired 0.645455
+	car-at-x01y15-flattired car-at-x01y15-flattired 1.000000
+	car-at-x01y15-hasspare car-at-x02y16-hasspare 0.354545
+	car-at-x01y15-hasspare car-at-x02y16-flattired-hasspare 0.645455
+	car-at-x01y15-flattired-hasspare car-at-x01y15-flattired-hasspare 1.000000
+	car-at-x01y17 car-at-x02y18 0.281818
+	car-at-x01y17 car-at-x02y18-flattired 0.718182
+	car-at-x01y17-flattired car-at-x01y17-flattired 1.000000
+	car-at-x01y17-hasspare car-at-x02y18-hasspare 0.281818
+	car-at-x01y17-hasspare car-at-x02y18-flattired-hasspare 0.718182
+	car-at-x01y17-flattired-hasspare car-at-x01y17-flattired-hasspare 1.000000
+	car-at-x01y19 car-at-x02y20 0.209091
+	car-at-x01y19 car-at-x02y20-flattired 0.790909
+	car-at-x01y19-flattired car-at-x01y19-flattired 1.000000
+	car-at-x01y19-hasspare car-at-x02y20-hasspare 0.209091
+	car-at-x01y19-hasspare car-at-x02y20-flattired-hasspare 0.790909
+	car-at-x01y19-flattired-hasspare car-at-x01y19-flattired-hasspare 1.000000
+	car-at-x01y21 car-at-x02y22 0.136364
+	car-at-x01y21 car-at-x02y22-flattired 0.863636
+	car-at-x01y21-flattired car-at-x01y21-flattired 1.000000
+	car-at-x01y21-hasspare car-at-x02y22-hasspare 0.136364
+	car-at-x01y21-hasspare car-at-x02y22-flattired-hasspare 0.863636
+	car-at-x01y21-flattired-hasspare car-at-x01y21-flattired-hasspare 1.000000
+	car-at-x01y23 car-at-x01y23 1.000000
+	car-at-x01y23-flattired car-at-x01y23-flattired 1.000000
+	car-at-x01y23-hasspare car-at-x01y23-hasspare 1.000000
+	car-at-x01y23-flattired-hasspare car-at-x01y23-flattired-hasspare 1.000000
+	car-at-x02y02 car-at-x03y03 0.827273
+	car-at-x02y02 car-at-x03y03-flattired 0.172727
+	car-at-x02y02-flattired car-at-x02y02-flattired 1.000000
+	car-at-x02y02-hasspare car-at-x03y03-hasspare 0.827273
+	car-at-x02y02-hasspare car-at-x03y03-flattired-hasspare 0.172727
+	car-at-x02y02-flattired-hasspare car-at-x02y02-flattired-hasspare 1.000000
+	car-at-x02y04 car-at-x03y05 0.754545
+	car-at-x02y04 car-at-x03y05-flattired 0.245455
+	car-at-x02y04-flattired car-at-x02y04-flattired 1.000000
+	car-at-x02y04-hasspare car-at-x03y05-hasspare 0.754545
+	car-at-x02y04-hasspare car-at-x03y05-flattired-hasspare 0.245455
+	car-at-x02y04-flattired-hasspare car-at-x02y04-flattired-hasspare 1.000000
+	car-at-x02y06 car-at-x03y07 0.681818
+	car-at-x02y06 car-at-x03y07-flattired 0.318182
+	car-at-x02y06-flattired car-at-x02y06-flattired 1.000000
+	car-at-x02y06-hasspare car-at-x03y07-hasspare 0.681818
+	car-at-x02y06-hasspare car-at-x03y07-flattired-hasspare 0.318182
+	car-at-x02y06-flattired-hasspare car-at-x02y06-flattired-hasspare 1.000000
+	car-at-x02y08 car-at-x03y09 0.609091
+	car-at-x02y08 car-at-x03y09-flattired 0.390909
+	car-at-x02y08-flattired car-at-x02y08-flattired 1.000000
+	car-at-x02y08-hasspare car-at-x03y09-hasspare 0.609091
+	car-at-x02y08-hasspare car-at-x03y09-flattired-hasspare 0.390909
+	car-at-x02y08-flattired-hasspare car-at-x02y08-flattired-hasspare 1.000000
+	car-at-x02y10 car-at-x03y11 0.536364
+	car-at-x02y10 car-at-x03y11-flattired 0.463636
+	car-at-x02y10-flattired car-at-x02y10-flattired 1.000000
+	car-at-x02y10-hasspare car-at-x03y11-hasspare 0.536364
+	car-at-x02y10-hasspare car-at-x03y11-flattired-hasspare 0.463636
+	car-at-x02y10-flattired-hasspare car-at-x02y10-flattired-hasspare 1.000000
+	car-at-x02y12 car-at-x03y13 0.463636
+	car-at-x02y12 car-at-x03y13-flattired 0.536364
+	car-at-x02y12-flattired car-at-x02y12-flattired 1.000000
+	car-at-x02y12-hasspare car-at-x03y13-hasspare 0.463636
+	car-at-x02y12-hasspare car-at-x03y13-flattired-hasspare 0.536364
+	car-at-x02y12-flattired-hasspare car-at-x02y12-flattired-hasspare 1.000000
+	car-at-x02y14 car-at-x03y15 0.390909
+	car-at-x02y14 car-at-x03y15-flattired 0.609091
+	car-at-x02y14-flattired car-at-x02y14-flattired 1.000000
+	car-at-x02y14-hasspare car-at-x03y15-hasspare 0.390909
+	car-at-x02y14-hasspare car-at-x03y15-flattired-hasspare 0.609091
+	car-at-x02y14-flattired-hasspare car-at-x02y14-flattired-hasspare 1.000000
+	car-at-x02y16 car-at-x03y17 0.318182
+	car-at-x02y16 car-at-x03y17-flattired 0.681818
+	car-at-x02y16-flattired car-at-x02y16-flattired 1.000000
+	car-at-x02y16-hasspare car-at-x03y17-hasspare 0.318182
+	car-at-x02y16-hasspare car-at-x03y17-flattired-hasspare 0.681818
+	car-at-x02y16-flattired-hasspare car-at-x02y16-flattired-hasspare 1.000000
+	car-at-x02y18 car-at-x03y19 0.245455
+	car-at-x02y18 car-at-x03y19-flattired 0.754545
+	car-at-x02y18-flattired car-at-x02y18-flattired 1.000000
+	car-at-x02y18-hasspare car-at-x03y19-hasspare 0.245455
+	car-at-x02y18-hasspare car-at-x03y19-flattired-hasspare 0.754545
+	car-at-x02y18-flattired-hasspare car-at-x02y18-flattired-hasspare 1.000000
+	car-at-x02y20 car-at-x03y21 0.172727
+	car-at-x02y20 car-at-x03y21-flattired 0.827273
+	car-at-x02y20-flattired car-at-x02y20-flattired 1.000000
+	car-at-x02y20-hasspare car-at-x03y21-hasspare 0.172727
+	car-at-x02y20-hasspare car-at-x03y21-flattired-hasspare 0.827273
+	car-at-x02y20-flattired-hasspare car-at-x02y20-flattired-hasspare 1.000000
+	car-at-x02y22 car-at-x02y22 1.000000
+	car-at-x02y22-flattired car-at-x02y22-flattired 1.000000
+	car-at-x02y22-hasspare car-at-x02y22-hasspare 1.000000
+	car-at-x02y22-flattired-hasspare car-at-x02y22-flattired-hasspare 1.000000
+	car-at-x03y03 car-at-x04y04 0.790909
+	car-at-x03y03 car-at-x04y04-flattired 0.209091
+	car-at-x03y03-flattired car-at-x03y03-flattired 1.000000
+	car-at-x03y03-hasspare car-at-x04y04-hasspare 0.790909
+	car-at-x03y03-hasspare car-at-x04y04-flattired-hasspare 0.209091
+	car-at-x03y03-flattired-hasspare car-at-x03y03-flattired-hasspare 1.000000
+	car-at-x03y05 car-at-x04y06 0.718182
+	car-at-x03y05 car-at-x04y06-flattired 0.281818
+	car-at-x03y05-flattired car-at-x03y05-flattired 1.000000
+	car-at-x03y05-hasspare car-at-x04y06-hasspare 0.718182
+	car-at-x03y05-hasspare car-at-x04y06-flattired-hasspare 0.281818
+	car-at-x03y05-flattired-hasspare car-at-x03y05-flattired-hasspare 1.000000
+	car-at-x03y07 car-at-x04y08 0.645455
+	car-at-x03y07 car-at-x04y08-flattired 0.354545
+	car-at-x03y07-flattired car-at-x03y07-flattired 1.000000
+	car-at-x03y07-hasspare car-at-x04y08-hasspare 0.645455
+	car-at-x03y07-hasspare car-at-x04y08-flattired-hasspare 0.354545
+	car-at-x03y07-flattired-hasspare car-at-x03y07-flattired-hasspare 1.000000
+	car-at-x03y09 car-at-x04y10 0.572727
+	car-at-x03y09 car-at-x04y10-flattired 0.427273
+	car-at-x03y09-flattired car-at-x03y09-flattired 1.000000
+	car-at-x03y09-hasspare car-at-x04y10-hasspare 0.572727
+	car-at-x03y09-hasspare car-at-x04y10-flattired-hasspare 0.427273
+	car-at-x03y09-flattired-hasspare car-at-x03y09-flattired-hasspare 1.000000
+	car-at-x03y11 car-at-x04y12 0.500000
+	car-at-x03y11 car-at-x04y12-flattired 0.500000
+	car-at-x03y11-flattired car-at-x03y11-flattired 1.000000
+	car-at-x03y11-hasspare car-at-x04y12-hasspare 0.500000
+	car-at-x03y11-hasspare car-at-x04y12-flattired-hasspare 0.500000
+	car-at-x03y11-flattired-hasspare car-at-x03y11-flattired-hasspare 1.000000
+	car-at-x03y13 car-at-x04y14 0.427273
+	car-at-x03y13 car-at-x04y14-flattired 0.572727
+	car-at-x03y13-flattired car-at-x03y13-flattired 1.000000
+	car-at-x03y13-hasspare car-at-x04y14-hasspare 0.427273
+	car-at-x03y13-hasspare car-at-x04y14-flattired-hasspare 0.572727
+	car-at-x03y13-flattired-hasspare car-at-x03y13-flattired-hasspare 1.000000
+	car-at-x03y15 car-at-x04y16 0.354545
+	car-at-x03y15 car-at-x04y16-flattired 0.645455
+	car-at-x03y15-flattired car-at-x03y15-flattired 1.000000
+	car-at-x03y15-hasspare car-at-x04y16-hasspare 0.354545
+	car-at-x03y15-hasspare car-at-x04y16-flattired-hasspare 0.645455
+	car-at-x03y15-flattired-hasspare car-at-x03y15-flattired-hasspare 1.000000
+	car-at-x03y17 car-at-x04y18 0.281818
+	car-at-x03y17 car-at-x04y18-flattired 0.718182
+	car-at-x03y17-flattired car-at-x03y17-flattired 1.000000
+	car-at-x03y17-hasspare car-at-x04y18-hasspare 0.281818
+	car-at-x03y17-hasspare car-at-x04y18-flattired-hasspare 0.718182
+	car-at-x03y17-flattired-hasspare car-at-x03y17-flattired-hasspare 1.000000
+	car-at-x03y19 car-at-x04y20 0.209091
+	car-at-x03y19 car-at-x04y20-flattired 0.790909
+	car-at-x03y19-flattired car-at-x03y19-flattired 1.000000
+	car-at-x03y19-hasspare car-at-x04y20-hasspare 0.209091
+	car-at-x03y19-hasspare car-at-x04y20-flattired-hasspare 0.790909
+	car-at-x03y19-flattired-hasspare car-at-x03y19-flattired-hasspare 1.000000
+	car-at-x03y21 car-at-x03y21 1.000000
+	car-at-x03y21-flattired car-at-x03y21-flattired 1.000000
+	car-at-x03y21-hasspare car-at-x03y21-hasspare 1.000000
+	car-at-x03y21-flattired-hasspare car-at-x03y21-flattired-hasspare 1.000000
+	car-at-x04y04 car-at-x05y05 0.754545
+	car-at-x04y04 car-at-x05y05-flattired 0.245455
+	car-at-x04y04-flattired car-at-x04y04-flattired 1.000000
+	car-at-x04y04-hasspare car-at-x05y05-hasspare 0.754545
+	car-at-x04y04-hasspare car-at-x05y05-flattired-hasspare 0.245455
+	car-at-x04y04-flattired-hasspare car-at-x04y04-flattired-hasspare 1.000000
+	car-at-x04y06 car-at-x05y07 0.681818
+	car-at-x04y06 car-at-x05y07-flattired 0.318182
+	car-at-x04y06-flattired car-at-x04y06-flattired 1.000000
+	car-at-x04y06-hasspare car-at-x05y07-hasspare 0.681818
+	car-at-x04y06-hasspare car-at-x05y07-flattired-hasspare 0.318182
+	car-at-x04y06-flattired-hasspare car-at-x04y06-flattired-hasspare 1.000000
+	car-at-x04y08 car-at-x05y09 0.609091
+	car-at-x04y08 car-at-x05y09-flattired 0.390909
+	car-at-x04y08-flattired car-at-x04y08-flattired 1.000000
+	car-at-x04y08-hasspare car-at-x05y09-hasspare 0.609091
+	car-at-x04y08-hasspare car-at-x05y09-flattired-hasspare 0.390909
+	car-at-x04y08-flattired-hasspare car-at-x04y08-flattired-hasspare 1.000000
+	car-at-x04y10 car-at-x05y11 0.536364
+	car-at-x04y10 car-at-x05y11-flattired 0.463636
+	car-at-x04y10-flattired car-at-x04y10-flattired 1.000000
+	car-at-x04y10-hasspare car-at-x05y11-hasspare 0.536364
+	car-at-x04y10-hasspare car-at-x05y11-flattired-hasspare 0.463636
+	car-at-x04y10-flattired-hasspare car-at-x04y10-flattired-hasspare 1.000000
+	car-at-x04y12 car-at-x05y13 0.463636
+	car-at-x04y12 car-at-x05y13-flattired 0.536364
+	car-at-x04y12-flattired car-at-x04y12-flattired 1.000000
+	car-at-x04y12-hasspare car-at-x05y13-hasspare 0.463636
+	car-at-x04y12-hasspare car-at-x05y13-flattired-hasspare 0.536364
+	car-at-x04y12-flattired-hasspare car-at-x04y12-flattired-hasspare 1.000000
+	car-at-x04y14 car-at-x05y15 0.390909
+	car-at-x04y14 car-at-x05y15-flattired 0.609091
+	car-at-x04y14-flattired car-at-x04y14-flattired 1.000000
+	car-at-x04y14-hasspare car-at-x05y15-hasspare 0.390909
+	car-at-x04y14-hasspare car-at-x05y15-flattired-hasspare 0.609091
+	car-at-x04y14-flattired-hasspare car-at-x04y14-flattired-hasspare 1.000000
+	car-at-x04y16 car-at-x05y17 0.318182
+	car-at-x04y16 car-at-x05y17-flattired 0.681818
+	car-at-x04y16-flattired car-at-x04y16-flattired 1.000000
+	car-at-x04y16-hasspare car-at-x05y17-hasspare 0.318182
+	car-at-x04y16-hasspare car-at-x05y17-flattired-hasspare 0.681818
+	car-at-x04y16-flattired-hasspare car-at-x04y16-flattired-hasspare 1.000000
+	car-at-x04y18 car-at-x05y19 0.245455
+	car-at-x04y18 car-at-x05y19-flattired 0.754545
+	car-at-x04y18-flattired car-at-x04y18-flattired 1.000000
+	car-at-x04y18-hasspare car-at-x05y19-hasspare 0.245455
+	car-at-x04y18-hasspare car-at-x05y19-flattired-hasspare 0.754545
+	car-at-x04y18-flattired-hasspare car-at-x04y18-flattired-hasspare 1.000000
+	car-at-x04y20 car-at-x04y20 1.000000
+	car-at-x04y20-flattired car-at-x04y20-flattired 1.000000
+	car-at-x04y20-hasspare car-at-x04y20-hasspare 1.000000
+	car-at-x04y20-flattired-hasspare car-at-x04y20-flattired-hasspare 1.000000
+	car-at-x05y05 car-at-x06y06 0.718182
+	car-at-x05y05 car-at-x06y06-flattired 0.281818
+	car-at-x05y05-flattired car-at-x05y05-flattired 1.000000
+	car-at-x05y05-hasspare car-at-x06y06-hasspare 0.718182
+	car-at-x05y05-hasspare car-at-x06y06-flattired-hasspare 0.281818
+	car-at-x05y05-flattired-hasspare car-at-x05y05-flattired-hasspare 1.000000
+	car-at-x05y07 car-at-x06y08 0.645455
+	car-at-x05y07 car-at-x06y08-flattired 0.354545
+	car-at-x05y07-flattired car-at-x05y07-flattired 1.000000
+	car-at-x05y07-hasspare car-at-x06y08-hasspare 0.645455
+	car-at-x05y07-hasspare car-at-x06y08-flattired-hasspare 0.354545
+	car-at-x05y07-flattired-hasspare car-at-x05y07-flattired-hasspare 1.000000
+	car-at-x05y09 car-at-x06y10 0.572727
+	car-at-x05y09 car-at-x06y10-flattired 0.427273
+	car-at-x05y09-flattired car-at-x05y09-flattired 1.000000
+	car-at-x05y09-hasspare car-at-x06y10-hasspare 0.572727
+	car-at-x05y09-hasspare car-at-x06y10-flattired-hasspare 0.427273
+	car-at-x05y09-flattired-hasspare car-at-x05y09-flattired-hasspare 1.000000
+	car-at-x05y11 car-at-x06y12 0.500000
+	car-at-x05y11 car-at-x06y12-flattired 0.500000
+	car-at-x05y11-flattired car-at-x05y11-flattired 1.000000
+	car-at-x05y11-hasspare car-at-x06y12-hasspare 0.500000
+	car-at-x05y11-hasspare car-at-x06y12-flattired-hasspare 0.500000
+	car-at-x05y11-flattired-hasspare car-at-x05y11-flattired-hasspare 1.000000
+	car-at-x05y13 car-at-x06y14 0.427273
+	car-at-x05y13 car-at-x06y14-flattired 0.572727
+	car-at-x05y13-flattired car-at-x05y13-flattired 1.000000
+	car-at-x05y13-hasspare car-at-x06y14-hasspare 0.427273
+	car-at-x05y13-hasspare car-at-x06y14-flattired-hasspare 0.572727
+	car-at-x05y13-flattired-hasspare car-at-x05y13-flattired-hasspare 1.000000
+	car-at-x05y15 car-at-x06y16 0.354545
+	car-at-x05y15 car-at-x06y16-flattired 0.645455
+	car-at-x05y15-flattired car-at-x05y15-flattired 1.000000
+	car-at-x05y15-hasspare car-at-x06y16-hasspare 0.354545
+	car-at-x05y15-hasspare car-at-x06y16-flattired-hasspare 0.645455
+	car-at-x05y15-flattired-hasspare car-at-x05y15-flattired-hasspare 1.000000
+	car-at-x05y17 car-at-x06y18 0.281818
+	car-at-x05y17 car-at-x06y18-flattired 0.718182
+	car-at-x05y17-flattired car-at-x05y17-flattired 1.000000
+	car-at-x05y17-hasspare car-at-x06y18-hasspare 0.281818
+	car-at-x05y17-hasspare car-at-x06y18-flattired-hasspare 0.718182
+	car-at-x05y17-flattired-hasspare car-at-x05y17-flattired-hasspare 1.000000
+	car-at-x05y19 car-at-x05y19 1.000000
+	car-at-x05y19-flattired car-at-x05y19-flattired 1.000000
+	car-at-x05y19-hasspare car-at-x05y19-hasspare 1.000000
+	car-at-x05y19-flattired-hasspare car-at-x05y19-flattired-hasspare 1.000000
+	car-at-x06y06 car-at-x07y07 0.681818
+	car-at-x06y06 car-at-x07y07-flattired 0.318182
+	car-at-x06y06-flattired car-at-x06y06-flattired 1.000000
+	car-at-x06y06-hasspare car-at-x07y07-hasspare 0.681818
+	car-at-x06y06-hasspare car-at-x07y07-flattired-hasspare 0.318182
+	car-at-x06y06-flattired-hasspare car-at-x06y06-flattired-hasspare 1.000000
+	car-at-x06y08 car-at-x07y09 0.609091
+	car-at-x06y08 car-at-x07y09-flattired 0.390909
+	car-at-x06y08-flattired car-at-x06y08-flattired 1.000000
+	car-at-x06y08-hasspare car-at-x07y09-hasspare 0.609091
+	car-at-x06y08-hasspare car-at-x07y09-flattired-hasspare 0.390909
+	car-at-x06y08-flattired-hasspare car-at-x06y08-flattired-hasspare 1.000000
+	car-at-x06y10 car-at-x07y11 0.536364
+	car-at-x06y10 car-at-x07y11-flattired 0.463636
+	car-at-x06y10-flattired car-at-x06y10-flattired 1.000000
+	car-at-x06y10-hasspare car-at-x07y11-hasspare 0.536364
+	car-at-x06y10-hasspare car-at-x07y11-flattired-hasspare 0.463636
+	car-at-x06y10-flattired-hasspare car-at-x06y10-flattired-hasspare 1.000000
+	car-at-x06y12 car-at-x07y13 0.463636
+	car-at-x06y12 car-at-x07y13-flattired 0.536364
+	car-at-x06y12-flattired car-at-x06y12-flattired 1.000000
+	car-at-x06y12-hasspare car-at-x07y13-hasspare 0.463636
+	car-at-x06y12-hasspare car-at-x07y13-flattired-hasspare 0.536364
+	car-at-x06y12-flattired-hasspare car-at-x06y12-flattired-hasspare 1.000000
+	car-at-x06y14 car-at-x07y15 0.390909
+	car-at-x06y14 car-at-x07y15-flattired 0.609091
+	car-at-x06y14-flattired car-at-x06y14-flattired 1.000000
+	car-at-x06y14-hasspare car-at-x07y15-hasspare 0.390909
+	car-at-x06y14-hasspare car-at-x07y15-flattired-hasspare 0.609091
+	car-at-x06y14-flattired-hasspare car-at-x06y14-flattired-hasspare 1.000000
+	car-at-x06y16 car-at-x07y17 0.318182
+	car-at-x06y16 car-at-x07y17-flattired 0.681818
+	car-at-x06y16-flattired car-at-x06y16-flattired 1.000000
+	car-at-x06y16-hasspare car-at-x07y17-hasspare 0.318182
+	car-at-x06y16-hasspare car-at-x07y17-flattired-hasspare 0.681818
+	car-at-x06y16-flattired-hasspare car-at-x06y16-flattired-hasspare 1.000000
+	car-at-x06y18 car-at-x06y18 1.000000
+	car-at-x06y18-flattired car-at-x06y18-flattired 1.000000
+	car-at-x06y18-hasspare car-at-x06y18-hasspare 1.000000
+	car-at-x06y18-flattired-hasspare car-at-x06y18-flattired-hasspare 1.000000
+	car-at-x07y07 car-at-x08y08 0.645455
+	car-at-x07y07 car-at-x08y08-flattired 0.354545
+	car-at-x07y07-flattired car-at-x07y07-flattired 1.000000
+	car-at-x07y07-hasspare car-at-x08y08-hasspare 0.645455
+	car-at-x07y07-hasspare car-at-x08y08-flattired-hasspare 0.354545
+	car-at-x07y07-flattired-hasspare car-at-x07y07-flattired-hasspare 1.000000
+	car-at-x07y09 car-at-x08y10 0.572727
+	car-at-x07y09 car-at-x08y10-flattired 0.427273
+	car-at-x07y09-flattired car-at-x07y09-flattired 1.000000
+	car-at-x07y09-hasspare car-at-x08y10-hasspare 0.572727
+	car-at-x07y09-hasspare car-at-x08y10-flattired-hasspare 0.427273
+	car-at-x07y09-flattired-hasspare car-at-x07y09-flattired-hasspare 1.000000
+	car-at-x07y11 car-at-x08y12 0.500000
+	car-at-x07y11 car-at-x08y12-flattired 0.500000
+	car-at-x07y11-flattired car-at-x07y11-flattired 1.000000
+	car-at-x07y11-hasspare car-at-x08y12-hasspare 0.500000
+	car-at-x07y11-hasspare car-at-x08y12-flattired-hasspare 0.500000
+	car-at-x07y11-flattired-hasspare car-at-x07y11-flattired-hasspare 1.000000
+	car-at-x07y13 car-at-x08y14 0.427273
+	car-at-x07y13 car-at-x08y14-flattired 0.572727
+	car-at-x07y13-flattired car-at-x07y13-flattired 1.000000
+	car-at-x07y13-hasspare car-at-x08y14-hasspare 0.427273
+	car-at-x07y13-hasspare car-at-x08y14-flattired-hasspare 0.572727
+	car-at-x07y13-flattired-hasspare car-at-x07y13-flattired-hasspare 1.000000
+	car-at-x07y15 car-at-x08y16 0.354545
+	car-at-x07y15 car-at-x08y16-flattired 0.645455
+	car-at-x07y15-flattired car-at-x07y15-flattired 1.000000
+	car-at-x07y15-hasspare car-at-x08y16-hasspare 0.354545
+	car-at-x07y15-hasspare car-at-x08y16-flattired-hasspare 0.645455
+	car-at-x07y15-flattired-hasspare car-at-x07y15-flattired-hasspare 1.000000
+	car-at-x07y17 car-at-x07y17 1.000000
+	car-at-x07y17-flattired car-at-x07y17-flattired 1.000000
+	car-at-x07y17-hasspare car-at-x07y17-hasspare 1.000000
+	car-at-x07y17-flattired-hasspare car-at-x07y17-flattired-hasspare 1.000000
+	car-at-x08y08 car-at-x09y09 0.609091
+	car-at-x08y08 car-at-x09y09-flattired 0.390909
+	car-at-x08y08-flattired car-at-x08y08-flattired 1.000000
+	car-at-x08y08-hasspare car-at-x09y09-hasspare 0.609091
+	car-at-x08y08-hasspare car-at-x09y09-flattired-hasspare 0.390909
+	car-at-x08y08-flattired-hasspare car-at-x08y08-flattired-hasspare 1.000000
+	car-at-x08y10 car-at-x09y11 0.536364
+	car-at-x08y10 car-at-x09y11-flattired 0.463636
+	car-at-x08y10-flattired car-at-x08y10-flattired 1.000000
+	car-at-x08y10-hasspare car-at-x09y11-hasspare 0.536364
+	car-at-x08y10-hasspare car-at-x09y11-flattired-hasspare 0.463636
+	car-at-x08y10-flattired-hasspare car-at-x08y10-flattired-hasspare 1.000000
+	car-at-x08y12 car-at-x09y13 0.463636
+	car-at-x08y12 car-at-x09y13-flattired 0.536364
+	car-at-x08y12-flattired car-at-x08y12-flattired 1.000000
+	car-at-x08y12-hasspare car-at-x09y13-hasspare 0.463636
+	car-at-x08y12-hasspare car-at-x09y13-flattired-hasspare 0.536364
+	car-at-x08y12-flattired-hasspare car-at-x08y12-flattired-hasspare 1.000000
+	car-at-x08y14 car-at-x09y15 0.390909
+	car-at-x08y14 car-at-x09y15-flattired 0.609091
+	car-at-x08y14-flattired car-at-x08y14-flattired 1.000000
+	car-at-x08y14-hasspare car-at-x09y15-hasspare 0.390909
+	car-at-x08y14-hasspare car-at-x09y15-flattired-hasspare 0.609091
+	car-at-x08y14-flattired-hasspare car-at-x08y14-flattired-hasspare 1.000000
+	car-at-x08y16 car-at-x08y16 1.000000
+	car-at-x08y16-flattired car-at-x08y16-flattired 1.000000
+	car-at-x08y16-hasspare car-at-x08y16-hasspare 1.000000
+	car-at-x08y16-flattired-hasspare car-at-x08y16-flattired-hasspare 1.000000
+	car-at-x09y09 car-at-x10y10 0.572727
+	car-at-x09y09 car-at-x10y10-flattired 0.427273
+	car-at-x09y09-flattired car-at-x09y09-flattired 1.000000
+	car-at-x09y09-hasspare car-at-x10y10-hasspare 0.572727
+	car-at-x09y09-hasspare car-at-x10y10-flattired-hasspare 0.427273
+	car-at-x09y09-flattired-hasspare car-at-x09y09-flattired-hasspare 1.000000
+	car-at-x09y11 car-at-x10y12 0.500000
+	car-at-x09y11 car-at-x10y12-flattired 0.500000
+	car-at-x09y11-flattired car-at-x09y11-flattired 1.000000
+	car-at-x09y11-hasspare car-at-x10y12-hasspare 0.500000
+	car-at-x09y11-hasspare car-at-x10y12-flattired-hasspare 0.500000
+	car-at-x09y11-flattired-hasspare car-at-x09y11-flattired-hasspare 1.000000
+	car-at-x09y13 car-at-x10y14 0.427273
+	car-at-x09y13 car-at-x10y14-flattired 0.572727
+	car-at-x09y13-flattired car-at-x09y13-flattired 1.000000
+	car-at-x09y13-hasspare car-at-x10y14-hasspare 0.427273
+	car-at-x09y13-hasspare car-at-x10y14-flattired-hasspare 0.572727
+	car-at-x09y13-flattired-hasspare car-at-x09y13-flattired-hasspare 1.000000
+	car-at-x09y15 car-at-x09y15 1.000000
+	car-at-x09y15-flattired car-at-x09y15-flattired 1.000000
+	car-at-x09y15-hasspare car-at-x09y15-hasspare 1.000000
+	car-at-x09y15-flattired-hasspare car-at-x09y15-flattired-hasspare 1.000000
+	car-at-x10y10 car-at-x11y11 0.536364
+	car-at-x10y10 car-at-x11y11-flattired 0.463636
+	car-at-x10y10-flattired car-at-x10y10-flattired 1.000000
+	car-at-x10y10-hasspare car-at-x11y11-hasspare 0.536364
+	car-at-x10y10-hasspare car-at-x11y11-flattired-hasspare 0.463636
+	car-at-x10y10-flattired-hasspare car-at-x10y10-flattired-hasspare 1.000000
+	car-at-x10y12 car-at-x11y13 0.463636
+	car-at-x10y12 car-at-x11y13-flattired 0.536364
+	car-at-x10y12-flattired car-at-x10y12-flattired 1.000000
+	car-at-x10y12-hasspare car-at-x11y13-hasspare 0.463636
+	car-at-x10y12-hasspare car-at-x11y13-flattired-hasspare 0.536364
+	car-at-x10y12-flattired-hasspare car-at-x10y12-flattired-hasspare 1.000000
+	car-at-x10y14 car-at-x10y14 1.000000
+	car-at-x10y14-flattired car-at-x10y14-flattired 1.000000
+	car-at-x10y14-hasspare car-at-x10y14-hasspare 1.000000
+	car-at-x10y14-flattired-hasspare car-at-x10y14-flattired-hasspare 1.000000
+	car-at-x11y11 car-at-x12y12 0.500000
+	car-at-x11y11 car-at-x12y12-flattired 0.500000
+	car-at-x11y11-flattired car-at-x11y11-flattired 1.000000
+	car-at-x11y11-hasspare car-at-x12y12-hasspare 0.500000
+	car-at-x11y11-hasspare car-at-x12y12-flattired-hasspare 0.500000
+	car-at-x11y11-flattired-hasspare car-at-x11y11-flattired-hasspare 1.000000
+	car-at-x11y13 car-at-x11y13 1.000000
+	car-at-x11y13-flattired car-at-x11y13-flattired 1.000000
+	car-at-x11y13-hasspare car-at-x11y13-hasspare 1.000000
+	car-at-x11y13-flattired-hasspare car-at-x11y13-flattired-hasspare 1.000000
+	car-at-x12y12 car-at-x12y12 1.000000
+	car-at-x12y12-flattired car-at-x12y12-flattired 1.000000
+	car-at-x12y12-hasspare car-at-x12y12-hasspare 1.000000
+	car-at-x12y12-flattired-hasspare car-at-x12y12-flattired-hasspare 1.000000
+endaction
+
+action load-tire
+	car-at-x01y01 car-at-x01y01 1.000000
+	car-at-x01y01-flattired car-at-x01y01-flattired 1.000000
+	car-at-x01y01-hasspare car-at-x01y01-hasspare 1.000000
+	car-at-x01y01-flattired-hasspare car-at-x01y01-flattired-hasspare 1.000000
+	car-at-x01y03 car-at-x01y03 1.000000
+	car-at-x01y03-flattired car-at-x01y03-flattired 1.000000
+	car-at-x01y03-hasspare car-at-x01y03-hasspare 1.000000
+	car-at-x01y03-flattired-hasspare car-at-x01y03-flattired-hasspare 1.000000
+	car-at-x01y05 car-at-x01y05 1.000000
+	car-at-x01y05-flattired car-at-x01y05-flattired 1.000000
+	car-at-x01y05-hasspare car-at-x01y05-hasspare 1.000000
+	car-at-x01y05-flattired-hasspare car-at-x01y05-flattired-hasspare 1.000000
+	car-at-x01y07 car-at-x01y07 1.000000
+	car-at-x01y07-flattired car-at-x01y07-flattired 1.000000
+	car-at-x01y07-hasspare car-at-x01y07-hasspare 1.000000
+	car-at-x01y07-flattired-hasspare car-at-x01y07-flattired-hasspare 1.000000
+	car-at-x01y09 car-at-x01y09 1.000000
+	car-at-x01y09-flattired car-at-x01y09-flattired 1.000000
+	car-at-x01y09-hasspare car-at-x01y09-hasspare 1.000000
+	car-at-x01y09-flattired-hasspare car-at-x01y09-flattired-hasspare 1.000000
+	car-at-x01y11 car-at-x01y11 1.000000
+	car-at-x01y11-flattired car-at-x01y11-flattired 1.000000
+	car-at-x01y11-hasspare car-at-x01y11-hasspare 1.000000
+	car-at-x01y11-flattired-hasspare car-at-x01y11-flattired-hasspare 1.000000
+	car-at-x01y13 car-at-x01y13 1.000000
+	car-at-x01y13-flattired car-at-x01y13-flattired 1.000000
+	car-at-x01y13-hasspare car-at-x01y13-hasspare 1.000000
+	car-at-x01y13-flattired-hasspare car-at-x01y13-flattired-hasspare 1.000000
+	car-at-x01y15 car-at-x01y15 1.000000
+	car-at-x01y15-flattired car-at-x01y15-flattired 1.000000
+	car-at-x01y15-hasspare car-at-x01y15-hasspare 1.000000
+	car-at-x01y15-flattired-hasspare car-at-x01y15-flattired-hasspare 1.000000
+	car-at-x01y17 car-at-x01y17 1.000000
+	car-at-x01y17-flattired car-at-x01y17-flattired 1.000000
+	car-at-x01y17-hasspare car-at-x01y17-hasspare 1.000000
+	car-at-x01y17-flattired-hasspare car-at-x01y17-flattired-hasspare 1.000000
+	car-at-x01y19 car-at-x01y19 1.000000
+	car-at-x01y19-flattired car-at-x01y19-flattired 1.000000
+	car-at-x01y19-hasspare car-at-x01y19-hasspare 1.000000
+	car-at-x01y19-flattired-hasspare car-at-x01y19-flattired-hasspare 1.000000
+	car-at-x01y21 car-at-x01y21 1.000000
+	car-at-x01y21-flattired car-at-x01y21-flattired 1.000000
+	car-at-x01y21-hasspare car-at-x01y21-hasspare 1.000000
+	car-at-x01y21-flattired-hasspare car-at-x01y21-flattired-hasspare 1.000000
+	car-at-x01y23 car-at-x01y23 1.000000
+	car-at-x01y23-flattired car-at-x01y23-flattired 1.000000
+	car-at-x01y23-hasspare car-at-x01y23-hasspare 1.000000
+	car-at-x01y23-flattired-hasspare car-at-x01y23-flattired-hasspare 1.000000
+	car-at-x02y02 car-at-x02y02-hasspare 1.000000
+	car-at-x02y02-flattired car-at-x02y02-flattired-hasspare 1.000000
+	car-at-x02y02-hasspare car-at-x02y02-hasspare 1.000000
+	car-at-x02y02-flattired-hasspare car-at-x02y02-flattired-hasspare 1.000000
+	car-at-x02y04 car-at-x02y04-hasspare 1.000000
+	car-at-x02y04-flattired car-at-x02y04-flattired-hasspare 1.000000
+	car-at-x02y04-hasspare car-at-x02y04-hasspare 1.000000
+	car-at-x02y04-flattired-hasspare car-at-x02y04-flattired-hasspare 1.000000
+	car-at-x02y06 car-at-x02y06-hasspare 1.000000
+	car-at-x02y06-flattired car-at-x02y06-flattired-hasspare 1.000000
+	car-at-x02y06-hasspare car-at-x02y06-hasspare 1.000000
+	car-at-x02y06-flattired-hasspare car-at-x02y06-flattired-hasspare 1.000000
+	car-at-x02y08 car-at-x02y08-hasspare 1.000000
+	car-at-x02y08-flattired car-at-x02y08-flattired-hasspare 1.000000
+	car-at-x02y08-hasspare car-at-x02y08-hasspare 1.000000
+	car-at-x02y08-flattired-hasspare car-at-x02y08-flattired-hasspare 1.000000
+	car-at-x02y10 car-at-x02y10-hasspare 1.000000
+	car-at-x02y10-flattired car-at-x02y10-flattired-hasspare 1.000000
+	car-at-x02y10-hasspare car-at-x02y10-hasspare 1.000000
+	car-at-x02y10-flattired-hasspare car-at-x02y10-flattired-hasspare 1.000000
+	car-at-x02y12 car-at-x02y12-hasspare 1.000000
+	car-at-x02y12-flattired car-at-x02y12-flattired-hasspare 1.000000
+	car-at-x02y12-hasspare car-at-x02y12-hasspare 1.000000
+	car-at-x02y12-flattired-hasspare car-at-x02y12-flattired-hasspare 1.000000
+	car-at-x02y14 car-at-x02y14-hasspare 1.000000
+	car-at-x02y14-flattired car-at-x02y14-flattired-hasspare 1.000000
+	car-at-x02y14-hasspare car-at-x02y14-hasspare 1.000000
+	car-at-x02y14-flattired-hasspare car-at-x02y14-flattired-hasspare 1.000000
+	car-at-x02y16 car-at-x02y16-hasspare 1.000000
+	car-at-x02y16-flattired car-at-x02y16-flattired-hasspare 1.000000
+	car-at-x02y16-hasspare car-at-x02y16-hasspare 1.000000
+	car-at-x02y16-flattired-hasspare car-at-x02y16-flattired-hasspare 1.000000
+	car-at-x02y18 car-at-x02y18-hasspare 1.000000
+	car-at-x02y18-flattired car-at-x02y18-flattired-hasspare 1.000000
+	car-at-x02y18-hasspare car-at-x02y18-hasspare 1.000000
+	car-at-x02y18-flattired-hasspare car-at-x02y18-flattired-hasspare 1.000000
+	car-at-x02y20 car-at-x02y20-hasspare 1.000000
+	car-at-x02y20-flattired car-at-x02y20-flattired-hasspare 1.000000
+	car-at-x02y20-hasspare car-at-x02y20-hasspare 1.000000
+	car-at-x02y20-flattired-hasspare car-at-x02y20-flattired-hasspare 1.000000
+	car-at-x02y22 car-at-x02y22-hasspare 1.000000
+	car-at-x02y22-flattired car-at-x02y22-flattired-hasspare 1.000000
+	car-at-x02y22-hasspare car-at-x02y22-hasspare 1.000000
+	car-at-x02y22-flattired-hasspare car-at-x02y22-flattired-hasspare 1.000000
+	car-at-x03y03 car-at-x03y03-hasspare 1.000000
+	car-at-x03y03-flattired car-at-x03y03-flattired-hasspare 1.000000
+	car-at-x03y03-hasspare car-at-x03y03-hasspare 1.000000
+	car-at-x03y03-flattired-hasspare car-at-x03y03-flattired-hasspare 1.000000
+	car-at-x03y05 car-at-x03y05-hasspare 1.000000
+	car-at-x03y05-flattired car-at-x03y05-flattired-hasspare 1.000000
+	car-at-x03y05-hasspare car-at-x03y05-hasspare 1.000000
+	car-at-x03y05-flattired-hasspare car-at-x03y05-flattired-hasspare 1.000000
+	car-at-x03y07 car-at-x03y07-hasspare 1.000000
+	car-at-x03y07-flattired car-at-x03y07-flattired-hasspare 1.000000
+	car-at-x03y07-hasspare car-at-x03y07-hasspare 1.000000
+	car-at-x03y07-flattired-hasspare car-at-x03y07-flattired-hasspare 1.000000
+	car-at-x03y09 car-at-x03y09-hasspare 1.000000
+	car-at-x03y09-flattired car-at-x03y09-flattired-hasspare 1.000000
+	car-at-x03y09-hasspare car-at-x03y09-hasspare 1.000000
+	car-at-x03y09-flattired-hasspare car-at-x03y09-flattired-hasspare 1.000000
+	car-at-x03y11 car-at-x03y11-hasspare 1.000000
+	car-at-x03y11-flattired car-at-x03y11-flattired-hasspare 1.000000
+	car-at-x03y11-hasspare car-at-x03y11-hasspare 1.000000
+	car-at-x03y11-flattired-hasspare car-at-x03y11-flattired-hasspare 1.000000
+	car-at-x03y13 car-at-x03y13-hasspare 1.000000
+	car-at-x03y13-flattired car-at-x03y13-flattired-hasspare 1.000000
+	car-at-x03y13-hasspare car-at-x03y13-hasspare 1.000000
+	car-at-x03y13-flattired-hasspare car-at-x03y13-flattired-hasspare 1.000000
+	car-at-x03y15 car-at-x03y15-hasspare 1.000000
+	car-at-x03y15-flattired car-at-x03y15-flattired-hasspare 1.000000
+	car-at-x03y15-hasspare car-at-x03y15-hasspare 1.000000
+	car-at-x03y15-flattired-hasspare car-at-x03y15-flattired-hasspare 1.000000
+	car-at-x03y17 car-at-x03y17-hasspare 1.000000
+	car-at-x03y17-flattired car-at-x03y17-flattired-hasspare 1.000000
+	car-at-x03y17-hasspare car-at-x03y17-hasspare 1.000000
+	car-at-x03y17-flattired-hasspare car-at-x03y17-flattired-hasspare 1.000000
+	car-at-x03y19 car-at-x03y19-hasspare 1.000000
+	car-at-x03y19-flattired car-at-x03y19-flattired-hasspare 1.000000
+	car-at-x03y19-hasspare car-at-x03y19-hasspare 1.000000
+	car-at-x03y19-flattired-hasspare car-at-x03y19-flattired-hasspare 1.000000
+	car-at-x03y21 car-at-x03y21-hasspare 1.000000
+	car-at-x03y21-flattired car-at-x03y21-flattired-hasspare 1.000000
+	car-at-x03y21-hasspare car-at-x03y21-hasspare 1.000000
+	car-at-x03y21-flattired-hasspare car-at-x03y21-flattired-hasspare 1.000000
+	car-at-x04y04 car-at-x04y04-hasspare 1.000000
+	car-at-x04y04-flattired car-at-x04y04-flattired-hasspare 1.000000
+	car-at-x04y04-hasspare car-at-x04y04-hasspare 1.000000
+	car-at-x04y04-flattired-hasspare car-at-x04y04-flattired-hasspare 1.000000
+	car-at-x04y06 car-at-x04y06-hasspare 1.000000
+	car-at-x04y06-flattired car-at-x04y06-flattired-hasspare 1.000000
+	car-at-x04y06-hasspare car-at-x04y06-hasspare 1.000000
+	car-at-x04y06-flattired-hasspare car-at-x04y06-flattired-hasspare 1.000000
+	car-at-x04y08 car-at-x04y08-hasspare 1.000000
+	car-at-x04y08-flattired car-at-x04y08-flattired-hasspare 1.000000
+	car-at-x04y08-hasspare car-at-x04y08-hasspare 1.000000
+	car-at-x04y08-flattired-hasspare car-at-x04y08-flattired-hasspare 1.000000
+	car-at-x04y10 car-at-x04y10-hasspare 1.000000
+	car-at-x04y10-flattired car-at-x04y10-flattired-hasspare 1.000000
+	car-at-x04y10-hasspare car-at-x04y10-hasspare 1.000000
+	car-at-x04y10-flattired-hasspare car-at-x04y10-flattired-hasspare 1.000000
+	car-at-x04y12 car-at-x04y12-hasspare 1.000000
+	car-at-x04y12-flattired car-at-x04y12-flattired-hasspare 1.000000
+	car-at-x04y12-hasspare car-at-x04y12-hasspare 1.000000
+	car-at-x04y12-flattired-hasspare car-at-x04y12-flattired-hasspare 1.000000
+	car-at-x04y14 car-at-x04y14-hasspare 1.000000
+	car-at-x04y14-flattired car-at-x04y14-flattired-hasspare 1.000000
+	car-at-x04y14-hasspare car-at-x04y14-hasspare 1.000000
+	car-at-x04y14-flattired-hasspare car-at-x04y14-flattired-hasspare 1.000000
+	car-at-x04y16 car-at-x04y16-hasspare 1.000000
+	car-at-x04y16-flattired car-at-x04y16-flattired-hasspare 1.000000
+	car-at-x04y16-hasspare car-at-x04y16-hasspare 1.000000
+	car-at-x04y16-flattired-hasspare car-at-x04y16-flattired-hasspare 1.000000
+	car-at-x04y18 car-at-x04y18-hasspare 1.000000
+	car-at-x04y18-flattired car-at-x04y18-flattired-hasspare 1.000000
+	car-at-x04y18-hasspare car-at-x04y18-hasspare 1.000000
+	car-at-x04y18-flattired-hasspare car-at-x04y18-flattired-hasspare 1.000000
+	car-at-x04y20 car-at-x04y20-hasspare 1.000000
+	car-at-x04y20-flattired car-at-x04y20-flattired-hasspare 1.000000
+	car-at-x04y20-hasspare car-at-x04y20-hasspare 1.000000
+	car-at-x04y20-flattired-hasspare car-at-x04y20-flattired-hasspare 1.000000
+	car-at-x05y05 car-at-x05y05-hasspare 1.000000
+	car-at-x05y05-flattired car-at-x05y05-flattired-hasspare 1.000000
+	car-at-x05y05-hasspare car-at-x05y05-hasspare 1.000000
+	car-at-x05y05-flattired-hasspare car-at-x05y05-flattired-hasspare 1.000000
+	car-at-x05y07 car-at-x05y07-hasspare 1.000000
+	car-at-x05y07-flattired car-at-x05y07-flattired-hasspare 1.000000
+	car-at-x05y07-hasspare car-at-x05y07-hasspare 1.000000
+	car-at-x05y07-flattired-hasspare car-at-x05y07-flattired-hasspare 1.000000
+	car-at-x05y09 car-at-x05y09-hasspare 1.000000
+	car-at-x05y09-flattired car-at-x05y09-flattired-hasspare 1.000000
+	car-at-x05y09-hasspare car-at-x05y09-hasspare 1.000000
+	car-at-x05y09-flattired-hasspare car-at-x05y09-flattired-hasspare 1.000000
+	car-at-x05y11 car-at-x05y11-hasspare 1.000000
+	car-at-x05y11-flattired car-at-x05y11-flattired-hasspare 1.000000
+	car-at-x05y11-hasspare car-at-x05y11-hasspare 1.000000
+	car-at-x05y11-flattired-hasspare car-at-x05y11-flattired-hasspare 1.000000
+	car-at-x05y13 car-at-x05y13-hasspare 1.000000
+	car-at-x05y13-flattired car-at-x05y13-flattired-hasspare 1.000000
+	car-at-x05y13-hasspare car-at-x05y13-hasspare 1.000000
+	car-at-x05y13-flattired-hasspare car-at-x05y13-flattired-hasspare 1.000000
+	car-at-x05y15 car-at-x05y15-hasspare 1.000000
+	car-at-x05y15-flattired car-at-x05y15-flattired-hasspare 1.000000
+	car-at-x05y15-hasspare car-at-x05y15-hasspare 1.000000
+	car-at-x05y15-flattired-hasspare car-at-x05y15-flattired-hasspare 1.000000
+	car-at-x05y17 car-at-x05y17-hasspare 1.000000
+	car-at-x05y17-flattired car-at-x05y17-flattired-hasspare 1.000000
+	car-at-x05y17-hasspare car-at-x05y17-hasspare 1.000000
+	car-at-x05y17-flattired-hasspare car-at-x05y17-flattired-hasspare 1.000000
+	car-at-x05y19 car-at-x05y19-hasspare 1.000000
+	car-at-x05y19-flattired car-at-x05y19-flattired-hasspare 1.000000
+	car-at-x05y19-hasspare car-at-x05y19-hasspare 1.000000
+	car-at-x05y19-flattired-hasspare car-at-x05y19-flattired-hasspare 1.000000
+	car-at-x06y06 car-at-x06y06-hasspare 1.000000
+	car-at-x06y06-flattired car-at-x06y06-flattired-hasspare 1.000000
+	car-at-x06y06-hasspare car-at-x06y06-hasspare 1.000000
+	car-at-x06y06-flattired-hasspare car-at-x06y06-flattired-hasspare 1.000000
+	car-at-x06y08 car-at-x06y08-hasspare 1.000000
+	car-at-x06y08-flattired car-at-x06y08-flattired-hasspare 1.000000
+	car-at-x06y08-hasspare car-at-x06y08-hasspare 1.000000
+	car-at-x06y08-flattired-hasspare car-at-x06y08-flattired-hasspare 1.000000
+	car-at-x06y10 car-at-x06y10-hasspare 1.000000
+	car-at-x06y10-flattired car-at-x06y10-flattired-hasspare 1.000000
+	car-at-x06y10-hasspare car-at-x06y10-hasspare 1.000000
+	car-at-x06y10-flattired-hasspare car-at-x06y10-flattired-hasspare 1.000000
+	car-at-x06y12 car-at-x06y12-hasspare 1.000000
+	car-at-x06y12-flattired car-at-x06y12-flattired-hasspare 1.000000
+	car-at-x06y12-hasspare car-at-x06y12-hasspare 1.000000
+	car-at-x06y12-flattired-hasspare car-at-x06y12-flattired-hasspare 1.000000
+	car-at-x06y14 car-at-x06y14-hasspare 1.000000
+	car-at-x06y14-flattired car-at-x06y14-flattired-hasspare 1.000000
+	car-at-x06y14-hasspare car-at-x06y14-hasspare 1.000000
+	car-at-x06y14-flattired-hasspare car-at-x06y14-flattired-hasspare 1.000000
+	car-at-x06y16 car-at-x06y16-hasspare 1.000000
+	car-at-x06y16-flattired car-at-x06y16-flattired-hasspare 1.000000
+	car-at-x06y16-hasspare car-at-x06y16-hasspare 1.000000
+	car-at-x06y16-flattired-hasspare car-at-x06y16-flattired-hasspare 1.000000
+	car-at-x06y18 car-at-x06y18-hasspare 1.000000
+	car-at-x06y18-flattired car-at-x06y18-flattired-hasspare 1.000000
+	car-at-x06y18-hasspare car-at-x06y18-hasspare 1.000000
+	car-at-x06y18-flattired-hasspare car-at-x06y18-flattired-hasspare 1.000000
+	car-at-x07y07 car-at-x07y07-hasspare 1.000000
+	car-at-x07y07-flattired car-at-x07y07-flattired-hasspare 1.000000
+	car-at-x07y07-hasspare car-at-x07y07-hasspare 1.000000
+	car-at-x07y07-flattired-hasspare car-at-x07y07-flattired-hasspare 1.000000
+	car-at-x07y09 car-at-x07y09-hasspare 1.000000
+	car-at-x07y09-flattired car-at-x07y09-flattired-hasspare 1.000000
+	car-at-x07y09-hasspare car-at-x07y09-hasspare 1.000000
+	car-at-x07y09-flattired-hasspare car-at-x07y09-flattired-hasspare 1.000000
+	car-at-x07y11 car-at-x07y11-hasspare 1.000000
+	car-at-x07y11-flattired car-at-x07y11-flattired-hasspare 1.000000
+	car-at-x07y11-hasspare car-at-x07y11-hasspare 1.000000
+	car-at-x07y11-flattired-hasspare car-at-x07y11-flattired-hasspare 1.000000
+	car-at-x07y13 car-at-x07y13-hasspare 1.000000
+	car-at-x07y13-flattired car-at-x07y13-flattired-hasspare 1.000000
+	car-at-x07y13-hasspare car-at-x07y13-hasspare 1.000000
+	car-at-x07y13-flattired-hasspare car-at-x07y13-flattired-hasspare 1.000000
+	car-at-x07y15 car-at-x07y15-hasspare 1.000000
+	car-at-x07y15-flattired car-at-x07y15-flattired-hasspare 1.000000
+	car-at-x07y15-hasspare car-at-x07y15-hasspare 1.000000
+	car-at-x07y15-flattired-hasspare car-at-x07y15-flattired-hasspare 1.000000
+	car-at-x07y17 car-at-x07y17-hasspare 1.000000
+	car-at-x07y17-flattired car-at-x07y17-flattired-hasspare 1.000000
+	car-at-x07y17-hasspare car-at-x07y17-hasspare 1.000000
+	car-at-x07y17-flattired-hasspare car-at-x07y17-flattired-hasspare 1.000000
+	car-at-x08y08 car-at-x08y08-hasspare 1.000000
+	car-at-x08y08-flattired car-at-x08y08-flattired-hasspare 1.000000
+	car-at-x08y08-hasspare car-at-x08y08-hasspare 1.000000
+	car-at-x08y08-flattired-hasspare car-at-x08y08-flattired-hasspare 1.000000
+	car-at-x08y10 car-at-x08y10-hasspare 1.000000
+	car-at-x08y10-flattired car-at-x08y10-flattired-hasspare 1.000000
+	car-at-x08y10-hasspare car-at-x08y10-hasspare 1.000000
+	car-at-x08y10-flattired-hasspare car-at-x08y10-flattired-hasspare 1.000000
+	car-at-x08y12 car-at-x08y12-hasspare 1.000000
+	car-at-x08y12-flattired car-at-x08y12-flattired-hasspare 1.000000
+	car-at-x08y12-hasspare car-at-x08y12-hasspare 1.000000
+	car-at-x08y12-flattired-hasspare car-at-x08y12-flattired-hasspare 1.000000
+	car-at-x08y14 car-at-x08y14-hasspare 1.000000
+	car-at-x08y14-flattired car-at-x08y14-flattired-hasspare 1.000000
+	car-at-x08y14-hasspare car-at-x08y14-hasspare 1.000000
+	car-at-x08y14-flattired-hasspare car-at-x08y14-flattired-hasspare 1.000000
+	car-at-x08y16 car-at-x08y16-hasspare 1.000000
+	car-at-x08y16-flattired car-at-x08y16-flattired-hasspare 1.000000
+	car-at-x08y16-hasspare car-at-x08y16-hasspare 1.000000
+	car-at-x08y16-flattired-hasspare car-at-x08y16-flattired-hasspare 1.000000
+	car-at-x09y09 car-at-x09y09-hasspare 1.000000
+	car-at-x09y09-flattired car-at-x09y09-flattired-hasspare 1.000000
+	car-at-x09y09-hasspare car-at-x09y09-hasspare 1.000000
+	car-at-x09y09-flattired-hasspare car-at-x09y09-flattired-hasspare 1.000000
+	car-at-x09y11 car-at-x09y11-hasspare 1.000000
+	car-at-x09y11-flattired car-at-x09y11-flattired-hasspare 1.000000
+	car-at-x09y11-hasspare car-at-x09y11-hasspare 1.000000
+	car-at-x09y11-flattired-hasspare car-at-x09y11-flattired-hasspare 1.000000
+	car-at-x09y13 car-at-x09y13-hasspare 1.000000
+	car-at-x09y13-flattired car-at-x09y13-flattired-hasspare 1.000000
+	car-at-x09y13-hasspare car-at-x09y13-hasspare 1.000000
+	car-at-x09y13-flattired-hasspare car-at-x09y13-flattired-hasspare 1.000000
+	car-at-x09y15 car-at-x09y15-hasspare 1.000000
+	car-at-x09y15-flattired car-at-x09y15-flattired-hasspare 1.000000
+	car-at-x09y15-hasspare car-at-x09y15-hasspare 1.000000
+	car-at-x09y15-flattired-hasspare car-at-x09y15-flattired-hasspare 1.000000
+	car-at-x10y10 car-at-x10y10-hasspare 1.000000
+	car-at-x10y10-flattired car-at-x10y10-flattired-hasspare 1.000000
+	car-at-x10y10-hasspare car-at-x10y10-hasspare 1.000000
+	car-at-x10y10-flattired-hasspare car-at-x10y10-flattired-hasspare 1.000000
+	car-at-x10y12 car-at-x10y12-hasspare 1.000000
+	car-at-x10y12-flattired car-at-x10y12-flattired-hasspare 1.000000
+	car-at-x10y12-hasspare car-at-x10y12-hasspare 1.000000
+	car-at-x10y12-flattired-hasspare car-at-x10y12-flattired-hasspare 1.000000
+	car-at-x10y14 car-at-x10y14-hasspare 1.000000
+	car-at-x10y14-flattired car-at-x10y14-flattired-hasspare 1.000000
+	car-at-x10y14-hasspare car-at-x10y14-hasspare 1.000000
+	car-at-x10y14-flattired-hasspare car-at-x10y14-flattired-hasspare 1.000000
+	car-at-x11y11 car-at-x11y11-hasspare 1.000000
+	car-at-x11y11-flattired car-at-x11y11-flattired-hasspare 1.000000
+	car-at-x11y11-hasspare car-at-x11y11-hasspare 1.000000
+	car-at-x11y11-flattired-hasspare car-at-x11y11-flattired-hasspare 1.000000
+	car-at-x11y13 car-at-x11y13-hasspare 1.000000
+	car-at-x11y13-flattired car-at-x11y13-flattired-hasspare 1.000000
+	car-at-x11y13-hasspare car-at-x11y13-hasspare 1.000000
+	car-at-x11y13-flattired-hasspare car-at-x11y13-flattired-hasspare 1.000000
+	car-at-x12y12 car-at-x12y12-hasspare 1.000000
+	car-at-x12y12-flattired car-at-x12y12-flattired-hasspare 1.000000
+	car-at-x12y12-hasspare car-at-x12y12-hasspare 1.000000
+	car-at-x12y12-flattired-hasspare car-at-x12y12-flattired-hasspare 1.000000
+endaction
+
+reward
+	car-at-x01y01 -1
+	car-at-x01y01-flattired -1
+	car-at-x01y01-hasspare -1
+	car-at-x01y01-flattired-hasspare -1
+	car-at-x01y03 -1
+	car-at-x01y03-flattired -1
+	car-at-x01y03-hasspare -1
+	car-at-x01y03-flattired-hasspare -1
+	car-at-x01y05 -1
+	car-at-x01y05-flattired -1
+	car-at-x01y05-hasspare -1
+	car-at-x01y05-flattired-hasspare -1
+	car-at-x01y07 -1
+	car-at-x01y07-flattired -1
+	car-at-x01y07-hasspare -1
+	car-at-x01y07-flattired-hasspare -1
+	car-at-x01y09 -1
+	car-at-x01y09-flattired -1
+	car-at-x01y09-hasspare -1
+	car-at-x01y09-flattired-hasspare -1
+	car-at-x01y11 -1
+	car-at-x01y11-flattired -1
+	car-at-x01y11-hasspare -1
+	car-at-x01y11-flattired-hasspare -1
+	car-at-x01y13 -1
+	car-at-x01y13-flattired -1
+	car-at-x01y13-hasspare -1
+	car-at-x01y13-flattired-hasspare -1
+	car-at-x01y15 -1
+	car-at-x01y15-flattired -1
+	car-at-x01y15-hasspare -1
+	car-at-x01y15-flattired-hasspare -1
+	car-at-x01y17 -1
+	car-at-x01y17-flattired -1
+	car-at-x01y17-hasspare -1
+	car-at-x01y17-flattired-hasspare -1
+	car-at-x01y19 -1
+	car-at-x01y19-flattired -1
+	car-at-x01y19-hasspare -1
+	car-at-x01y19-flattired-hasspare -1
+	car-at-x01y21 -1
+	car-at-x01y21-flattired -1
+	car-at-x01y21-hasspare -1
+	car-at-x01y21-flattired-hasspare -1
+	car-at-x01y23 0
+	car-at-x01y23-flattired 0
+	car-at-x01y23-hasspare 0
+	car-at-x01y23-flattired-hasspare 0
+	car-at-x02y02 -1
+	car-at-x02y02-flattired -1
+	car-at-x02y02-hasspare -1
+	car-at-x02y02-flattired-hasspare -1
+	car-at-x02y04 -1
+	car-at-x02y04-flattired -1
+	car-at-x02y04-hasspare -1
+	car-at-x02y04-flattired-hasspare -1
+	car-at-x02y06 -1
+	car-at-x02y06-flattired -1
+	car-at-x02y06-hasspare -1
+	car-at-x02y06-flattired-hasspare -1
+	car-at-x02y08 -1
+	car-at-x02y08-flattired -1
+	car-at-x02y08-hasspare -1
+	car-at-x02y08-flattired-hasspare -1
+	car-at-x02y10 -1
+	car-at-x02y10-flattired -1
+	car-at-x02y10-hasspare -1
+	car-at-x02y10-flattired-hasspare -1
+	car-at-x02y12 -1
+	car-at-x02y12-flattired -1
+	car-at-x02y12-hasspare -1
+	car-at-x02y12-flattired-hasspare -1
+	car-at-x02y14 -1
+	car-at-x02y14-flattired -1
+	car-at-x02y14-hasspare -1
+	car-at-x02y14-flattired-hasspare -1
+	car-at-x02y16 -1
+	car-at-x02y16-flattired -1
+	car-at-x02y16-hasspare -1
+	car-at-x02y16-flattired-hasspare -1
+	car-at-x02y18 -1
+	car-at-x02y18-flattired -1
+	car-at-x02y18-hasspare -1
+	car-at-x02y18-flattired-hasspare -1
+	car-at-x02y20 -1
+	car-at-x02y20-flattired -1
+	car-at-x02y20-hasspare -1
+	car-at-x02y20-flattired-hasspare -1
+	car-at-x02y22 -1
+	car-at-x02y22-flattired -1
+	car-at-x02y22-hasspare -1
+	car-at-x02y22-flattired-hasspare -1
+	car-at-x03y03 -1
+	car-at-x03y03-flattired -1
+	car-at-x03y03-hasspare -1
+	car-at-x03y03-flattired-hasspare -1
+	car-at-x03y05 -1
+	car-at-x03y05-flattired -1
+	car-at-x03y05-hasspare -1
+	car-at-x03y05-flattired-hasspare -1
+	car-at-x03y07 -1
+	car-at-x03y07-flattired -1
+	car-at-x03y07-hasspare -1
+	car-at-x03y07-flattired-hasspare -1
+	car-at-x03y09 -1
+	car-at-x03y09-flattired -1
+	car-at-x03y09-hasspare -1
+	car-at-x03y09-flattired-hasspare -1
+	car-at-x03y11 -1
+	car-at-x03y11-flattired -1
+	car-at-x03y11-hasspare -1
+	car-at-x03y11-flattired-hasspare -1
+	car-at-x03y13 -1
+	car-at-x03y13-flattired -1
+	car-at-x03y13-hasspare -1
+	car-at-x03y13-flattired-hasspare -1
+	car-at-x03y15 -1
+	car-at-x03y15-flattired -1
+	car-at-x03y15-hasspare -1
+	car-at-x03y15-flattired-hasspare -1
+	car-at-x03y17 -1
+	car-at-x03y17-flattired -1
+	car-at-x03y17-hasspare -1
+	car-at-x03y17-flattired-hasspare -1
+	car-at-x03y19 -1
+	car-at-x03y19-flattired -1
+	car-at-x03y19-hasspare -1
+	car-at-x03y19-flattired-hasspare -1
+	car-at-x03y21 -1
+	car-at-x03y21-flattired -1
+	car-at-x03y21-hasspare -1
+	car-at-x03y21-flattired-hasspare -1
+	car-at-x04y04 -1
+	car-at-x04y04-flattired -1
+	car-at-x04y04-hasspare -1
+	car-at-x04y04-flattired-hasspare -1
+	car-at-x04y06 -1
+	car-at-x04y06-flattired -1
+	car-at-x04y06-hasspare -1
+	car-at-x04y06-flattired-hasspare -1
+	car-at-x04y08 -1
+	car-at-x04y08-flattired -1
+	car-at-x04y08-hasspare -1
+	car-at-x04y08-flattired-hasspare -1
+	car-at-x04y10 -1
+	car-at-x04y10-flattired -1
+	car-at-x04y10-hasspare -1
+	car-at-x04y10-flattired-hasspare -1
+	car-at-x04y12 -1
+	car-at-x04y12-flattired -1
+	car-at-x04y12-hasspare -1
+	car-at-x04y12-flattired-hasspare -1
+	car-at-x04y14 -1
+	car-at-x04y14-flattired -1
+	car-at-x04y14-hasspare -1
+	car-at-x04y14-flattired-hasspare -1
+	car-at-x04y16 -1
+	car-at-x04y16-flattired -1
+	car-at-x04y16-hasspare -1
+	car-at-x04y16-flattired-hasspare -1
+	car-at-x04y18 -1
+	car-at-x04y18-flattired -1
+	car-at-x04y18-hasspare -1
+	car-at-x04y18-flattired-hasspare -1
+	car-at-x04y20 -1
+	car-at-x04y20-flattired -1
+	car-at-x04y20-hasspare -1
+	car-at-x04y20-flattired-hasspare -1
+	car-at-x05y05 -1
+	car-at-x05y05-flattired -1
+	car-at-x05y05-hasspare -1
+	car-at-x05y05-flattired-hasspare -1
+	car-at-x05y07 -1
+	car-at-x05y07-flattired -1
+	car-at-x05y07-hasspare -1
+	car-at-x05y07-flattired-hasspare -1
+	car-at-x05y09 -1
+	car-at-x05y09-flattired -1
+	car-at-x05y09-hasspare -1
+	car-at-x05y09-flattired-hasspare -1
+	car-at-x05y11 -1
+	car-at-x05y11-flattired -1
+	car-at-x05y11-hasspare -1
+	car-at-x05y11-flattired-hasspare -1
+	car-at-x05y13 -1
+	car-at-x05y13-flattired -1
+	car-at-x05y13-hasspare -1
+	car-at-x05y13-flattired-hasspare -1
+	car-at-x05y15 -1
+	car-at-x05y15-flattired -1
+	car-at-x05y15-hasspare -1
+	car-at-x05y15-flattired-hasspare -1
+	car-at-x05y17 -1
+	car-at-x05y17-flattired -1
+	car-at-x05y17-hasspare -1
+	car-at-x05y17-flattired-hasspare -1
+	car-at-x05y19 -1
+	car-at-x05y19-flattired -1
+	car-at-x05y19-hasspare -1
+	car-at-x05y19-flattired-hasspare -1
+	car-at-x06y06 -1
+	car-at-x06y06-flattired -1
+	car-at-x06y06-hasspare -1
+	car-at-x06y06-flattired-hasspare -1
+	car-at-x06y08 -1
+	car-at-x06y08-flattired -1
+	car-at-x06y08-hasspare -1
+	car-at-x06y08-flattired-hasspare -1
+	car-at-x06y10 -1
+	car-at-x06y10-flattired -1
+	car-at-x06y10-hasspare -1
+	car-at-x06y10-flattired-hasspare -1
+	car-at-x06y12 -1
+	car-at-x06y12-flattired -1
+	car-at-x06y12-hasspare -1
+	car-at-x06y12-flattired-hasspare -1
+	car-at-x06y14 -1
+	car-at-x06y14-flattired -1
+	car-at-x06y14-hasspare -1
+	car-at-x06y14-flattired-hasspare -1
+	car-at-x06y16 -1
+	car-at-x06y16-flattired -1
+	car-at-x06y16-hasspare -1
+	car-at-x06y16-flattired-hasspare -1
+	car-at-x06y18 -1
+	car-at-x06y18-flattired -1
+	car-at-x06y18-hasspare -1
+	car-at-x06y18-flattired-hasspare -1
+	car-at-x07y07 -1
+	car-at-x07y07-flattired -1
+	car-at-x07y07-hasspare -1
+	car-at-x07y07-flattired-hasspare -1
+	car-at-x07y09 -1
+	car-at-x07y09-flattired -1
+	car-at-x07y09-hasspare -1
+	car-at-x07y09-flattired-hasspare -1
+	car-at-x07y11 -1
+	car-at-x07y11-flattired -1
+	car-at-x07y11-hasspare -1
+	car-at-x07y11-flattired-hasspare -1
+	car-at-x07y13 -1
+	car-at-x07y13-flattired -1
+	car-at-x07y13-hasspare -1
+	car-at-x07y13-flattired-hasspare -1
+	car-at-x07y15 -1
+	car-at-x07y15-flattired -1
+	car-at-x07y15-hasspare -1
+	car-at-x07y15-flattired-hasspare -1
+	car-at-x07y17 -1
+	car-at-x07y17-flattired -1
+	car-at-x07y17-hasspare -1
+	car-at-x07y17-flattired-hasspare -1
+	car-at-x08y08 -1
+	car-at-x08y08-flattired -1
+	car-at-x08y08-hasspare -1
+	car-at-x08y08-flattired-hasspare -1
+	car-at-x08y10 -1
+	car-at-x08y10-flattired -1
+	car-at-x08y10-hasspare -1
+	car-at-x08y10-flattired-hasspare -1
+	car-at-x08y12 -1
+	car-at-x08y12-flattired -1
+	car-at-x08y12-hasspare -1
+	car-at-x08y12-flattired-hasspare -1
+	car-at-x08y14 -1
+	car-at-x08y14-flattired -1
+	car-at-x08y14-hasspare -1
+	car-at-x08y14-flattired-hasspare -1
+	car-at-x08y16 -1
+	car-at-x08y16-flattired -1
+	car-at-x08y16-hasspare -1
+	car-at-x08y16-flattired-hasspare -1
+	car-at-x09y09 -1
+	car-at-x09y09-flattired -1
+	car-at-x09y09-hasspare -1
+	car-at-x09y09-flattired-hasspare -1
+	car-at-x09y11 -1
+	car-at-x09y11-flattired -1
+	car-at-x09y11-hasspare -1
+	car-at-x09y11-flattired-hasspare -1
+	car-at-x09y13 -1
+	car-at-x09y13-flattired -1
+	car-at-x09y13-hasspare -1
+	car-at-x09y13-flattired-hasspare -1
+	car-at-x09y15 -1
+	car-at-x09y15-flattired -1
+	car-at-x09y15-hasspare -1
+	car-at-x09y15-flattired-hasspare -1
+	car-at-x10y10 -1
+	car-at-x10y10-flattired -1
+	car-at-x10y10-hasspare -1
+	car-at-x10y10-flattired-hasspare -1
+	car-at-x10y12 -1
+	car-at-x10y12-flattired -1
+	car-at-x10y12-hasspare -1
+	car-at-x10y12-flattired-hasspare -1
+	car-at-x10y14 -1
+	car-at-x10y14-flattired -1
+	car-at-x10y14-hasspare -1
+	car-at-x10y14-flattired-hasspare -1
+	car-at-x11y11 -1
+	car-at-x11y11-flattired -1
+	car-at-x11y11-hasspare -1
+	car-at-x11y11-flattired-hasspare -1
+	car-at-x11y13 -1
+	car-at-x11y13-flattired -1
+	car-at-x11y13-hasspare -1
+	car-at-x11y13-flattired-hasspare -1
+	car-at-x12y12 -1
+	car-at-x12y12-flattired -1
+	car-at-x12y12-hasspare -1
+	car-at-x12y12-flattired-hasspare -1
+endreward
+
+cost
+	move-north 0
+	move-northeast 0
+	move-northwest 0
+	change-tire 0
+	load-tire 0
+endcost
+
+discount factor 0.900000
+initialstate
+	car-at-x01y01-hasspare
+endinitialstate
+
+goalstate
+	car-at-x01y23
+	car-at-x01y23-hasspare
+	car-at-x01y23-flattired
+	car-at-x01y23-flattired-hasspare
+endgoalstate

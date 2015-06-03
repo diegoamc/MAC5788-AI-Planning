@@ -1,0 +1,203 @@
+states
+	car-at-x01y01, car-at-x01y01-flattired, car-at-x01y01-hasspare, car-at-x01y01-flattired-hasspare, car-at-x01y03, car-at-x01y03-flattired, car-at-x01y03-hasspare, car-at-x01y03-flattired-hasspare, car-at-x01y05, car-at-x01y05-flattired, car-at-x01y05-hasspare, car-at-x01y05-flattired-hasspare, car-at-x02y02, car-at-x02y02-flattired, car-at-x02y02-hasspare, car-at-x02y02-flattired-hasspare, car-at-x02y04, car-at-x02y04-flattired, car-at-x02y04-hasspare, car-at-x02y04-flattired-hasspare, car-at-x03y03, car-at-x03y03-flattired, car-at-x03y03-hasspare, car-at-x03y03-flattired-hasspare
+endstates
+
+action change-tire
+	car-at-x01y01 car-at-x01y01 1.000000
+	car-at-x01y01-flattired car-at-x01y01-flattired 1.000000
+	car-at-x01y01-hasspare car-at-x01y01-hasspare 1.000000
+	car-at-x01y01-flattired-hasspare car-at-x01y01 1.000000
+	car-at-x01y03 car-at-x01y03 1.000000
+	car-at-x01y03-flattired car-at-x01y03-flattired 1.000000
+	car-at-x01y03-hasspare car-at-x01y03-hasspare 1.000000
+	car-at-x01y03-flattired-hasspare car-at-x01y03 1.000000
+	car-at-x01y05 car-at-x01y05 1.000000
+	car-at-x01y05-flattired car-at-x01y05-flattired 1.000000
+	car-at-x01y05-hasspare car-at-x01y05-hasspare 1.000000
+	car-at-x01y05-flattired-hasspare car-at-x01y05-flattired-hasspare 1.000000
+	car-at-x02y02 car-at-x02y02 1.000000
+	car-at-x02y02-flattired car-at-x02y02-flattired 1.000000
+	car-at-x02y02-hasspare car-at-x02y02-hasspare 1.000000
+	car-at-x02y02-flattired-hasspare car-at-x02y02 1.000000
+	car-at-x02y04 car-at-x02y04 1.000000
+	car-at-x02y04-flattired car-at-x02y04-flattired 1.000000
+	car-at-x02y04-hasspare car-at-x02y04-hasspare 1.000000
+	car-at-x02y04-flattired-hasspare car-at-x02y04 1.000000
+	car-at-x03y03 car-at-x03y03 1.000000
+	car-at-x03y03-flattired car-at-x03y03-flattired 1.000000
+	car-at-x03y03-hasspare car-at-x03y03-hasspare 1.000000
+	car-at-x03y03-flattired-hasspare car-at-x03y03 1.000000
+endaction
+
+action move-northwest
+	car-at-x01y01 car-at-x01y01 1.000000
+	car-at-x01y01-flattired car-at-x01y01-flattired 1.000000
+	car-at-x01y01-hasspare car-at-x01y01-hasspare 1.000000
+	car-at-x01y01-flattired-hasspare car-at-x01y01-flattired-hasspare 1.000000
+	car-at-x01y03 car-at-x01y03 1.000000
+	car-at-x01y03-flattired car-at-x01y03-flattired 1.000000
+	car-at-x01y03-hasspare car-at-x01y03-hasspare 1.000000
+	car-at-x01y03-flattired-hasspare car-at-x01y03-flattired-hasspare 1.000000
+	car-at-x01y05 car-at-x01y05 1.000000
+	car-at-x01y05-flattired car-at-x01y05-flattired 1.000000
+	car-at-x01y05-hasspare car-at-x01y05-hasspare 1.000000
+	car-at-x01y05-flattired-hasspare car-at-x01y05-flattired-hasspare 1.000000
+	car-at-x02y02 car-at-x01y03 0.500000
+	car-at-x02y02 car-at-x01y03-flattired 0.500000
+	car-at-x02y02-flattired car-at-x02y02-flattired 1.000000
+	car-at-x02y02-hasspare car-at-x01y03-hasspare 0.500000
+	car-at-x02y02-hasspare car-at-x01y03-flattired-hasspare 0.500000
+	car-at-x02y02-flattired-hasspare car-at-x02y02-flattired-hasspare 1.000000
+	car-at-x02y04 car-at-x01y05 0.100000
+	car-at-x02y04 car-at-x01y05-flattired 0.900000
+	car-at-x02y04-flattired car-at-x02y04-flattired 1.000000
+	car-at-x02y04-hasspare car-at-x01y05-hasspare 0.100000
+	car-at-x02y04-hasspare car-at-x01y05-flattired-hasspare 0.900000
+	car-at-x02y04-flattired-hasspare car-at-x02y04-flattired-hasspare 1.000000
+	car-at-x03y03 car-at-x02y04 0.300000
+	car-at-x03y03 car-at-x02y04-flattired 0.700000
+	car-at-x03y03-flattired car-at-x03y03-flattired 1.000000
+	car-at-x03y03-hasspare car-at-x02y04-hasspare 0.300000
+	car-at-x03y03-hasspare car-at-x02y04-flattired-hasspare 0.700000
+	car-at-x03y03-flattired-hasspare car-at-x03y03-flattired-hasspare 1.000000
+endaction
+
+action move-north
+	car-at-x01y01 car-at-x01y03 0.500000
+	car-at-x01y01 car-at-x01y03-flattired 0.500000
+	car-at-x01y01-flattired car-at-x01y01-flattired 1.000000
+	car-at-x01y01-hasspare car-at-x01y03-hasspare 0.500000
+	car-at-x01y01-hasspare car-at-x01y03-flattired-hasspare 0.500000
+	car-at-x01y01-flattired-hasspare car-at-x01y01-flattired-hasspare 1.000000
+	car-at-x01y03 car-at-x01y05 0.100000
+	car-at-x01y03 car-at-x01y05-flattired 0.900000
+	car-at-x01y03-flattired car-at-x01y03-flattired 1.000000
+	car-at-x01y03-hasspare car-at-x01y05-hasspare 0.100000
+	car-at-x01y03-hasspare car-at-x01y05-flattired-hasspare 0.900000
+	car-at-x01y03-flattired-hasspare car-at-x01y03-flattired-hasspare 1.000000
+	car-at-x01y05 car-at-x01y05 1.000000
+	car-at-x01y05-flattired car-at-x01y05-flattired 1.000000
+	car-at-x01y05-hasspare car-at-x01y05-hasspare 1.000000
+	car-at-x01y05-flattired-hasspare car-at-x01y05-flattired-hasspare 1.000000
+	car-at-x02y02 car-at-x02y04 0.300000
+	car-at-x02y02 car-at-x02y04-flattired 0.700000
+	car-at-x02y02-flattired car-at-x02y02-flattired 1.000000
+	car-at-x02y02-hasspare car-at-x02y04-hasspare 0.300000
+	car-at-x02y02-hasspare car-at-x02y04-flattired-hasspare 0.700000
+	car-at-x02y02-flattired-hasspare car-at-x02y02-flattired-hasspare 1.000000
+	car-at-x02y04 car-at-x02y04 1.000000
+	car-at-x02y04-flattired car-at-x02y04-flattired 1.000000
+	car-at-x02y04-hasspare car-at-x02y04-hasspare 1.000000
+	car-at-x02y04-flattired-hasspare car-at-x02y04-flattired-hasspare 1.000000
+	car-at-x03y03 car-at-x03y03 1.000000
+	car-at-x03y03-flattired car-at-x03y03-flattired 1.000000
+	car-at-x03y03-hasspare car-at-x03y03-hasspare 1.000000
+	car-at-x03y03-flattired-hasspare car-at-x03y03-flattired-hasspare 1.000000
+endaction
+
+action move-northeast
+	car-at-x01y01 car-at-x02y02 0.700000
+	car-at-x01y01 car-at-x02y02-flattired 0.300000
+	car-at-x01y01-flattired car-at-x01y01-flattired 1.000000
+	car-at-x01y01-hasspare car-at-x02y02-hasspare 0.700000
+	car-at-x01y01-hasspare car-at-x02y02-flattired-hasspare 0.300000
+	car-at-x01y01-flattired-hasspare car-at-x01y01-flattired-hasspare 1.000000
+	car-at-x01y03 car-at-x02y04 0.300000
+	car-at-x01y03 car-at-x02y04-flattired 0.700000
+	car-at-x01y03-flattired car-at-x01y03-flattired 1.000000
+	car-at-x01y03-hasspare car-at-x02y04-hasspare 0.300000
+	car-at-x01y03-hasspare car-at-x02y04-flattired-hasspare 0.700000
+	car-at-x01y03-flattired-hasspare car-at-x01y03-flattired-hasspare 1.000000
+	car-at-x01y05 car-at-x01y05 1.000000
+	car-at-x01y05-flattired car-at-x01y05-flattired 1.000000
+	car-at-x01y05-hasspare car-at-x01y05-hasspare 1.000000
+	car-at-x01y05-flattired-hasspare car-at-x01y05-flattired-hasspare 1.000000
+	car-at-x02y02 car-at-x03y03 0.500000
+	car-at-x02y02 car-at-x03y03-flattired 0.500000
+	car-at-x02y02-flattired car-at-x02y02-flattired 1.000000
+	car-at-x02y02-hasspare car-at-x03y03-hasspare 0.500000
+	car-at-x02y02-hasspare car-at-x03y03-flattired-hasspare 0.500000
+	car-at-x02y02-flattired-hasspare car-at-x02y02-flattired-hasspare 1.000000
+	car-at-x02y04 car-at-x02y04 1.000000
+	car-at-x02y04-flattired car-at-x02y04-flattired 1.000000
+	car-at-x02y04-hasspare car-at-x02y04-hasspare 1.000000
+	car-at-x02y04-flattired-hasspare car-at-x02y04-flattired-hasspare 1.000000
+	car-at-x03y03 car-at-x03y03 1.000000
+	car-at-x03y03-flattired car-at-x03y03-flattired 1.000000
+	car-at-x03y03-hasspare car-at-x03y03-hasspare 1.000000
+	car-at-x03y03-flattired-hasspare car-at-x03y03-flattired-hasspare 1.000000
+endaction
+
+action load-tire
+	car-at-x01y01 car-at-x01y01 1.000000
+	car-at-x01y01-flattired car-at-x01y01-flattired 1.000000
+	car-at-x01y01-hasspare car-at-x01y01-hasspare 1.000000
+	car-at-x01y01-flattired-hasspare car-at-x01y01-flattired-hasspare 1.000000
+	car-at-x01y03 car-at-x01y03 1.000000
+	car-at-x01y03-flattired car-at-x01y03-flattired 1.000000
+	car-at-x01y03-hasspare car-at-x01y03-hasspare 1.000000
+	car-at-x01y03-flattired-hasspare car-at-x01y03-flattired-hasspare 1.000000
+	car-at-x01y05 car-at-x01y05 1.000000
+	car-at-x01y05-flattired car-at-x01y05-flattired 1.000000
+	car-at-x01y05-hasspare car-at-x01y05-hasspare 1.000000
+	car-at-x01y05-flattired-hasspare car-at-x01y05-flattired-hasspare 1.000000
+	car-at-x02y02 car-at-x02y02-hasspare 1.000000
+	car-at-x02y02-flattired car-at-x02y02-flattired-hasspare 1.000000
+	car-at-x02y02-hasspare car-at-x02y02-hasspare 1.000000
+	car-at-x02y02-flattired-hasspare car-at-x02y02-flattired-hasspare 1.000000
+	car-at-x02y04 car-at-x02y04-hasspare 1.000000
+	car-at-x02y04-flattired car-at-x02y04-flattired-hasspare 1.000000
+	car-at-x02y04-hasspare car-at-x02y04-hasspare 1.000000
+	car-at-x02y04-flattired-hasspare car-at-x02y04-flattired-hasspare 1.000000
+	car-at-x03y03 car-at-x03y03-hasspare 1.000000
+	car-at-x03y03-flattired car-at-x03y03-flattired-hasspare 1.000000
+	car-at-x03y03-hasspare car-at-x03y03-hasspare 1.000000
+	car-at-x03y03-flattired-hasspare car-at-x03y03-flattired-hasspare 1.000000
+endaction
+
+reward
+	car-at-x01y01 -1
+	car-at-x01y01-flattired -1
+	car-at-x01y01-hasspare -1
+	car-at-x01y01-flattired-hasspare -1
+	car-at-x01y03 -1
+	car-at-x01y03-flattired -1
+	car-at-x01y03-hasspare -1
+	car-at-x01y03-flattired-hasspare -1
+	car-at-x01y05 0
+	car-at-x01y05-flattired 0
+	car-at-x01y05-hasspare 0
+	car-at-x01y05-flattired-hasspare 0
+	car-at-x02y02 -1
+	car-at-x02y02-flattired -1
+	car-at-x02y02-hasspare -1
+	car-at-x02y02-flattired-hasspare -1
+	car-at-x02y04 -1
+	car-at-x02y04-flattired -1
+	car-at-x02y04-hasspare -1
+	car-at-x02y04-flattired-hasspare -1
+	car-at-x03y03 -1
+	car-at-x03y03-flattired -1
+	car-at-x03y03-hasspare -1
+	car-at-x03y03-flattired-hasspare -1
+endreward
+
+cost
+	move-north 0
+	move-northeast 0
+	move-northwest 0
+	change-tire 0
+	load-tire 0
+endcost
+
+discount factor 0.900000
+initialstate
+	car-at-x01y01-hasspare
+endinitialstate
+
+goalstate
+	car-at-x01y05
+	car-at-x01y05-hasspare
+	car-at-x01y05-flattired
+	car-at-x01y05-flattired-hasspare
+endgoalstate
