@@ -2,6 +2,7 @@
 require_relative 'requirements'
 
 domain_name = ARGV[0] # tireworld | navigation_problem
+algorithm = ARGV[1] # LAO | LRTDP
 problems_directory = "problems/#{domain_name}"
 
 Dir.foreach(problems_directory) do |problem_instance|
@@ -10,9 +11,9 @@ Dir.foreach(problems_directory) do |problem_instance|
   problem = Parser.new.parse("#{problems_directory}/#{problem_instance}")
   problem.order_action_destinations_by_probability
 
-  lrtdp = LRTDP.new(problem)
+  algorithm_instance = Kernel.const_get(algorithm).new(problem)
   start_time = Time.now
-  lrtdp.run
+  algorithm_instance.run
   end_time = Time.now
 
   p (end_time - start_time)
