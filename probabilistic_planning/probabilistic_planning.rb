@@ -10,19 +10,10 @@ Dir.foreach(problems_directory) do |problem_instance|
   problem = Parser.new.parse("#{problems_directory}/#{problem_instance}")
   problem.order_action_destinations_by_probability
 
-  puts problem.initial_state
-  puts problem.goal_state
-  puts problem.discount_factor
-  problem.states.each do |state_name, state|
-    puts "=========" + state_name + "========="
-    puts "\t" + state.name
-    puts "\t" + state.reward
-    state.actions.each do |action_name, action|
-      puts "++++++++" + action_name + "++++++++"
-      puts "\t\t" + action.name
-      puts "\t\t" + action.initial_state
-      puts "\t\t" + action.cost
-      puts "\t\t #{action.destinations}"
-    end
-  end
+  lrtdp = LRTDP.new(problem)
+  start_time = Time.now
+  lrtdp.run
+  end_time = Time.now
+
+  p (end_time - start_time)
 end

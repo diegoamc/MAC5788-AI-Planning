@@ -3,8 +3,6 @@ class ProblemDefinition
   attr_accessor :discount_factor, :states, :initial_state, :goal_state
 
   def initialize
-    @initial_state = {}
-    @goal_state = {}
     @states = {}
   end
 
