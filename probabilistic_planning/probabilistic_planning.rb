@@ -8,6 +8,7 @@ Dir.foreach(problems_directory) do |problem_instance|
   next if problem_instance == '.' or problem_instance == '..'
 
   problem = Parser.new.parse("#{problems_directory}/#{problem_instance}")
+  problem.order_action_destinations_by_probability
 
   puts problem.initial_state
   puts problem.goal_state

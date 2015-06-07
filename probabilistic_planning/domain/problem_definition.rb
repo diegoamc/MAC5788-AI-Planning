@@ -17,7 +17,7 @@ class ProblemDefinition
     if not @states[initial_state].actions.has_key?(action_name)
       @states[initial_state].actions[action_name] = action
     else
-      @states[initial_state].actions[action_name].destinations << [final_state, probability]
+      @states[initial_state].actions[action_name].destinations << [probability, final_state]
     end
   end
 
@@ -28,6 +28,14 @@ class ProblemDefinition
   def add_cost(action_name, cost)
     @states.each_value do |state|
       state.actions[action_name].cost = cost if not state.actions[action_name].nil?
+    end
+  end
+
+  def order_action_destinations_by_probability
+    @states.each_value do |state|
+      state.actions.each_value do |action|
+        action.destinations.sort!
+      end
     end
   end
 end
