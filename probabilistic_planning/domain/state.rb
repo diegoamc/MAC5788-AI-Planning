@@ -1,12 +1,13 @@
 # abstraction for the state
 class State
   attr_accessor :name, :actions, :reward, :greedy_action
-  attr_writer :solved, :initial_state, :goal_state
+  attr_writer :solved, :initial_state, :goal_state, :visited
 
   def initialize(name)
     @solved = false
     @initial_state = false
     @goal_state = false
+    @visited = false
     @name = name
     @actions = {}
   end
@@ -17,5 +18,9 @@ class State
 
   def is_goal_state?
     @goal_state
+  end
+
+  def visited?
+    @visited
   end
 end
