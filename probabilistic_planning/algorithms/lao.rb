@@ -71,7 +71,7 @@ class LAO
     q_values = @v[state.name]
     residual = 1
     if q_values.size > 1
-      residual = q_values[q_values.size - 2] - q_values.last
+      residual = (q_values[q_values.size - 2] - q_values.last).abs
     end
     return residual
   end
