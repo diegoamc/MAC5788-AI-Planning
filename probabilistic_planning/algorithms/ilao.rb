@@ -1,5 +1,6 @@
 # LAO algorithm
 class ILAO
+  include Procedures
   attr_accessor :v
   @@epsilon = 0.0000001
 
@@ -30,24 +31,6 @@ class ILAO
     end
   end
 
-  def greedy_action(state)
-    state.actions.each_value do |action|
-      action.q_value = q_value(action)
-    end
-
-    selected_action = state.actions.to_a.min { |action1, action2| action1.last.q_value <=> action2.last.q_value }
-    return selected_action.last
-  end
-
-  def q_value(action)
-    sum = 0.0
-    action.destinations.each do |probability, final_state|
-      sum += (probability * @v[final_state].last)
-    end
-
-    @problem.states[@problem.initial_state].reward + action.cost + @problem.discount_factor * sum
-  end
-
   def converged?
     converged = false
     while (not @z.empty?)
@@ -60,12 +43,6 @@ class ILAO
     end
 
     return converged
-  end
-
-  def update_v(state)
-    action = greedy_action(state)
-    state.greedy_action = action
-    @v[state.name] << action.q_value
   end
 
   def residual(state)
