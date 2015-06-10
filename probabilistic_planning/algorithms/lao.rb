@@ -34,7 +34,7 @@ class LAO
       action.q_value = q_value(action)
     end
 
-    selected_action = state.actions.to_a.min { |action1, action2| action1.last.q_value <=> action2.last.q_value }
+    selected_action = state.actions.to_a.max { |action1, action2| action1.last.q_value <=> action2.last.q_value }
     return selected_action.last
   end
 
