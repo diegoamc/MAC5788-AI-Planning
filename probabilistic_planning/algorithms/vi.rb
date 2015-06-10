@@ -1,4 +1,5 @@
 class VI
+  attr_accessor :v
   @@epsilon = 0.0000001
 
   def initialize(problem)

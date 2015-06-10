@@ -18,6 +18,11 @@ Dir.foreach(problems_directory) do |problem_instance|
   rescue
   ensure
     end_time = Time.now
+    problem.states.each_value do |state|
+      greedy_action = state.greedy_action.nil? ? "" : state.greedy_action.name
+      q_value = algorithm_instance.v[state.name].is_a?(Array) ? algorithm_instance.v[state.name].last : algorithm_instance.v[state.name]
+      puts "Action(#{state.name}): #{greedy_action} ; V(#{state.name}): #{q_value}"
+    end
     p (end_time - start_time)
   end
 end
