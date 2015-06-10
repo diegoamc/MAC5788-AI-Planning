@@ -1,7 +1,5 @@
 # LRTDP algorithm
 class RTDP
-  @@epsilon = 0.0000001
-
   def initialize(problem)
     @problem = problem
     @v = Hash.new(0.0) # its keys are the problem's state names, with default values equal to 0.0
