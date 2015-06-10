@@ -2,7 +2,7 @@
 require_relative 'requirements'
 
 domain_name = ARGV[0] # tireworld | navigation_problem
-algorithm = ARGV[1] # LAO | LRTDP | RTDP | VI
+algorithm = ARGV[1] # ILAO | LRTDP | RTDP | VI
 problems_directory = "problems/#{domain_name}"
 
 Dir.foreach(problems_directory) do |problem_instance|

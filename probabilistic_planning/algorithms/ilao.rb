@@ -1,5 +1,5 @@
 # LAO algorithm
-class LAO
+class ILAO
   @@epsilon = 0.0000001
 
   def initialize(problem)
