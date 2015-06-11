@@ -6,7 +6,7 @@ class ILAO
 
   def initialize(problem)
     @problem = problem
-    @v = Hash.new([0.0]) # its keys are the problem's state names, with default values equal to [0.0]
+    @v = Hash.new { |h,k| h[k] = [0.0]} # its keys are the problem's state names, with default values equal to [0.0]
     @z = []
   end
 
@@ -32,13 +32,13 @@ class ILAO
   end
 
   def converged?
-    converged = false
+    converged = true
     while (not @z.empty?)
       state = @z.pop
       unless state.is_goal_state?
         state.visited = false
         update_v(state)
-        converged = true if residual(state) <= @@epsilon
+        converged = false if residual(state) > @@epsilon
       end
     end
 
