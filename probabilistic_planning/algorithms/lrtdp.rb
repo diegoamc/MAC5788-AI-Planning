@@ -1,19 +1,21 @@
 # LRTDP algorithm
 class LRTDP
   include Procedures
-  attr_accessor :v
+  attr_reader :v, :trials
 
   @@epsilon = 0.0000001
 
   def initialize(problem)
     @problem = problem
     @v = Hash.new(0.0) # its keys are the problem's state names, with default values equal to 0.0
+    @trials = 0
   end
 
   def run
     initial_state = @problem.states[@problem.initial_state]
     while (not initial_state.solved?)
       lrtdp_trial(initial_state)
+      @trials += 1
     end
   end
 

@@ -1,19 +1,21 @@
 # LAO algorithm
 class ILAO
   include Procedures
-  attr_accessor :v
+  attr_reader :v, :trials
   @@epsilon = 0.0000001
 
   def initialize(problem)
     @problem = problem
     @v = Hash.new { |h,k| h[k] = [0.0]} # its keys are the problem's state names, with default values equal to [0.0]
     @z = []
+    @trials = 0
   end
 
   def run
     initial_state = @problem.states[@problem.initial_state]
     loop do
       lao_trial(initial_state)
+      @trials += 1
       break if converged?
     end
   end

@@ -1,11 +1,12 @@
 class VI
   include Procedures
-  attr_accessor :v
+  attr_reader :v, :trials
   @@epsilon = 0.0000001
 
   def initialize(problem)
     @problem = problem
     @v = Hash.new(0.0) # its keys are the problem's state names, with default values equal to 0.0
+    @trials = 0
   end
 
   def run
@@ -13,6 +14,7 @@ class VI
       @problem.states.each_value do |state|
         update_v(state)
       end
+      @trials += 1
       break if converged?
     end
   end
