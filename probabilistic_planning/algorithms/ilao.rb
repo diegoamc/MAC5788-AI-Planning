@@ -35,7 +35,8 @@ class ILAO
 
   def converged?
     converged = true
-    while (not @z.empty?)
+    loop do
+      break if @z.empty?
       state = @z.pop
       unless state.is_goal_state?
         state.visited = false

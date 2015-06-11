@@ -13,7 +13,8 @@ class LRTDP
 
   def run
     initial_state = @problem.states[@problem.initial_state]
-    while (not initial_state.solved?)
+    loop do
+      break if initial_state.solved?
       lrtdp_trial(initial_state)
       @trials += 1
     end
@@ -21,7 +22,8 @@ class LRTDP
 
   def lrtdp_trial(state)
     visited = []
-    while (not state.solved?) && (visited.size < 50)
+    loop do
+      break if state.solved? || visited.size >= 50
       visited.push(state) #insert into visited
 
       break if state.is_goal_state? #check termination at goal states
@@ -35,7 +37,8 @@ class LRTDP
     end
 
     #try labelling visited states in reverse order
-    while (not visited.empty?)
+    loop do
+      break if visited.empty?
       state = visited.pop
       break if not check_solved(state)
     end
@@ -49,7 +52,8 @@ class LRTDP
 
     open_states.push(state) if not state.solved?
 
-    while (not open_states.empty?)
+    loop do
+      break if open_states.empty?
       state = open_states.pop
       closed_states.push(state)
 
@@ -76,7 +80,8 @@ class LRTDP
       end
     else
       #update states with residuals and ancestors
-      while (not closed_states.empty?)
+      loop do
+        break if closed_states.empty?
         closed_state = closed_states.pop
         update_v(closed_state)
       end
