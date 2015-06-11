@@ -20,8 +20,10 @@ class RTDP
   end
 
   def rtdp_trial(state)
+    counter = 0
     loop do
-      break if state.is_goal_state?
+      break if state.is_goal_state? || counter >= 30
+      counter += 1
 
       #pick the best action and update hash
       action = greedy_action(state)

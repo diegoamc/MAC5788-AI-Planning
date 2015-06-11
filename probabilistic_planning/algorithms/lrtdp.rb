@@ -23,7 +23,7 @@ class LRTDP
   def lrtdp_trial(state)
     visited = []
     loop do
-      break if state.solved? || visited.size >= 50
+      break if state.solved? || visited.size >= 30
       visited.push(state) #insert into visited
 
       break if state.is_goal_state? #check termination at goal states
