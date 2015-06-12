@@ -11,6 +11,7 @@ Dir.foreach(problems_directory) do |problem_instance|
   problem = Parser.new.parse("#{problems_directory}/#{problem_instance}")
   problem.order_action_destinations_by_probability
 
+  puts "---------- Starting #{algorithm} for #{problem_instance} ----------"
   algorithm_instance = Kernel.const_get(algorithm).new(problem)
   begin
     start_time = Time.now
@@ -18,13 +19,15 @@ Dir.foreach(problems_directory) do |problem_instance|
   rescue
   ensure
     end_time = Time.now
-    p "====================================="
+    output_file = File.new("results/#{domain_name}/#{problem_instance.gsub(".txt", "")}_#{algorithm}.txt", "w")
+    output_file.puts "Elapsed time: #{(end_time - start_time)}"
+    output_file.puts "Number of trials: #{algorithm_instance.trials}"
+    output_file.puts "Policy:"
     problem.states.each_value do |state|
       greedy_action = state.greedy_action.nil? ? "" : state.greedy_action.name
       q_value = algorithm_instance.v[state.name].is_a?(Array) ? algorithm_instance.v[state.name].last : algorithm_instance.v[state.name]
-      puts "Action(#{state.name}): #{greedy_action} ; V(#{state.name}): #{q_value}"
+      output_file.puts "\tAction(#{state.name}): #{greedy_action} ; V(#{state.name}): #{q_value}"
     end
-    p (end_time - start_time)
-    p "Number of trials: #{algorithm_instance.trials}"
+
   end
 end
