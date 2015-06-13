@@ -1,7 +1,7 @@
 # abstraction for the state
 class State
   attr_accessor :name, :actions, :reward, :greedy_action
-  attr_writer :solved, :initial_state, :goal_state, :visited
+  attr_writer :solved, :initial_state, :goal_state, :visited, :stacked
 
   def initialize(name)
     @solved = false
@@ -22,5 +22,9 @@ class State
 
   def visited?
     @visited
+  end
+
+  def stacked?
+    @stacked
   end
 end

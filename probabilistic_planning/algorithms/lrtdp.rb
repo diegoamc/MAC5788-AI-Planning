@@ -24,6 +24,7 @@ class LRTDP
     visited = []
     loop do
       break if state.solved? || visited.size >= 30
+      state.visited = true
       visited.push(state) #insert into visited
 
       break if state.is_goal_state? #check termination at goal states

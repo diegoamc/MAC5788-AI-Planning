@@ -12,6 +12,7 @@ class VI
   def run
     loop do
       @problem.states.each_value do |state|
+        state.visited = true
         update_v(state)
       end
       @trials += 1

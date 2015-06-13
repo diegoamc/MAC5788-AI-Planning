@@ -21,7 +21,8 @@ class ILAO
   end
 
   def lao_trial(state)
-    if (not state.is_goal_state?) && (not state.visited?)
+    if (not state.is_goal_state?) && (not state.stacked?)
+      state.stacked = true
       state.visited = true
 
       @z.push(state) unless @z.include?(state)
@@ -39,7 +40,7 @@ class ILAO
       break if @z.empty?
       state = @z.pop
       unless state.is_goal_state?
-        state.visited = false
+        state.stacked = false
         update_v(state)
         converged = false if residual(state) > @@epsilon
       end

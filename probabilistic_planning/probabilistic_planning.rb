@@ -25,6 +25,10 @@ Dir.foreach(problems_directory) do |problem_instance|
     output_file = File.new("results/#{domain_name}/#{problem_instance.gsub(".txt", "")}_#{algorithm}.txt", "w")
     output_file.puts "Elapsed time: #{(end_time - start_time)}"
     output_file.puts "Number of trials: #{algorithm_instance.trials}"
+    output_file.puts "Total number of states: #{problem.states.size}"
+    visited_states = 0
+    problem.states.each_value {|state| visited_states += 1 if state.visited?}
+    output_file.puts "Visited states: #{visited_states}"
     output_file.puts "Policy:"
     problem.states.each_value do |state|
       greedy_action = state.greedy_action.nil? ? "" : state.greedy_action.name

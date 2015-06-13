@@ -23,6 +23,7 @@ class RTDP
     counter = 0
     loop do
       break if state.is_goal_state? || counter >= 30
+      state.visited = true
       counter += 1
 
       #pick the best action and update hash
