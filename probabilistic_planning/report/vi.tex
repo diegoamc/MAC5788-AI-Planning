@@ -1,0 +1,9 @@
+O Algoritmo Iteração de Valor (VI) \cite{Bellman57} garante encontrar uma política ótima usando programação dinâmica. 
+
+Na primeira iteração o algoritmo inicia V(s) com valores arbitrários e, a cada iteração, atualiza V(s) para todos os estados segundo a Equação \ref{bellman}. O algoritmo termina quando o valor residual é menor que $\varepsilon$.
+
+O valor residual é a diferença entre os valores $V(s)_i$ (calculados na iteração atual) e $V(s)_{i-1}$ (calculados na última iteração). $\varepsilon$ é um valor muito pequeno, definido no algoritmo. Em nossa implementação usamos $\varepsilon=10^{-7}$.
+
+A cada iteração, este algoritmo atualiza todos os estados e, como o espaço de estados pode ter tamanho exponencial, problemas mais complexos tornam-se inviáveis de resolver.
+
+Em razão da atualização de todos os estados a cada iteração, o VI é chamado de solução síncrona.

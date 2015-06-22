@@ -1,0 +1,115 @@
+A Figura \ref{fig:timeNav} exibe o tempo de execução de cada um dos algoritmos. Ao observarmos ela, é possível perceber que nos domínios menores, ou seja, domínios onde o espaço de estados possíveis é menor (por exemplo Nav-01, Nav-02, Nav-03 e Nav-04) o algoritmo $LRTDP$ converge mais rapidamente quando comparado ao $ILAO$. Porém, a partir do momento em lidamos com problemas maiores, o $ILAO$ passa a apresentar resultados melhores. 
+
+Como o $RTDP$ não possui uma condição de parada, nos experimentos definimos o \textit{timeout} de execução em 1 minuto. Isso explica porque seus resultados estão muito acima dos demais algoritmos.
+
+Os demais algoritmos ($ILAO$, $LRTDP$ e $VI$) que tem como critério de parada a convergência dos estados, o $VI$ foi o que apresentou um desempenho pior. Ou seja, levou um tempo maior para convergir.
+
+%Grafico para time - Navigation
+\begin{figure}[H]
+\centering
+\begin{tikzpicture}
+  \begin{axis}[
+      xtick=data, 
+      xticklabels from table={plots/timeNav.dat}{Problema},
+      xticklabel style={rotate=90},
+      axis lines=left,
+      xlabel={Problemas Navigation},
+      xlabel style={at={(0.5,-0.15)}},
+      ylabel={Tempo de Execução em milissegundos},
+      enlarge x limits={abs={0.0001*\pgfplotbarwidth}},
+      legend style={at={(0.25,0.4)},anchor=north,legend columns=2},
+      height=9cm, width=12cm,
+      ymode=log]
+
+      \addplot table [x expr=\coordindex,y=ILAO]{plots/timeNav.dat};
+      \addplot table [x expr=\coordindex,y=RTDP]{plots/timeNav.dat};
+      \addplot table [x expr=\coordindex,y=LRTDP]{plots/timeNav.dat};
+      \addplot table [x expr=\coordindex,y=VI]{plots/timeNav.dat};
+
+  \legend{ILAO, RTDP, LRTDP, VI}
+  \end{axis}
+\end{tikzpicture}
+\caption{Tempo de Execução - Domínio Navigation}
+\label{fig:timeNav}
+\end{figure}
+
+
+A Figura \ref{fig:trialsNav} apresenta o número de \textit{trials} de cada um dos algoritmos ao longo de sua execução nas diferentes instâncias.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Frase reformulada
+Ao observamos o algoritmo $RTDP$, podemos perceber que neste domínio, para os problemas menores, o número de \textit{trials} foi maior que em problemas maiores (linha vermelha). Isso ocorre porque todas as instâncias foram executadas por um tempo limite padrão (\textit{timeout}=1 minuto), como o \textit{trial} das instâncias menores consome menos tempo, é natural que dado um tempo limite, instâncias menores consigam executar mais \textit{trials}.
+
+Neste domínio, que não possui política própria (uma política que quando executada a partir de um estado $s$ alcança algum estado meta com probabilidade igual a 1), o algoritmo $ILAO^*$ executou um número maior de \textit{trials} que $VI$ e $LRTDP$.
+
+
+%Grafico Numero de trials - Navigation
+\begin{figure}[H]
+\centering
+\begin{tikzpicture}
+  \begin{axis}[
+      xtick=data, 
+      xticklabels from table={plots/trialsNav.dat}{Problema},
+      xticklabel style={rotate=90},
+      axis lines=left,
+      xlabel={Problemas Navigation},
+      xlabel style={at={(0.5,-0.15)}},
+      ylabel={Número de \textit{Trials}},
+      enlarge x limits={abs={0.0001*\pgfplotbarwidth}},
+      legend style={at={(0.25,0.45)},anchor=north,legend columns=2},
+      height=9cm, width=12cm,
+      ymode=log]
+
+      \addplot table [x expr=\coordindex,y=ILAO]{plots/trialsNav.dat};
+      \addplot table [x expr=\coordindex,y=RTDP]{plots/trialsNav.dat};
+      \addplot table [x expr=\coordindex,y=LRTDP]{plots/trialsNav.dat};
+      \addplot table [x expr=\coordindex,y=VI]{plots/trialsNav.dat};
+
+  \legend{ILAO, RTDP, LRTDP, VI}
+  \end{axis}
+\end{tikzpicture}
+\caption{Número de \textit{Trials} - Domínio Navigation}
+\label{fig:trialsNav}
+\end{figure}
+
+
+A Figura \ref{fig:estadosNav} mostra a quantidade de estados explorados pelos algoritmos. O algoritmo $VI$ foi o que visitou o maior número de estados. Em nossos experimentos, este algoritmo sempre visita todos os estados do problema.
+
+Ao compararmos os algoritmos $ILAO$ e $LRTDP$, percebemos que o número de estados visitados pelo $ILAO$ é maior que o número de estados visitados pelo $LRTDP$. Em alguns problemas, como por exemplo Nav-07, a diferença entre os estados visitados por esses algoritmos é bastante significativa.
+
+Apesar do número de estados visitados pelo $ILAO$ em praticamente todos os problemas analisados ser maior, o tempo de convergência do $ILAO$ é menor. Isso porque, conforme citado anteriormente, o número de estados atualizados a cada iteração (e consequentemente visitados) pelo $ILAO$ é maior que o número de estados atualizados pelo $LRTDP$.
+
+
+
+%Grafico Estados - Navigation
+\begin{figure}[H]
+\centering
+\begin{tikzpicture}
+  \begin{axis}[
+      xtick=data, 
+      xticklabels from table={plots/estadosNav.dat}{Problema},
+      xticklabel style={rotate=90},
+      axis lines=left,
+      xlabel={Problemas Navigation},
+      xlabel style={at={(0.5,-0.15)}},
+      ylabel={Número de estados Visitados},
+      enlarge x limits={abs={0.0001*\pgfplotbarwidth}},
+      legend style={at={(0.88,0.35)},anchor=north,legend columns=1},
+      height=9cm, width=12cm,
+      ymode=log
+      ]
+
+      \addplot table [x expr=\coordindex,y=ILAO]{plots/estadosNav.dat};
+      \addplot table [x expr=\coordindex,y=RTDP]{plots/estadosNav.dat};
+      \addplot table [x expr=\coordindex,y=LRTDP]{plots/estadosNav.dat};
+      \addplot table [x expr=\coordindex,y=VI]{plots/estadosNav.dat};
+
+  \legend{ILAO, RTDP, LRTDP, VI}
+  \end{axis}
+\end{tikzpicture}
+\caption{Número de estados visitados- Domínio Navigation}
+\label{fig:estadosNav}
+\end{figure}
+
+
+

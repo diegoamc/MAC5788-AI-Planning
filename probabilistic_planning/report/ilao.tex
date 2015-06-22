@@ -1,0 +1,14 @@
+%copy paste Ignasi com pequenas alterações
+
+O algoritmo ILAO$^*$ (\textit{Improved LAO$^*$}) \cite{ilao}, assim como RTDP e 
+LRTP, utiliza programação dinâmica na atualização dos estados.
+
+O princípio deste algoritmo também consiste em criar \textit{trials} ou caminhos entre o estado inicial e um estado meta.
+
+Se chegarmos a um estado meta, o algoritmo executa o algoritmo Value Iteration entre os estados do caminho. 
+
+Se o algoritmo encontrar um estado novo que não foi adicionado no caminho, ou algum estado que ainda não convergiu, ele realiza um novo \textit{trial} e assim sucessivamente até que todos os estados no caminho estejam convergidos, e nenhum caminho novo seja encontrado.
+
+O algoritmo $LAO^*$ original executa o algoritmo VI sempre que adiciona um novo estado no caminho. Esta versão do algoritmo é menos eficiente. Por isso, os autores propuseram uma versão na qual a etapa de execução do VI somente é executada quando um caminho é descoberto.
+
+Uma das vantagens deste algoritmo a respeito da família RTDP é que ele analisa não somente os estados com maior probabilidade de serem alcançados, mas todos os estados que podem ser alcançados a partir de uma mesma ação não determinística. Isso pode acelerar o tempo de convergência do algoritmo, uma vez que, a cada iteração, ele atualiza um maior número de estados.

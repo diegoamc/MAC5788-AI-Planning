@@ -1,0 +1,8 @@
+
+O algoritmo RTDP (\textit{Real-Time Dynamic Programming}) \cite{barto95} diferente do algoritmo VI, não garante como solução uma política ótima. Porém, RTDP encontra valor ótimo para todos os estados relevantes. Estados relevantes são aqueles alcançáveis a partir do conjunto de estados inicial segundo uma política ótima.
+
+Assim como o algoritmo VI, ele também inicia $V(s)$ com valores arbitrários porém, a cada iteração o algoritmo recalcula o valor de $V(S)$ apenas para o estado atual usando a Equação \ref{bellman}, por esse motivo RTDP é um exemplo de algoritmo de programação dinâmica assíncrona.
+
+Após a etapa de inicialização, o RTDP executa várias simulações (\textit{trials}). A cada simulação um estado do conjunto de estados inicial é escolhido aleatoriamente. Para obter o próximo estado, o algoritmo sorteia o próximo estado a partir da função de transição $P(.|s, a)$. RTDP termina um trial se encontrar um estado meta ou quando uma profundidade limitada é alcançada.
+
+O RTDP não tem condição de parada. Portanto, em nossos experimentos, consideramos um \textit{timeout} de 1 minuto. Esse valor foi escolhido baseado no tempo de execução do algoritmo LRTP, explicado a seguir.

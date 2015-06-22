@@ -1,0 +1,126 @@
+A Figura \ref{fig:timeTW} exibe o tempo de execução de cada um dos algoritmos. Assim como no domínio Navigation, nos problemas do domínio Tireworld, o algoritmo $VI$ foi o que apresentou o pior desempenho em termos de tempo de convergência. Neste domínio, em todos os problemas, o $ILAO$ foi o que teve o menor tempo de convergência.
+
+Nestes experimentos também usamos \textit{timeout} de um minuto para o algoritmo $RTDP$, o que pode explicar resultados muito acima dos demais algoritmos.
+
+%Grafico para time - Tireworld
+\begin{figure}[H]
+\centering
+\begin{tikzpicture}
+  \begin{axis}[
+%      only marks, 
+      xtick=data, 
+      xticklabels from table={plots/timeTW.dat}{Problema},
+      xticklabel style={rotate=90},
+      axis lines=left,
+      xlabel={Problemas Tireworld},
+      xlabel style={at={(0.5,-0.15)}},
+      ylabel={Tempo de Execução em milissegundos},
+      enlarge x limits={abs={0.0001*\pgfplotbarwidth}},
+      legend style={at={(0.8,0.2)},anchor=north,legend columns=2},
+      height=9cm, width=12cm,
+      ymode=log]
+
+      \addplot table [x expr=\coordindex,y=ILAO]{plots/timeTW.dat};
+      \addplot table [x expr=\coordindex,y=RTDP]{plots/timeTW.dat};
+      \addplot table [x expr=\coordindex,y=LRTDP]{plots/timeTW.dat};
+      \addplot table [x expr=\coordindex,y=VI]{plots/timeTW.dat};
+
+  \legend{ILAO, RTDP, LRTDP, VI}
+  \end{axis}
+\end{tikzpicture}
+\caption{Tempo de Execução - Domínio Tireworld}
+\label{fig:timeTW}
+\end{figure}
+
+
+A Figura \ref{fig:trialsTW} apresenta o número de \textit{trials} de cada um dos algoritmos ao longo de sua execução nas diferentes instâncias.
+
+Neste domínio, o algortimo $LRTP$ executou mais \textit{trials} que o algoritmo $ILAO^*$, isso porque o algoritmo $ILAO$ atualiza mais estados a cada iteração. 
+
+
+%Grafico Numero de trials - Tireworld
+\begin{figure}[H]
+\centering
+\begin{tikzpicture}
+  \begin{axis}[
+      xtick=data, 
+      xticklabels from table={plots/trialsTW.dat}{Problema},
+      xticklabel style={rotate=90},
+      axis lines=left,
+      xlabel={Problemas Tireworld},
+      xlabel style={at={(0.5,-0.15)}},
+      ylabel={Número de \textit{Trials}},
+      enlarge x limits={abs={0.0001*\pgfplotbarwidth}},
+      legend style={at={(0.8,0.2)},anchor=north,legend columns=2},
+      height=9cm, width=12cm, ymode=log]
+
+      \addplot table [x expr=\coordindex,y=ILAO]{plots/trialsTW.dat};
+      \addplot table [x expr=\coordindex,y=RTDP]{plots/trialsTW.dat};
+      \addplot table [x expr=\coordindex,y=LRTDP]{plots/trialsTW.dat};
+      \addplot table [x expr=\coordindex,y=VI]{plots/trialsTW.dat};
+      %\addplot table [x expr=\coordindex,y=RTDP90]{plots/trialsTW.dat};
+
+  \legend{ILAO, RTDP, LRTDP, VI}
+  \end{axis}
+\end{tikzpicture}
+\caption{Número de \textit{Trials} - Domínio Tireworld}
+\label{fig:trialsTW}
+\end{figure}
+
+
+A Figura \ref{fig:estadosTW} mostra a quantidade de estados visitados pelos algoritmos. 
+
+Assim como no domínio Navigation, o algoritmo $VI$ visitou o maior número de estados em todos os problemas. Neste domínio, a diferença enter os estados visitados em cada um dos algoritmos foi muito pequena. Nos problemas pequenos (tw-01 e tw-02) o $RTDP$ foi o que visitou menos estados.
+
+%TODO explicar figura
+%Grafico Estados - Tireworld
+\begin{figure}[H]
+\centering
+%\scriptsize
+%\subfigure[ref2][Estados Visitados]{
+\begin{tikzpicture}
+  \begin{axis}[
+      xtick=data, 
+      xticklabels from table={plots/estadosTW.dat}{Problema},
+      xticklabel style={rotate=90},
+      axis lines=left,
+      xlabel={Problemas Tireworld},
+      xlabel style={at={(0.5,-0.15)}},
+      ylabel={Número de estados Visitados},
+      enlarge x limits={abs={0.0001*\pgfplotbarwidth}},
+      legend style={at={(0.88,0.35)},anchor=north,legend columns=1},
+      height=9cm, width=12cm,
+      ymode=log
+      ]
+
+      \addplot table [x expr=\coordindex,y=vILAO]{plots/estadosTW.dat};
+      \addplot table [x expr=\coordindex,y=vRTDP]{plots/estadosTW.dat};
+      \addplot table [x expr=\coordindex,y=vLRTDP]{plots/estadosTW.dat};
+      \addplot table [x expr=\coordindex,y=vVI]{plots/estadosTW.dat};
+
+  \legend{ILAO, RTDP, LRTDP, VI}
+  \end{axis}
+\end{tikzpicture}
+%}
+%\subfigure[ref1][Número de estados visitados]{
+%\begin{tabular}{|l|l|l|l|l|}
+%\hline
+%Prob. & ILAO & RTDP & LRTDP & VI  \\ \hline
+%tw-01 & 15   & 12   & 16    & 24  \\ \hline
+%tw-02 & 32   & 30   & 32    & 40  \\ \hline
+%tw-03 & 52   & 50   & 54    & 60  \\ \hline
+%tw-04 & 76   & 76   & 73    & 84  \\ \hline
+%tw-05 & 104  & 104  & 105   & 112 \\ \hline
+%tw-06 & 136  & 136  & 135   & 144 \\ \hline
+%tw-07 & 172  & 172  & 169   & 180 \\ \hline
+%tw-08 & 212  & 212  & 212   & 220 \\ \hline
+%tw-09 & 256  & 256  & 254   & 264 \\ \hline
+%tw-10 & 304  & 304  & 302   & 312 \\ \hline
+%\end{tabular}
+%}
+\caption{Número de estados visitados- Domínio Tireworld}
+\label{fig:estadosTW}
+\end{figure}
+
+
+

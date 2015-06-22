@@ -1,0 +1,9 @@
+
+
+O algoritmo LRTDP (\textit{Labeled Real-Time Dynamic Programming}) \cite{Bonet03labeledrtdp}, baseia-se no algoritmo RTDP. Ele introduz uma heurística ao algoritmo RTDP e, diferente deste, devolve uma política parcialmente ótima. A política é chamada de parcialmente ótima por devolver uma política ótima apenas para os estados relevantes partindo do estado inicial estado inicial até o estado meta.
+
+Enquanto no algoritmo RTPD, quanto maior a probabilidade de um estado $s$ ser alcançado mais vezes seu valor função $V(s)$ será atualizado, no LRTDP os estados que já convergiram são rotulados. A cada novo \textit{trial} o algoritmo irá priorizar a atualização dos estados que ainda não convergiram (e não apenas os caminhos com maior probabilidade) aumentando a velocidade de convergência do algoritmo.
+
+O algoritmo termina quando o estado inicial converge com valor residual menor que um determinado $\varepsilon$. Neste trabalho, consideramos $\varepsilon=10^{-7}$.
+
+É importante notar que tanto o LRTDP quanto o RTDP tem comportamento \textit{anytime}. Isso significa que eles podem produzir uma boa política rapidamente e melhorá-la com o tempo.
