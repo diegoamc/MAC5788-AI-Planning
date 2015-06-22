@@ -14,13 +14,13 @@ class ILAO
   def run
     initial_state = @problem.states[@problem.initial_state]
     loop do
-      lao_trial(initial_state)
+      ilao_trial(initial_state)
       @trials += 1
       break if converged?
     end
   end
 
-  def lao_trial(state)
+  def ilao_trial(state)
     if (not state.is_goal_state?) && (not state.stacked?)
       state.stacked = true
       state.visited = true
@@ -29,7 +29,7 @@ class ILAO
 
       action = greedy_action(state)
       action.destinations.each do |probability, final_state|
-        lao_trial(@problem.states[final_state])
+        ilao_trial(@problem.states[final_state])
       end
     end
   end

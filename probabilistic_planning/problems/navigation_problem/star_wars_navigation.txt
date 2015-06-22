@@ -134,7 +134,7 @@ action move-north
 	robot-at-x08y01 robot-at-x08y02 1.000000
 	robot-at-x08y02 robot-at-x08y03 1.000000
 	robot-at-x08y03 robot-at-x08y04 0.500000
-	robot-at-x07y03 robot-at-x08y03 0.500000
+	robot-at-x08y03 robot-at-x08y03 0.500000
 	robot-at-x09y05 robot-at-x09y05 0.100000
 	robot-at-x09y05 broken-robot 0.900000
 	robot-at-x09y04 robot-at-x09y05 0.100000

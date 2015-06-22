@@ -5,7 +5,7 @@ domain_name = ARGV[0] # tireworld | navigation_problem
 algorithm = ARGV[1] # ILAO | LRTDP | RTDP | VI
 problems_directory = "problems/#{domain_name}"
 
-global_results = File.new("results/#{domain_name}/global_#{algorithm}.txt", "w")
+global_results = File.new("results/#{domain_name}/global_#{algorithm}.csv", "w")
 global_results.puts "#{domain_name}_#{algorithm}"
 global_results.puts "Problem;Elapsed time;Number of trials;Total number of states;Visited states"
 Dir.foreach(problems_directory) do |problem_instance|
